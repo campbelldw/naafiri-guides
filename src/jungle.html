@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Naafiri Jungle — Patch 26.13 Guide</title>
+<style>
+  @page { size: letter; margin: 13mm 14mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DejaVu Sans", "Segoe UI", system-ui, sans-serif; color: #1a1418; margin: 0; font-size: 10.2pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "DejaVu Serif", serif; color: #143a52; margin: 0 0 6px 0; }
+  h2 { font-size: 15pt; border-bottom: 2px solid #1f5b80; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #1f4d6b; margin-top: 14px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  .cover { position: relative; margin: -13mm -14mm 8mm -14mm; overflow: hidden; }
+  .cover img.splash { width: 100%; display: block; }
+  .cover .titleblock { position: absolute; bottom: 0; left: 0; right: 0; padding: 26px 14mm 14px; background: linear-gradient(transparent, rgba(4,10,16,0.94) 55%); color: #dcebf3; }
+  .cover h1 { color: #dcebf3; font-size: 26pt; margin: 0; }
+  .cover .sub { color: #7fb8d8; font-size: 11pt; margin-top: 2px; }
+  .tag { display: inline-block; font-size: 7.2pt; font-weight: 700; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+  .t-ver { background: #dcefdd; color: #1d5e2a; border: 1px solid #a7cfa9; }
+  .t-single { background: #fdf3d7; color: #7a5a12; border: 1px solid #e3ca8a; }
+  .t-reason { background: #e8e4f4; color: #45357c; border: 1px solid #beb3e0; }
+  .box { border: 1px solid #c9d4d8; border-left: 4px solid #1f5b80; background: #f4f8fa; padding: 9px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+  .box.gold { border-left-color: #c99a3f; background: #fbf8ef; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #143a52; color: #dcebf3; text-align: left; padding: 5px 8px; }
+  td { border-bottom: 1px solid #d6dfe2; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f8f9; }
+  .icon { width: 26px; height: 26px; border-radius: 4px; vertical-align: middle; margin-right: 6px; border: 1px solid #99b; }
+  ul, ol { margin: 6px 0 6px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .muted { color: #5f696b; font-size: 9pt; }
+  .footer { margin-top: 26px; padding-top: 8px; border-top: 1px solid #c9d4d8; font-size: 8.4pt; color: #5f696b; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img class="splash" src="img/splash.jpg" alt="Naafiri splash art">
+  <div class="titleblock">
+    <h1>Naafiri Jungle</h1>
+    <div class="sub">Companion guide for <b>soup minion#NA1</b> &middot; Patch 26.13 &middot; July 2026</div>
+  </div>
+</div>
+
+<p class="muted">Jungle is Naafiri's statistically dominant role on 26.13 — this companion covers it in case you ever queue it or face it. Labels: <span class="tag t-ver">VERIFIED</span> multi-source adversarially fact-checked &middot; <span class="tag t-single">SINGLE SOURCE</span> one reputable source &middot; <span class="tag t-reason">REASONING</span> game-knowledge, verify yourself. Note: your own jungle Naafiri record is 1W–2L ranked — this guide is informational; mid is where your win rate lives.</p>
+
+<h2>1 &middot; Why She Jungles Now</h2>
+<p><span class="tag t-ver">VERIFIED</span> ~69% of Naafiri's games are jungle on 26.13: S/S- tier, 50.5–52.3% WR Emerald+, top-10 jungler on lolalytics, 15–27% ban rate. The history: patch 26.03 restored her passive's monster damage to 155% (Riot explicitly said it was to help her clear), which moved her home to the jungle; 26.04 trimmed early mana/HP-regen sustain, and 26.10 shaved Q bleed damage and R base damage. Nerfed twice, still strong.</p>
+
+<h2>2 &middot; Build &amp; Runes</h2>
+<table>
+<tr><th>Piece</th><th>Choice</th><th>Notes</th></tr>
+<tr><td>Keystone</td><td><img class="icon" src="img/rune_conqueror.png" alt=""><b>Conqueror</b> (Precision)</td><td><span class="tag t-ver">VERIFIED</span> Unanimous, ~92% pick rate — NOT the mid keystones (Electrocute/HoB). Jungle is skirmish-heavy; Conqueror stacks fully in extended 1v1s over Scuttle/objectives.</td></tr>
+<tr><td>Minors</td><td>Triumph &middot; Legend: Haste (or Alacrity) &middot; Coup de Grace</td><td>Skill-Capped's case for Haste: she barely autos in fights. Secondary: Inspiration (Triple Tonic + Cash Back — highest WR) or Domination (Sudden Impact + hunters).</td></tr>
+<tr><td>Start</td><td>Scorchclaw pup + Long Sword</td><td>Gustwalker appears in some featured builds.</td></tr>
+<tr><td>Core</td><td><img class="icon" src="img/item_6699.png" alt="">Voltaic → <img class="icon" src="img/item_6696.png" alt="">Axiom Arc → <img class="icon" src="img/item_6694.png" alt="">Serylda's</td><td><span class="tag t-ver">VERIFIED</span> Most popular core (~22% of games, ~54.8% WR). Boots split: Ionian Lucidity (most picked) vs Plated Steelcaps (Skill-Capped).</td></tr>
+<tr><td>Highest-WR variant</td><td><img class="icon" src="img/item_2020.png" alt="">Brutalizer → Voltaic → <img class="icon" src="img/item_3071.png" alt="">Black Cleaver</td><td><span class="tag t-ver">VERIFIED</span> Bruiser-lethality hybrid, 53% WR vs 51% for pure lethality (Blitz). Worth defaulting into tanky comps.</td></tr>
+<tr><td>Situational</td><td>Edge of Night, Death's Dance, Shojin, Serpent's Fang, GA, Eclipse, Maw, Hubris, Profane Hydra</td><td>Same logic as mid: buy for the specific problem.</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> Skill order (unanimous, ~67% of games): Q1 → E2 → W3, max <b>Q &gt; E &gt; W</b>, R at 6/11/16. A Q&gt;W&gt;E claim was refuted 0–3 in verification. Her damage is ~92% physical.</p>
+
+<h2>3 &middot; The Clear</h2>
+<p><span class="tag t-ver">VERIFIED</span> The one mechanic that defines her jungle: <b>Q's cooldown starts only after Q2</b> (or when the 4s recast lapses). Between camps with no downtime, <b>recast Q2 immediately</b> so it's back up for the next camp; delay Q2 only when you need the full bleed detonation. Landing both casts matters everywhere — missing one drastically lowers her damage.</p>
+<div class="box">
+<p><b>Honest gap:</b> no specific first-clear route survived fact-checking (the one candidate — blue start → Gromp → Wolves → Raptors → Red → Krugs — was refuted 0–3). <span class="tag t-reason">REASONING</span> Practical approach: her clear is on the slow side pre-26.03-buff levels, so full-clear toward the side you intend to gank, and practice-tool your route once — time it; sub-3:30 full clears are the benchmark for most AD junglers.</p>
+</div>
+
+<h2>4 &middot; Early Game: Respect the Weakness</h2>
+<p><span class="tag t-ver">VERIFIED</span> She's weak levels 1–5: slower early clear, no escape tools, loses early duels — enemy junglers are told to punish her exactly then. So: don't contest early Scuttle into strong duelists, full-clear, hit your item spike (1–2 items), then flip aggressive. Post-Voltaic she wins most 1v1s — that's the Conqueror synergy and your cue to skirmish over every objective.</p>
+
+<h2>5 &middot; Ganking &amp; Snowballing</h2>
+<ul>
+<li><span class="tag t-ver">VERIFIED</span> <b>Post-6 ganks are her identity:</b> R is a 900-range point-and-click dive with a takedown recast — gank lanes with CC, kill, recast onto the second laner. Fast roam/pack mobility spreads leads across the map; isolated targets are the diet.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Snowball levers:</b> (1) picking up early kills → pivot rush from Voltaic to <img class="icon" src="img/item_6697.png" alt="">Hubris to compound gold; (2) Voltaic completing is the green light to force skirmishes and invade; (3) chain takedowns — R recast + Axiom Arc refunds turn one kill into multi-kill fights; (4) convert every gank into an objective (Dragon after bot ganks, Herald/grubs after top).</li>
+<li><span class="tag t-reason">REASONING</span> Same Hubris rule as mid: it needs guaranteed takedowns to out-value Voltaic's unconditional proc. 2–3 kills before first full item = Hubris window; even game = Voltaic.</li>
+</ul>
+
+<h2>6 &middot; Matchups (Jungle)</h2>
+<p><span class="tag t-ver">VERIFIED</span> The verified matchup table covers junglers only — Bel'Veth, Briar, Kayn, Nocturne, Hecarim, Rammus are the current meta opponents tracked on u.gg. <span class="tag t-reason">REASONING</span> Principles: early-duel monsters (Bel'Veth, Briar, Lee) beat you levels 1–5 — trade map-side, don't fight; scaling/farm junglers you out-tempo after Voltaic; Rammus is the classic "your whole kit is physical" counter — 92% physical damage means armor stackers blunt you; go Serylda's earlier or the Cleaver hybrid.</p>
+
+<h2>7 &middot; Balance History Cheat Sheet</h2>
+<table>
+<tr><th>Patch</th><th>Change</th><th>Practical effect</th></tr>
+<tr><td>26.03</td><td>Packmate monster damage 135% → 155%</td><td>The buff that made her a jungler</td></tr>
+<tr><td>26.04</td><td>Base HP regen 7.5→6.25 (growth 0.7→0.6); Q mana 55–75→50–90; E mana 35→40</td><td>Early sustain tax — first-clear health matters more</td></tr>
+<tr><td>26.10</td><td>Q vs bleeding targets 30/45/60/75/90 → 30/42.5/55/67.5/80 (max detonation 160 from 180); R base 150/250/350 → 150/225/300; passive monster mod trimmed to 145%; W mana up</td><td>Damage shave — she kills squishies fine, bruiser kills got slower</td></tr>
+</table>
+<p class="muted"><span class="tag t-ver">VERIFIED</span> against LoL Wiki patch history + Riot patch coverage; no reverts through 26.13.</p>
+
+<div class="footer">
+Compiled 2026-07-04 by Claude for Campbell (soup minion#NA1) &middot; Patch 26.13 &middot; Sources: lolalytics, u.gg, Blitz, Mobalytics, Skill-Capped, jungler.gg, LoL Wiki patch history &middot; 104-agent adversarially-verified research run &middot; Images © Riot Games via Data Dragon CDN, used under Riot's Legal Jibber Jabber for non-commercial fan content.
+</div>
+
+</body>
+</html>

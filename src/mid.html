@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Naafiri Mid — Patch 26.13 Guide</title>
+<style>
+  @page { size: letter; margin: 13mm 14mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DejaVu Sans", "Segoe UI", system-ui, sans-serif; color: #1a1418; margin: 0; font-size: 10.2pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "DejaVu Serif", serif; color: #5e1220; margin: 0 0 6px 0; }
+  h2 { font-size: 15pt; border-bottom: 2px solid #8a1c2e; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #7a2233; margin-top: 14px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  .cover { position: relative; margin: -13mm -14mm 8mm -14mm; overflow: hidden; }
+  .cover img.splash { width: 100%; display: block; }
+  .cover .titleblock { position: absolute; bottom: 0; left: 0; right: 0; padding: 26px 14mm 14px; background: linear-gradient(transparent, rgba(12,4,8,0.94) 55%); color: #f3e2d0; }
+  .cover h1 { color: #f3e2d0; font-size: 26pt; margin: 0; }
+  .cover .sub { color: #d8a25e; font-size: 11pt; margin-top: 2px; }
+  .tag { display: inline-block; font-size: 7.2pt; font-weight: 700; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+  .t-ver { background: #dcefdd; color: #1d5e2a; border: 1px solid #a7cfa9; }
+  .t-single { background: #fdf3d7; color: #7a5a12; border: 1px solid #e3ca8a; }
+  .t-reason { background: #e8e4f4; color: #45357c; border: 1px solid #beb3e0; }
+  .t-you { background: #fbe3e7; color: #8a1c2e; border: 1px solid #eab2bc; }
+  .box { border: 1px solid #d8c9cd; border-left: 4px solid #8a1c2e; background: #faf6f4; padding: 9px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+  .box.gold { border-left-color: #c99a3f; background: #fbf8ef; }
+  .box.purple { border-left-color: #6c57b8; background: #f7f5fc; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #5e1220; color: #f3e2d0; text-align: left; padding: 5px 8px; }
+  td { border-bottom: 1px solid #e2d6d9; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f4f5; }
+  .icon { width: 26px; height: 26px; border-radius: 4px; vertical-align: middle; margin-right: 6px; border: 1px solid #b99; }
+  .icon-lg { width: 34px; height: 34px; }
+  ul, ol { margin: 6px 0 6px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .kv { color: #7a2233; font-weight: 700; }
+  .muted { color: #6b5f63; font-size: 9pt; }
+  .flex { display: flex; gap: 12px; align-items: flex-start; }
+  .flex > div { flex: 1; }
+  .abil { display: flex; gap: 10px; margin: 10px 0; page-break-inside: avoid; }
+  .abil img { width: 44px; height: 44px; border-radius: 5px; border: 2px solid #8a1c2e; flex: none; }
+  .abil .body { flex: 1; }
+  .abil h3 { margin: 0; }
+  .footer { margin-top: 26px; padding-top: 8px; border-top: 1px solid #d8c9cd; font-size: 8.4pt; color: #6b5f63; }
+  .pagebreak { page-break-before: always; }
+  .checklist li { margin: 5px 0; }
+  code { background: #f1e9ea; padding: 0 4px; border-radius: 3px; font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img class="splash" src="img/splash.jpg" alt="Naafiri splash art">
+  <div class="titleblock">
+    <h1>Naafiri Mid</h1>
+    <div class="sub">A personalized guide for <b>soup minion#NA1</b> &middot; Patch 26.13 &middot; July 2026</div>
+  </div>
+</div>
+
+<p class="muted">Every claim in this guide is labeled. <span class="tag t-ver">VERIFIED</span> = confirmed by 3-vote adversarial fact-checking across independent sources. <span class="tag t-single">SINGLE SOURCE</span> = one reputable source, unverified elsewhere. <span class="tag t-reason">REASONING</span> = derived from current-patch numbers (Riot Data Dragon 16.13.1) + game knowledge; sanity-check in the practice tool. <span class="tag t-you">YOUR DATA</span> = from your own match history (59 Naafiri games, season 2026).</p>
+
+<h2>The One-Paragraph Diagnosis</h2>
+<div class="box">
+<p><span class="tag t-you">YOUR DATA</span> You are already <b>good</b> at Naafiri mid: 62% win rate this season (66% over the last 7 days), 9.5 kills a game, solid damage. Your account sits at Gold 3 because of two leaks, and neither is mechanical: <b>kill participation of ~43%</b> (8 of 28 ranked losses at KP &le; 32%, including two 0% games), and losses that end at <b>~27 minutes</b> — <i>faster than your wins</i>. You are not falling off late; you are farming while the map decides the game. Nearly everything in this guide funnels toward one skill: <b>converting your lane advantage into map presence between minutes 8 and 25.</b> Fix that and this champion carries you to Platinum — you've already peaked at Plat 2 this season.</p>
+</div>
+
+<h2>1 &middot; The Kit, As A Fighting Game</h2>
+<p><span class="tag t-ver">VERIFIED</span> Ability facts below confirmed against the LoL Wiki and Riot's Data Dragon API for patch 26.13. Fun fossil: the 25.06 midscope swapped W and R, and the API still shows it — the ultimate's internal ID is literally <code>NaafiriW</code>.</p>
+
+<div class="abil"><img src="img/passive.png" alt=""><div class="body">
+<h3>Passive — We Are More</h3>
+<p>Packmates spawn and attack whatever you attack. They're your damage multiplier and your Deathfire Touch applicator. They die to AoE — vs mages, they're also your skillshot shields.</p>
+</div></div>
+
+<div class="abil"><img src="img/Q.png" alt=""><div class="body">
+<h3>Q — Darkin Daggers <span class="muted">(9–7s CD, starts after 2nd cast)</span></h3>
+<p>Two casts. Q1 applies a bleed; Q2 detonates remaining bleed damage with a bonus that scales off missing health, and <b>heals you against champions</b>. The cooldown doesn't start until Q2 (or the 4s recast window lapses).</p>
+<p><b>FGC translation:</b> Q1 is your fireball — it's the poke and the conditioning tool. Q1 hit → Q2 is your <b>confirm</b>; treat the two as one input the way you'd never drop a combo after a stray hit. Your self-reported "missing Q" problem is a whiff-punish problem: you're throwing Q1 raw at neutral. Throw it when their movement is committed — as they step up to last-hit, during their cast animation, or after you've conditioned a dodge direction with two same-side throws (then aim at the dodge). A whiffed Q1 means your entire offense is on cooldown: back off like you just whiffed a DP.</p>
+</div></div>
+
+<div class="abil"><img src="img/W.png" alt=""><div class="body">
+<h3>W — The Call of the Pack <span class="muted">(26–18s CD)</span></h3>
+<p>Summons extra packmates, empowers the pack, and starts a "hunt" window. <b>It has no takedown reset</b> — the 25.06 rework removed that explicitly (its one R interaction: casting R extends the hunt by 1.75s). Use it as your all-in steroid, cast <i>before</i> you commit so the extra hounds join the full route.</p>
+</div></div>
+
+<div class="abil"><img src="img/E.png" alt=""><div class="body">
+<h3>E — Eviscerate <span class="muted">(11–7s CD, 450 range dash)</span></h3>
+<p>Dash + AoE damage in two hits. It's your gap-closer <i>and</i> your only defensive tool.</p>
+<p><b>FGC translation:</b> E is a resource like meter. Dashing in with E is spending your only movement option — if their answer (Zed R, Ahri charm, exhaust) is still up, you've jumped in on a shoto holding down-back. In poke lanes, <b>hold E to dodge the return skillshot</b> after you Q — that's your read-based sidestep. E used aggressively is a hard commit; E held is a reversal threat that changes how they play.</p>
+</div></div>
+
+<div class="abil"><img src="img/R.png" alt=""><div class="body">
+<h3>R — Hounds' Pursuit <span class="muted">(110/95/80s CD, 900 range)</span></h3>
+<p><span class="tag t-ver">VERIFIED</span> You were right: <b>the takedown reward lives on R.</b> Champion takedown within 7s of casting → a reveal pulse around Naafiri <b>and one free recast within 12s</b>; the recast also grants a 3s shield (100/150/200 + 150% bonus AD). This is the reset engine: kill one target, immediately have a shielded second engage. Stack it with Axiom Arc's ult-CD refund (also takedown-triggered) and a good fight gives you R → kill → free R → kill → half your ult CD already back.</p>
+<p><b>FGC translation:</b> the recast is your okizeme — the first kill isn't the end of the sequence, it's the knockdown. Before you press R the first time, already know who the <i>second</i> target is.</p>
+</div></div>
+
+<h2>2 &middot; Runes: An Honest Reality Check</h2>
+<p><span class="tag t-ver">VERIFIED</span> What the current-patch data actually says about mid keystones (Emerald+, patch 26.13):</p>
+<table>
+<tr><th></th><th>Keystone</th><th>Status on Naafiri mid</th><th>Evidence</th></tr>
+<tr><td><img class="icon" src="img/rune_electrocute.png" alt=""></td><td><b>Electrocute</b></td><td>Most-picked keystone</td><td>53.65% WR, 23.7k games (lolalytics)</td></tr>
+<tr><td><img class="icon" src="img/rune_hob.png" alt=""></td><td><b>Hail of Blades</b></td><td>u.gg's recommended page (Domination + Sorcery: Transcendence/Scorch)</td><td>50.8% WR, 13.5k matches (u.gg)</td></tr>
+<tr><td><img class="icon" src="img/rune_dft.png" alt=""></td><td><b>Deathfire Touch</b></td><td>Real, current, but a <b>niche variant</b> — u.gg lists it only as an alternate "AD" page (paired with Eclipse); Master-tier DFT VODs exist on 26.13</td><td>One u.gg sample: 43.2% WR, 3.1k games</td></tr>
+<tr><td><img class="icon" src="img/rune_dh.png" alt=""></td><td><b>Dark Harvest</b></td><td>Third displayed option</td><td>lolalytics</td></tr>
+</table>
+
+<p><span class="tag t-ver">VERIFIED</span> <b>Deathfire Touch, precisely:</b> re-added in patch 26.9 (April 29, 2026) as a Sorcery keystone. Ability damage <i>or pet damage</i> burns for 1.5–6.53 (+3.5% bonus AD, +1.25% AP) magic damage per 0.5s tick; pet hits refresh a 1s burn, so your hounds keep it rolling constantly — that's the Naafiri hook. <b>But it was nerfed in 26.11</b>: damage changed from adaptive to <i>magic-only</i>, specifically to kill a Black Cleaver synergy. It's weaker for full-AD builds than when you first picked it up.</p>
+
+<div class="box">
+<h3>What this means for you <span class="tag t-you">YOUR DATA</span></h3>
+<p>You run DFT in 38 of 59 games at a personal 62% — you have made a niche page work, and it fits your poke-and-condition style perfectly. Nobody should tell you to drop a winning formula mid-streak. But the aggregate gap (DFT sample 43% vs Electrocute 53.65%) is large enough that it's probably not all sample noise. The experiment worth running: <b>20 games of Electrocute</b> — you already play it (14 games this season), and it's the lowest-friction switch: same Domination tree as your Electrocute page, same poke pattern, except your Q1 → packmate hits → Q2 <i>already procs it at range</i>. It rewards exactly the trade pattern you already run, but front-loads the damage instead of DoT-ing it. Keep DFT as your comfort pick into heavy-poke mirror lanes where the burn out-values burst.</p>
+</div>
+
+<div class="box purple">
+<h3>Hail of Blades: the "how do I go in" problem <span class="tag t-reason">REASONING</span></h3>
+<p>You said HoB feels stronger but you don't know how to use it in lane. That instinct is right — HoB is an <b>all-in keystone</b>, and the discomfort is because it demands a different game: it does nothing until you commit to autoattack range, which your poke style never enters on purpose.</p>
+<p>Think of it as a <b>preplanned combo route off a conditioning read</b> — the throw after they've been conditioned to block. The route:</p>
+<ol>
+<li><b>Condition first (minutes 1–5):</b> poke with Q1 exactly as you do now. You're training them to respect the fireball and hold their dash/shield for it.</li>
+<li><b>The read:</b> when they're ~60% HP and their answer is down (they just used their dash/shield on a Q, or wasted it farming), that's the throw window.</li>
+<li><b>The route (drill 10 reps in practice tool until it's muscle memory):</b> W (pre-cast) → E in → <b>AA-AA-AA</b> (the three HoB autos — this is the part poke players skip) → Q1 → Q2 detonate → R if they flash. The three autos + pack hits are most of HoB's value; going in with abilities only wastes the keystone.</li>
+<li><b>Post-6:</b> the same route but R is the opener from 900 range, and a kill hands you the shielded recast — your escape is built into the confirm.</li>
+</ol>
+<p>Adopt it in normals first. Until the AA-weave is automatic, HoB games will feel worse than DFT games — that's execution, not the keystone.</p>
+</div>
+
+<h2>3 &middot; Items</h2>
+<p><span class="tag t-ver">VERIFIED</span> The standard 26.13 mid path — and the one you already build:</p>
+<table>
+<tr><th>Slot</th><th>Item</th><th>Why</th></tr>
+<tr><td>Start</td><td><img class="icon" src="img/item_1055.png" alt="">Doran's Blade</td><td>Your standard start; components: Serrated Dirk first back if you can afford it.</td></tr>
+<tr><td>1</td><td><img class="icon" src="img/item_6699.png" alt=""><b>Voltaic Cyclosword</b> (3000g) <span class="muted">or Hubris — see §4</span></td><td>Energized proc adds burst to every engage; 56.7% WR, and u.gg/Mobalytics both open with it.</td></tr>
+<tr><td>Boots</td><td><img class="icon" src="img/item_3008.png" alt="">Gluttonous Greaves</td><td>Standard (both aggregators' path).</td></tr>
+<tr><td>2</td><td><img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> (2750g)</td><td>Ult CD refund on takedown — the other half of your reset engine. 60.1% WR at slot 3-4.</td></tr>
+<tr><td>3</td><td><img class="icon" src="img/item_6694.png" alt=""><b>Serylda's Grudge</b> (3000g)</td><td>35% armor pen — the "bruisers become killable" item. Highest-sample 4th-slot pick (57.6% WR / 14.6k games).</td></tr>
+<tr><td>4–5</td><td><img class="icon" src="img/item_3814.png" alt="">Edge of Night &middot; <img class="icon" src="img/item_6333.png" alt="">Death's Dance &middot; <img class="icon" src="img/item_3026.png" alt="">GA &middot; <img class="icon" src="img/item_6695.png" alt="">Serpent's Fang</td><td>Situational — see §5.</td></tr>
+</table>
+<p class="muted">Caveat the verifiers insisted on: 4th/5th-slot win rates are survivorship-biased (games that reach item 4 were already being won). They tell you what's standard, not what causes wins.</p>
+
+<h2>4 &middot; Hubris vs Voltaic — The Actual Math</h2>
+<p><span class="tag t-reason">REASONING</span> The research verified that both are played first (lolalytics' path opens Hubris, u.gg's opens Voltaic) but no source survived verification explaining <i>when</i>. Here's the reasoning from current-patch tooltips (Data Dragon 16.13.1):</p>
+<table>
+<tr><th></th><th><img class="icon" src="img/item_6699.png" alt="">Voltaic Cyclosword — 3000g</th><th><img class="icon" src="img/item_6697.png" alt="">Hubris — 2800g</th></tr>
+<tr><td>Stats</td><td>55 AD, 10 lethality, 10 haste</td><td>55 AD, <b>18 lethality</b>, 10 haste</td></tr>
+<tr><td>Passive</td><td>Energized: ability hit → bonus current-HP physical damage + lethality for 4s. <b>Unconditional</b> — procs on every single engage.</td><td>Eminence: takedown → +12 AD (+3 per kill) for 90s. <b>Conditional</b> — literally zero passive value in a fight where nobody dies.</td></tr>
+</table>
+<p><b>The trade you're making:</b> Hubris is 200g cheaper and has more raw lethality on its stat line — its "lost kill power" is only the Energized proc. What the proc is worth: it's front-loaded burst attached to your <i>first</i> ability hit, i.e., it helps you kill someone from an even state. Hubris's passive only pays out <i>after</i> the first kill — it makes kill #2 through #5 faster, and with 90s duration it's really a "keep fighting every wave" tempo item.</p>
+<div class="box gold">
+<h3>Decision rule</h3>
+<p><b>Voltaic is the default.</b> Buy Hubris over it only when takedowns are already guaranteed — you're 2–3 kills up before your first full item and the lane is unwinnable for them, or the enemy team is fighting you every wave. If you're rushing Hubris while <i>even</i>, you've bought an item whose passive needs kills to work, to get the kills it needs to work — circular, and why it's the snowball pivot, not the standard rush.</p>
+<p><b>How much gold is "an item ahead"?</b> Mid legendaries run 2750–3300g. A solo kill is 300g + ~2 waves the dead laner misses (~250–400g more in CS/XP swing) — call each clean solo kill a ~600g swing. So <b>roughly 3 uncontested solo kills ≈ one item of real advantage</b>, less if they were shutdowns against you. At 2–3 kills up by first back, you're more than half an item ahead — that's the Hubris window: it compounds a lead that already exists.</p>
+</div>
+
+<h2>5 &middot; Kill Thresholds by Item Spike</h2>
+<p><span class="tag t-reason">REASONING</span> No quantified thresholds survived fact-checking (an open question even for the community), so treat this as a calibrated starting point and verify against your own games. Assumes you land the full route (both Q casts — that's the swing factor).</p>
+<table>
+<tr><th>Your spike</th><th>Squishies (mages, ADCs, enchanters)</th><th>Bruisers/divers</th><th>Tanks</th></tr>
+<tr><td>Dirk + Boots (lvl 6–8)</td><td>Kill at &le;60–70% HP with full route + keystone; full-HP kill needs their misplay</td><td>Only with jungler help</td><td>No — don't try</td></tr>
+<tr><td><b>Voltaic done</b> (lvl 8–10)</td><td><b>Full-HP kill with R route</b> — this is your license to play assassin</td><td>Trade, don't all-in; kill at &le;60%</td><td>No</td></tr>
+<tr><td>+ Axiom Arc (2 items)</td><td>Kill through Flash (R recast catches the flash)</td><td>Killable at &le;75% if you dodge their key spell with E</td><td>No</td></tr>
+<tr><td>+ Serylda's (3 items)</td><td>Deleted on sight</td><td><b>Now real targets</b> — 35% armor pen is exactly the anti-bruiser stat</td><td>Still no. Serylda's slow is for kiting them, not killing them</td></tr>
+</table>
+<div class="box">
+<h3>Calibrate it yourself (5 minutes, practice tool)</h3>
+<p>Load practice tool, set a dummy to 1800 HP / 60 armor (a mid-game ADC), run your full route with your actual build, watch the damage. Repeat at 2600 HP / 120 armor (a bruiser). Do this once per patch — you'll stop guessing in game. In game, the fast check is Tab: <b>their armor grew faster than your lethality → they've left your kill list; find a squishier target.</b> Naafiri's identity is punishing <i>isolated, squishy</i> targets (verified) — walking past the Renekton to touch the Lux is the whole champion.</p>
+</div>
+
+<h2 class="pagebreak">6 &middot; Laning: Your Poke Game, Sharpened</h2>
+<p><span class="tag t-reason">REASONING</span> Your poke-until-under-tower pattern is genuinely correct for this kit — here's the structure around it:</p>
+<ul>
+<li><b>The poke loop:</b> Q1 when their movement commits (last-hit windows are the reliable tell) → packmates apply pressure → hold E to dodge the answer → step back. With Electrocute, add one auto or E when Q1 lands and the proc chunks; with DFT, the bleed+burn does the chip for you.</li>
+<li><b>Level 1–2:</b> Q at 1, E at 2. You win extended level-2 trades with the pack; most mids expect a passive Naafiri.</li>
+<li><b>The all-in conversion:</b> your current pattern's known weakness — pokes them low, they hug tower, you never cash in, their jungler resets the lane. Once they're at your kill threshold (§5), <i>commit or leave</i>: either run the full route under tower right as the wave tanks tower aggro, or — usually better — <b>shove and spend the advantage elsewhere</b> (§7). Poke that never converts to a kill, a plate, or a roam is just noise.</li>
+<li><b>Matchup archetypes</b> (no per-matchup data survived verification; principles only): vs <b>artillery mages</b>, your packmates eat skillshots and DFT-style patience wins — your comfort zone. vs <b>melee assassins</b> (Zed, Qiyana): whoever lands their opener wins; hold E strictly defensively pre-6, respect their 6 spike, this is the pure-reads matchup your FGC brain is built for. vs <b>bruisers/enchanted tops flexed mid</b>: poke freely, never all-in without Serylda's, shove and roam instead.</li>
+</ul>
+
+<h2>7 &middot; Roaming — Your #1 Improvement Area</h2>
+<p><span class="tag t-you">YOUR DATA</span> 43% kill participation. Eight losses at KP &le;32%. Losses ending at 27 minutes. Read those three numbers together and the story is: <b>lane won, map lost.</b> This section is the guide's core.</p>
+<p><span class="tag t-single">SINGLE SOURCE</span> The verified game plan (Mobalytics, 26.13): <i>start looking for roams after pushing the wave; roaming opens at level 6; play around your ultimate — look for kills whenever R is up; gank bot, then rotate to Dragon.</i></p>
+<p><span class="tag t-reason">REASONING</span> The operating system around that:</p>
+<div class="box">
+<h3>The rule that fixes your KP</h3>
+<p><b>Every time your wave crashes into their tower, you owe the map a decision</b> — roam, invade with your jungler, deep ward, or hard reset. Standing in lane waiting for the wave to bounce back is the 43%-KP habit. You have ~25 seconds of paid time-off per crash; spend it somewhere every single time, even if "somewhere" is just a river ward and a look at Dragon.</p>
+</div>
+<ul>
+<li><b>When to roam (green lights):</b> wave crashed or slow-pushing away from you &middot; R up (your ganks are 900-range point-and-click — nearly unmissable) &middot; a side lane is pushing toward their own tower (targets overextended) &middot; an objective spawns within ~45s &middot; enemy mid just backed or died.</li>
+<li><b>When NOT to roam (red lights):</b> wave frozen against you (you donate 2 waves + plates) &middot; R down and target has escapes &middot; bot lane already dove under their tower. A failed roam costs more at your elo than a skipped one.</li>
+<li><b>Route choice:</b> default <b>bot-side</b> — it's the verified line (gank bot → take Dragon), and a bot-lane kill converts into an objective immediately. Gank top mainly when Herald/void grubs are up or top is your only winning lane.</li>
+<li><b>The Gold-elo cheat code:</b> supports walk the map alone in the mid game (verified: "capitalise on this to get yourself free kills"). A support face-checking river vision is a free 300g + a free objective for a champion with a 900-range targeted ult. Hunt wards; hunt the warder.</li>
+</ul>
+
+<h2>8 &middot; Ahead But Can't Close — The Conversion Playbook</h2>
+<p><span class="tag t-you">YOUR DATA</span> Your words, and your match history agrees. The pattern in your losses isn't throwing fights — it's <b>kills that buy nothing</b>.</p>
+<p><span class="tag t-reason">REASONING</span> Kills are currency, not score. After every pick, in the 10 seconds while they're grey-screened, ask: <b>what did this kill just buy?</b> The menu, in order:</p>
+<ol>
+<li><b>An objective.</b> Dragon/Herald/Baron if numbers allow. This is the verified core loop (gank → rotate to Drake).</li>
+<li><b>A tower or plates.</b> Mid tower first — it opens the whole map for the pick game.</li>
+<li><b>Vision.</b> Sweep + deep ward their jungle entrances; the next pick comes from this darkness. (Picks before objectives is standard assassin macro.)</li>
+<li><b>A crashed wave somewhere.</b> Worst acceptable answer — never just recall on a kill with 40s of numbers advantage on the clock.</li>
+</ol>
+<div class="box gold">
+<h3>Mid-game plan when ahead (2+ items, 15–25 min)</h3>
+<p><span class="tag t-single">SINGLE SOURCE</span> Side-lane and pressure towers; punish lone supports and rotators; you "easily take down squishy champions in the mid game." <span class="tag t-reason">REASONING</span> Structure it as a loop: <b>push side wave → ward the flank → look mid for a pick with R up → objective on the pick → back to a side lane.</b> Each lap of that loop is 60–90 seconds and each one either gains map or gains gold. The failure mode in your losses is exiting the loop — farming a quiet side lane while the enemy groups 5 and takes mid. If the enemy grouped and you can't get a pick: <b>join your team immediately.</b> A 2-item Naafiri grouped is scarier than a 3-item Naafiri arriving after the fight.</p>
+</div>
+<ul class="checklist">
+<li>&#9744; Win a fight at Dragon ≥3 spawns? Force the next fight <i>before</i> soul point, not at it.</li>
+<li>&#9744; 5k+ gold lead at 20 min? Group mid, take tower, end by 28 — your champ's best window (she "falls off a bit" late, verified).</li>
+<li>&#9744; Enemy has a fed carry? They are your only R target in every fight from now on.</li>
+</ul>
+
+<h2>9 &middot; Teamfights — Stop Dying Going In</h2>
+<p><span class="tag t-you">YOUR DATA</span> Pain point #2, and it interlocks with the first: low-KP players arrive at fights late and enter them badly.</p>
+<p><span class="tag t-reason">REASONING</span> Assassin entry rules, FGC-flavored:</p>
+<ul>
+<li><b>You are never the opener.</b> Entering first is jumping in on someone whose reversal is up. You enter on <i>whiffs</i>: the enemy's key CC (the hook, the Malphite R, the exhaust) just got used on someone else — that's your frame advantage; the route is now safe.</li>
+<li><b>Flank, don't funnel.</b> R is 900 range and point-and-click: you don't need to walk through the frontline. Fight from a side bush or the fog. Your late-game role (verified): flank the enemy <b>but stick near teammates</b> — the flank angle without the solo-side-lane isolation.</li>
+<li><b>Target selection is pre-decided:</b> squishiest reachable target, and the <i>next</i> one after it (the R recast needs a plan before the first cast). Never ult a full-HP bruiser "because he was closest" — check §5's threshold table.</li>
+<li><b>The exit is built in:</b> kill → R recast with its 100–200 (+150% bAD) shield → that's your combo escape, either onto target #2 or <i>backward</i> to a packmate-covered retreat. If the kill isn't certain, you have no exit — don't press the button.</li>
+<li><b>Item help if fights stay lethal:</b> Edge of Night's spell shield blocks the one ability (the hook, the snare) that usually kills you on entry — it most directly purchases what you're missing. Death's Dance/GA for 5th–6th. <span class="tag t-reason">REASONING</span> — the statistical case for defensive items got <i>refuted</i> in verification (survivorship bias), so buy them for the specific problem, not the win rate: if you're dying to burst-on-entry, EoN; to sustained damage, Death's Dance; if you're so fed the game rests on you, GA. A full bruiser build (Eclipse/Cleaver/Sterak's) exists but had no verified evidence behind it — entry timing, not items, is the real fix at your rank.</li>
+</ul>
+
+<h2>10 &middot; Game Plan by Stage — What Naafiri Wants</h2>
+<table>
+<tr><th>Stage</th><th>What she wants <span class="muted">(verified skeleton, single-source)</span></th><th>Your specific focus</th></tr>
+<tr><td><b>Early (0–8)</b></td><td>Farm, poke, survive to items; roams open at 6; play around R cooldown</td><td>Your best phase already — just convert poke into <i>something</i> (kill, plates, or a shove-roam) instead of letting it decay</td></tr>
+<tr><td><b>Mid (8–25)</b></td><td>Her prime. Side-lane tower pressure, delete lone squishies/supports, picks with R up, rotate off kills to Dragon/Herald</td><td><b>The KP fix lives here.</b> Run the §8 loop; every wave-crash triggers a map decision</td></tr>
+<tr><td><b>Late (25+)</b></td><td>"Falls off a bit as teams group." Grouped flanks near her team, punish rotations, one clean pick ends the game</td><td>Don't solo side-lane. One good R + recast on a carry <i>is</i> the win condition — play patient, like holding for one clean punish in round 3</td></tr>
+</table>
+
+<h2>11 &middot; What Didn't Survive Fact-Checking</h2>
+<p class="muted">Full transparency on the limits of this guide's evidence:</p>
+<ul class="muted">
+<li>Kill-thresholds-per-item, the Hubris/Voltaic decision, and gold-lead-per-item had <b>no verified sources</b> — §4–5 are reasoning from current-patch data, labeled as such.</li>
+<li>The statistical case for defensive/bruiser items was <b>refuted</b> (survivorship bias in late-slot win rates).</li>
+<li>The per-stage game plan rests on <b>one source</b> (Mobalytics' 26.13 guide) — it matches standard assassin macro, but treat details as coaching advice, not law.</li>
+<li>onetricks.gg and the Reddit communities you suggested contributed no claims that survived verification this pass — worth browsing r/NaafiriMains yourself for HoB routes; nothing there met the evidence bar.</li>
+<li>All aggregate stats are Emerald+, patch 26.13, and will drift next patch.</li>
+</ul>
+
+<div class="footer">
+Compiled 2026-07-04 by Claude for Campbell (soup minion#NA1) &middot; Patch 26.13 &middot; Sources: LoL Wiki, Riot patch notes 26.9/26.11, Riot Data Dragon 16.13.1, lolalytics, u.gg, Mobalytics, skill-capped; player data via op.gg/u.gg &middot; 100-agent adversarially-verified research run + 104-agent jungle-role run &middot; Images © Riot Games via Data Dragon CDN, used under Riot's Legal Jibber Jabber for non-commercial fan content.
+</div>
+
+</body>
+</html>
