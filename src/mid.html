@@ -121,16 +121,25 @@
   <div class="inner"><p class="muted"><span class="tag t-you">YOUR DATA</span> Your current page (38 games). Know its 26.11 nerf: the burn is now <b>magic-only</b> (was adaptive), so it no longer converts your AD as well. Packmate hits refresh a 1s burn — the DoT is real, but it pays out over seconds your all-ins don't wait for.</p></div>
 </div>
 
+<div class="setup">
+  <div class="head"><img class="icon" src="img/rune_dft.png" alt="">SETUP D — DFT Bruiser <span class="when">VS BULKY COMPS — 2+ divers/juggernauts, or no frontline on your team</span></div>
+  <table>
+    <tr><th style="width:23%">Primary — Sorcery</th><th style="width:27%">Secondary — Precision</th><th style="width:17%">Shards</th><th>Build order</th></tr>
+    <tr><td><b>Deathfire Touch</b><br>Manaflow Band<br>Transcendence<br>Scorch</td><td>Cut Down<br>Legend: Haste</td><td>Adaptive<br>Adaptive<br>Health</td><td>Doran's → Caulfield's → <img class="icon" src="img/item_6692.png" alt=""><b>Eclipse</b> → boots → <img class="icon" src="img/item_3071.png" alt=""><b>Black Cleaver</b> → <img class="icon" src="img/item_6333.png" alt=""><b>Death's Dance</b> → Spirit Visage → Endless Hunger <i>or</i> <img class="icon" src="img/item_3156.png" alt="">Maw (vs AP)</td></tr>
+  </table>
+  <div class="inner"><p class="muted"><span class="tag t-you">YOUR BUILD</span> — and it holds up better than the stat sites suggest: Eclipse, Black Cleaver, Death's Dance, Endless Hunger, and Maw all chart among lolalytics' popular/winning mid Naafiri items. Spirit Visage is the one off-meta piece — the logic is real (its 25% heal amp boosts your Q champion-heal of 45–105 +40% bAD, Death's Dance healing, and Endless Hunger omnivamp) but statistically unproven; it's also your only MR-with-HP slot, so it earns its place vs mixed damage. One honest note: patch 26.11 made the DFT burn magic-only <i>specifically</i> to break its Black Cleaver interaction — the burn no longer benefits from Cleaver shred. Cleaver still shreds for the ~92% of your kit that's physical, so the pairing stays coherent; it's just no longer the free-damage combo it was in 26.9–26.10. Expect slower kills than lethality (§5 thresholds drop roughly a spike) in exchange for surviving the collapse.</p></div>
+</div>
+
 <div class="box">
 <h3>Component cheat sheet — what to buy on each back <span class="tag t-ver">VERIFIED</span> <span class="muted">(recipes: Riot Data Dragon 16.13.1)</span></h3>
 <table>
 <tr><th>Component</th><th>Builds into</th><th>Buy it when</th></tr>
 <tr><td><img class="icon" src="img/item_2020.png" alt=""><b>The Brutalizer</b> (1337g)</td><td><b>Voltaic</b> (+2 Long Swords) and <b>Axiom Arc</b> (+Caulfield's) — the core uses <b>two</b></td><td>Default first back on Setups A/B</td></tr>
-<tr><td>Caulfield's Warhammer (1050g)</td><td>Axiom Arc, Serylda's, Hubris, Eclipse</td><td>Second back, or first back on Setup C</td></tr>
+<tr><td>Caulfield's Warhammer (1050g)</td><td>Axiom Arc, Serylda's, Hubris, Eclipse</td><td>Second back, or first back on Setups C/D</td></tr>
 <tr><td><img class="icon" src="img/item_3134.png" alt="">Serrated Dirk (1000g)</td><td>Hubris, Edge of Night, Collector — <b>NOT Voltaic</b></td><td>Only when pivoting Hubris (&sect;4) or an EoN/Collector slot</td></tr>
 <tr><td>Last Whisper (1450g)</td><td>Serylda's Grudge</td><td>Third-item territory</td></tr>
 </table>
-<p class="muted">Boots: Gluttonous Greaves (1000g) upgrades into <b>Immortal Path</b> — take the upgrade when it unlocks (it's the boots line in 30 of your games). Note lolalytics' most-common mid line opens <b>Hubris → Greaves → Voltaic</b> instead; op.gg and u.gg both open Voltaic, and Voltaic-first is what your winning games run — treat Hubris-first as the snowball variant, per &sect;4.</p>
+<p class="muted"><b>Boots timing:</b> every verified sequence (op.gg, u.gg, lolalytics) slots completed boots as the <b>second full purchase</b>, right after the first legendary — so: basic Boots (300g) on an early back only if you have spare gold and the lane punishes slow feet (skillshot mids), Gluttonous Greaves completed after Voltaic (or after Hubris on the lolalytics line), <b>Immortal Path</b> upgrade whenever it unlocks — it's the boots line in 30 of your games. (onetricks.gg purchase-timeline data was rate-limited on every attempt this session — the above is from verified build sequences instead; I can retry onetricks later.) Note lolalytics' most-common mid line opens <b>Hubris → Greaves → Voltaic</b>; op.gg and u.gg open Voltaic, and Voltaic-first is what your winning games run — treat Hubris-first as the snowball variant, per &sect;4.</p>
 </div>
 
 <div class="box gold">
@@ -163,19 +172,22 @@
 <p><b>Gold math:</b> a clean solo kill ≈ 600g swing (300g bounty + ~2 missed waves). Mid legendaries cost 2750–3300g, so <b>~3 uncontested solo kills ≈ one item of real advantage</b> — at 2–3 kills by first back you're past half an item, which is the Hubris window.</p>
 </div>
 
-<h2>5 &middot; Kill Thresholds by Spike</h2>
-<p><span class="tag t-reason">REASONING</span> — assumes the full route lands (both Q casts are the swing factor). Calibrate once per patch: practice-tool dummy at 1800 HP/60 armor (ADC), then 2600/120 (bruiser), run your route, watch the numbers.</p>
+<h2>5 &middot; Kill Thresholds by Spike — Computed</h2>
+<p><span class="tag t-reason">REASONING</span> Computed from current wiki ability values + Data Dragon item stats. Model: full rotation = R + E + Q1 (full bleed) + Q2 (average detonation) + 2 autos + ~3 hits per packmate + an Electrocute-tier keystone proc; no ignite, no target shards/MR/heals. Treat as ±10–15%.</p>
 <table>
-<tr><th>Spike</th><th>Squishies</th><th>Bruisers</th><th>Tanks</th></tr>
-<tr><td>Brutalizer + boots (6–8)</td><td>Kill at &le;60–70%</td><td>Jungler help only</td><td>Never — all guide rows</td></tr>
-<tr><td><b>Voltaic done</b> (8–10)</td><td><b>Full-HP with R route</b> — your assassin license</td><td>Trade only; kill &le;60%</td><td rowspan="3">Serylda's slow is for kiting them, not killing them. Tab check: their armor outgrowing your lethality = off your kill list.</td></tr>
-<tr><td>+ Axiom (2 items)</td><td>Kill through Flash (recast catches it)</td><td>&le;75% if you E-dodge their key spell</td></tr>
-<tr><td>+ Serylda's (3 items)</td><td>Deleted on sight</td><td><b>Real targets now</b> (35% armor pen)</td></tr>
+<tr><th>Spike</th><th>vs Squishy</th><th>vs Bruiser</th><th>vs Tank</th><th>Verdict</th></tr>
+<tr><td>Brutalizer + boots (lvl 8)</td><td><b>~68%</b> of their HP</td><td>—</td><td>—</td><td>Kill from ~65%; full-HP kills don't exist yet</td></tr>
+<tr><td><b>Voltaic done</b> (lvl 9–10)</td><td><b>~70%</b></td><td>~39%</td><td>—</td><td>Kill squishies from ~70% — <b>not</b> from full; bruisers are trades only</td></tr>
+<tr><td><b>+ Axiom Arc</b> (lvl 11)</td><td><b>~99%</b></td><td>~58%</td><td>—</td><td><b>The real assassin license: full-HP squishy dies to one R rotation.</b> Bruisers from ~60%</td></tr>
+<tr><td>+ Serylda's (lvl 13)</td><td><b>~118%</b></td><td>~64%</td><td>~43%</td><td>Squishies overkilled (a partly-missed Q still kills); bruisers from ~65%, or full-HP in an extended fight with a 2nd Q; tanks never — kite them with the Serylda's slow</td></tr>
 </table>
+<p><b>The R tax:</b> the same rotation without R does ~20–25% less (e.g. 2-item squishy: 99% → 76%). That's the "play around your ult timer" rule as a number — with R down you are a poke champion, not an assassin.</p>
+<p class="muted">Calibrate per patch in 5 min: practice-tool dummy at 1650 HP/65 armor, then 2300/120; run the full route with your real build. Tab check in game: their armor outgrowing your lethality = off your kill list.</p>
 
 <h2>6 &middot; Laning &amp; Roaming — The KP Fix</h2>
 <p><span class="tag t-you">YOUR DATA</span> 43% KP, low-KP losses at 27 min: lane won, map lost. This is the section that ranks you up.</p>
 <p><b>Lane:</b> your poke loop is right — Q1 at committed movement, packmates chip, hold E for the answer. Level 1–2 (Q→E) you win extended trades; most mids expect passive Naafiri. The one fix: poke that never becomes a kill, plates, or a roam is noise. Once they hit your &sect;5 threshold, <b>commit or leave</b> — usually leave: shove and spend the advantage elsewhere.</p>
+<p><b>Matchups</b> (lolalytics, current patch): hardest — <b>Riven, Talon, Qiyana</b>: melee ADs who win the early all-in. Play those like a Zed lane — E strictly defensive pre-6, concede the level-2/3 window, poke only after their gap-closer whiffs. Best — <b>LeBlanc, Ryze, Mel</b>: packmates eat their skillshots and your all-in outdamages theirs. General: artillery mages are your comfort zone; bruisers flexed mid — poke freely, no all-ins before Serylda's, shove and roam instead.</p>
 <div class="box">
 <p><b>The rule:</b> every wave crash into their tower = you owe the map a decision — <b>roam, invade with jungler, deep ward, or reset</b>. Never stand in lane waiting for the bounce. That wait is the 43%.</p>
 </div>
@@ -210,7 +222,7 @@
 </table>
 
 <div class="footer">
-Compiled 2026-07-04 &middot; rev 4 (build paths verified against Data Dragon 16.13.1 recipes; sequences cross-checked live on op.gg, lolalytics, u.gg) &middot; Patch 26.13, Emerald+ aggregates (will drift next patch) &middot; Kill thresholds, Hubris math, and gold-lead heuristics had no verified public sources — they're reasoning from Riot Data Dragon 16.13.1 tooltips, labeled REASONING; per-stage plan is single-source (Mobalytics) &middot; Other sources: LoL Wiki, Riot patch notes 26.9–26.11, lolalytics, u.gg, skill-capped; player data via op.gg/u.gg &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
+Compiled 2026-07-04 &middot; rev 5 (&sect;5 recomputed from wiki ability values + item stats; bruiser Setup D added; boots timing from verified sequences; matchup data added; skill order re-confirmed on op.gg: Q1/E2/W3, Q&gt;E&gt;W, 96% pick / 58% WR) &middot; Patch 26.13, Emerald+ aggregates (will drift next patch) &middot; Kill thresholds, Hubris math, and gold-lead heuristics had no verified public sources — they're reasoning from Riot Data Dragon 16.13.1 tooltips, labeled REASONING; per-stage plan is single-source (Mobalytics) &middot; Other sources: LoL Wiki, Riot patch notes 26.9–26.11, lolalytics, u.gg, skill-capped; player data via op.gg/u.gg &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
 </div>
 
 </body>
