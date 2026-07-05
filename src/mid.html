@@ -213,16 +213,114 @@
 <li>Still dying? Edge of Night next back (&sect;3). But entry timing, not items, is the real fix.</li>
 </ul>
 
-<h2>9 &middot; Game Plan by Stage</h2>
-<table>
-<tr><th>Stage</th><th>Naafiri wants <span class="muted">(single-source skeleton)</span></th><th>Your focus</th></tr>
-<tr><td><b>Early (0–8)</b></td><td>Farm, poke, hit items; roams open at 6; play around R timer</td><td>Already your best phase — convert poke into something concrete</td></tr>
-<tr><td><b>Mid (8–25)</b></td><td><b>Her prime.</b> Side-lane tower pressure, delete lone squishies, picks with R up, rotate kills into objectives</td><td>The KP fix (&sect;6–7). Every crash = a map decision</td></tr>
-<tr><td><b>Late (25+)</b></td><td>Falls off as teams group; grouped flanks, one pick ends it</td><td>Patient — one clean pick wins it. Wait for the right target like a late-game Rengar; no solo side-lanes</td></tr>
-</table>
+<h2>9 &middot; Game Plan by Stage — Decision Flowcharts</h2>
+<p class="muted">Skeleton verified per stage (Mobalytics 26.13, single source); decision structure is coaching reasoning. Read each chart top to bottom every time its trigger fires.</p>
+
+<h3>Early game (0–8): win the poke war, cash it in</h3>
+<p><b>Goals:</b> hit 1337g for Brutalizer by first back (~minute 6–8) &middot; keep CS ≥ 6.5/min (your winning games average 7.0) &middot; force their escape with poke, then commit once &middot; never trade while your Q is down.</p>
+<svg viewBox="0 0 700 330" style="width:100%; max-width:700px; display:block; margin:6px auto; page-break-inside:avoid;" font-family="DejaVu Sans, sans-serif" font-size="10">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#5e1220"/></marker></defs>
+<g text-anchor="middle">
+<rect x="270" y="8" width="160" height="30" rx="6" fill="#f1e9ea" stroke="#5e1220"/><text x="350" y="27">Wave meets mid</text>
+<rect x="245" y="62" width="210" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="79">Target committed (last-hit step,</text><text x="350" y="90">cast animation)?</text>
+<rect x="40" y="66" width="130" height="30" rx="6" fill="#f1e9ea" stroke="#5e1220"/><text x="105" y="80">Farm. Hold E.</text><text x="105" y="91" font-size="8.5">Don't throw Q at neutral</text>
+<rect x="270" y="122" width="160" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="350" y="136">Poke: Q1 → Q2</text><text x="350" y="147" font-size="8.5">packmates chip, E held for answer</text>
+<rect x="500" y="122" width="170" height="30" rx="6" fill="#fbe3e7" stroke="#8a1c2e"/><text x="585" y="136">Q1 whiffed?</text><text x="585" y="147" font-size="8.5">8s full defensive — no E, no trades</text>
+<rect x="230" y="178" width="240" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="195">At &sect;5 kill threshold AND their</text><text x="350" y="206">dash/shield down?</text>
+<rect x="245" y="236" width="210" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="253">Post-6 with R up?</text><text x="350" y="264" font-size="8.5">(no R = you're a poke champ, &sect;5)</text>
+<rect x="60" y="238" width="150" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="135" y="252">Commit ONCE: full route</text><text x="135" y="263" font-size="8.5">W → E → (AAs) → Q1-Q2 → R</text>
+<rect x="200" y="292" width="300" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="350" y="306">Kill or shove → plates → back at 1337g+: Brutalizer</text><text x="350" y="317" font-size="8.5">(Dirk instead ONLY if 2–3 kills up → Hubris line, &sect;4)</text>
+</g>
+<g stroke="#5e1220" fill="none" marker-end="url(#ar)">
+<line x1="350" y1="38" x2="350" y2="60"/>
+<line x1="245" y1="79" x2="172" y2="80"/>
+<line x1="350" y1="96" x2="350" y2="120"/>
+<line x1="430" y1="137" x2="498" y2="137"/>
+<line x1="350" y1="152" x2="350" y2="176"/>
+<line x1="470" y1="195" x2="560" y2="195"/><line x1="560" y1="195" x2="560" y2="154" stroke-dasharray="3,3" marker-end="none"/>
+<line x1="350" y1="212" x2="350" y2="234"/>
+<line x1="245" y1="253" x2="212" y2="253"/>
+<line x1="135" y1="268" x2="135" y2="307"/><line x1="135" y1="307" x2="198" y2="307" marker-end="none"/>
+<line x1="455" y1="253" x2="520" y2="253" marker-end="none"/><line x1="520" y1="253" x2="520" y2="300" stroke-dasharray="3,3"/>
+</g>
+<g font-size="8.5" fill="#5e1220">
+<text x="200" y="74">no</text><text x="358" y="110">yes</text>
+<text x="440" y="132">miss</text>
+<text x="500" y="190">no — keep poking</text>
+<text x="358" y="226">yes</text>
+<text x="222" y="247">yes</text><text x="460" y="248">no — wait, poke</text>
+</g>
+</svg>
+
+<h3>Mid game (8–25): her prime — the phase your losses happen in</h3>
+<p><b>Goals:</b> KP above 50% from here on &middot; every R cooldown spent on a gank, pick, or objective setup &middot; two items by ~16 min in a winning game &middot; cash every kill within 30s (&sect;7 menu).</p>
+<svg viewBox="0 0 700 330" style="width:100%; max-width:700px; display:block; margin:6px auto; page-break-inside:avoid;" font-family="DejaVu Sans, sans-serif" font-size="10">
+<defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#5e1220"/></marker></defs>
+<g text-anchor="middle">
+<rect x="255" y="8" width="190" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="25">Wave crashed their tower?</text><text x="350" y="36" font-size="8.5">(the trigger — fires every ~90s)</text>
+<rect x="40" y="10" width="150" height="30" rx="6" fill="#f1e9ea" stroke="#5e1220"/><text x="115" y="24">Shove first.</text><text x="115" y="35" font-size="8.5">Never roam off a frozen wave</text>
+<rect x="500" y="8" width="180" height="34" rx="6" fill="#fbe3e7" stroke="#8a1c2e"/><text x="590" y="25">Enemy 5 grouping mid?</text><text x="590" y="36" font-size="8.5">JOIN TEAM NOW — overrides all</text>
+<rect x="250" y="66" width="200" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="83">Objective (drake/grubs/Herald)</text><text x="350" y="94">spawning ≤ 45s?</text>
+<rect x="40" y="68" width="160" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="120" y="82">Ward it early + hunt the warder</text><text x="120" y="93" font-size="8.5">lone support = free 300g + objective</text>
+<rect x="285" y="124" width="130" height="30" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="142">R up?</text>
+<rect x="480" y="124" width="190" height="30" rx="6" fill="#f1e9ea" stroke="#5e1220"/><text x="575" y="138">Deep ward + reset or safe side farm</text><text x="575" y="149" font-size="8.5">no pick attempts with R down (&sect;5)</text>
+<rect x="240" y="180" width="220" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="197">Pick available? (lone support,</text><text x="350" y="208">rotator in fog, overextended bot)</text>
+<rect x="40" y="182" width="160" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="120" y="196">Roam BOT → gank → Dragon</text><text x="120" y="207" font-size="8.5">default route; top only for Herald/grubs</text>
+<rect x="270" y="238" width="160" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="350" y="252">Take the pick</text><text x="350" y="263" font-size="8.5">R → kill → shielded recast ready</text>
+<rect x="180" y="292" width="340" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="350" y="306">CASH IT within 30s: objective &gt; tower/plates &gt; vision &gt; wave</text><text x="350" y="317" font-size="8.5">never just recall on a kill — that's the 43%-KP habit</text>
+</g>
+<g stroke="#5e1220" fill="none" marker-end="url(#ar2)">
+<line x1="255" y1="25" x2="192" y2="25"/><line x1="115" y1="40" x2="115" y2="55" marker-end="none"/><line x1="115" y1="55" x2="330" y2="60" stroke-dasharray="3,3"/>
+<line x1="350" y1="42" x2="350" y2="64"/>
+<line x1="250" y1="83" x2="202" y2="83"/>
+<line x1="350" y1="100" x2="350" y2="122"/>
+<line x1="415" y1="139" x2="478" y2="139"/>
+<line x1="350" y1="154" x2="350" y2="178"/>
+<line x1="240" y1="197" x2="202" y2="197"/>
+<line x1="350" y1="214" x2="350" y2="236"/>
+<line x1="350" y1="268" x2="350" y2="290"/>
+<line x1="120" y1="212" x2="120" y2="307" marker-end="none"/><line x1="120" y1="307" x2="178" y2="307"/>
+</g>
+<g font-size="8.5" fill="#5e1220">
+<text x="212" y="20">no</text><text x="358" y="56">yes</text>
+<text x="215" y="78">yes</text><text x="358" y="114">no</text>
+<text x="430" y="133">no</text><text x="358" y="170">yes</text>
+<text x="212" y="192">no</text><text x="358" y="228">yes</text>
+</g>
+</svg>
+
+<h3>Late game (25+): one clean pick ends it</h3>
+<p><b>Goals:</b> zero solo deaths (death timers are 40–60s — one mistake is Baron + the game) &middot; stay within one screen of your team &middot; every fight entry pre-planned: target #1, target #2, exit. She falls off as teams group <span class="tag t-single">SINGLE SOURCE</span> — you're not the win condition in a 40-min game, your <i>one pick</i> is.</p>
+<svg viewBox="0 0 700 290" style="width:100%; max-width:700px; display:block; margin:6px auto; page-break-inside:avoid;" font-family="DejaVu Sans, sans-serif" font-size="10">
+<defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#5e1220"/></marker></defs>
+<g text-anchor="middle">
+<rect x="285" y="8" width="130" height="30" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="26">With your team?</text>
+<rect x="490" y="8" width="180" height="30" rx="6" fill="#fbe3e7" stroke="#8a1c2e"/><text x="580" y="22">Get there. No solo side lanes.</text><text x="580" y="33" font-size="8.5">shove ONLY with numbers info + TP-safe</text>
+<rect x="250" y="62" width="200" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="79">R up + target #2 planned?</text><text x="350" y="90" font-size="8.5">(recast plan before first cast)</text>
+<rect x="490" y="64" width="180" height="30" rx="6" fill="#f1e9ea" stroke="#5e1220"/><text x="580" y="78">HOLD. Q poke only.</text><text x="580" y="89" font-size="8.5">R down = poke champion (&sect;5)</text>
+<rect x="240" y="120" width="220" height="34" rx="16" fill="#fdf3d7" stroke="#c99a3f"/><text x="350" y="137">Their carry reachable — flank angle</text><text x="350" y="148">open, their key CC spent?</text>
+<rect x="490" y="122" width="180" height="30" rx="6" fill="#f1e9ea" stroke="#5e1220"/><text x="580" y="136">Wait in fog with team.</text><text x="580" y="147" font-size="8.5">patience wins round 3 — don't force</text>
+<rect x="255" y="178" width="190" height="30" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="350" y="192">R the carry from the flank</text><text x="350" y="203" font-size="8.5">team follows your engage</text>
+<rect x="230" y="232" width="240" height="34" rx="6" fill="#dcefdd" stroke="#1d5e2a"/><text x="350" y="249">Kill → shielded recast → target #2</text><text x="350" y="260" font-size="8.5">then: Baron / Elder / mid push — END, don't reset</text>
+</g>
+<g stroke="#5e1220" fill="none" marker-end="url(#ar3)">
+<line x1="415" y1="23" x2="488" y2="23"/><line x1="580" y1="38" x2="580" y2="52" marker-end="none"/><line x1="580" y1="52" x2="420" y2="58" stroke-dasharray="3,3"/>
+<line x1="350" y1="38" x2="350" y2="60"/>
+<line x1="450" y1="79" x2="488" y2="79"/>
+<line x1="350" y1="96" x2="350" y2="118"/>
+<line x1="460" y1="137" x2="488" y2="137"/><line x1="580" y1="152" x2="580" y2="164" marker-end="none"/><line x1="580" y1="164" x2="430" y2="130" stroke-dasharray="3,3" marker-end="none"/>
+<line x1="350" y1="154" x2="350" y2="176"/>
+<line x1="350" y1="208" x2="350" y2="230"/>
+</g>
+<g font-size="8.5" fill="#5e1220">
+<text x="430" y="18">no</text><text x="358" y="52">yes</text>
+<text x="462" y="74">no</text><text x="358" y="110">yes</text>
+<text x="468" y="132">no</text><text x="358" y="168">yes</text>
+</g>
+</svg>
 
 <div class="footer">
-Compiled 2026-07-04 &middot; rev 5 (&sect;5 recomputed from wiki ability values + item stats; bruiser Setup D added; boots timing from verified sequences; matchup data added; skill order re-confirmed on op.gg: Q1/E2/W3, Q&gt;E&gt;W, 96% pick / 58% WR) &middot; Patch 26.13, Emerald+ aggregates (will drift next patch) &middot; Kill thresholds, Hubris math, and gold-lead heuristics had no verified public sources — they're reasoning from Riot Data Dragon 16.13.1 tooltips, labeled REASONING; per-stage plan is single-source (Mobalytics) &middot; Other sources: LoL Wiki, Riot patch notes 26.9–26.11, lolalytics, u.gg, skill-capped; player data via op.gg/u.gg &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
+Compiled 2026-07-04 &middot; rev 6 (per-phase flowcharts added; &sect;5 recomputed from wiki ability values + item stats; bruiser Setup D added; boots timing from verified sequences; matchup data added; skill order re-confirmed on op.gg: Q1/E2/W3, Q&gt;E&gt;W, 96% pick / 58% WR) &middot; Patch 26.13, Emerald+ aggregates (will drift next patch) &middot; Kill thresholds, Hubris math, and gold-lead heuristics had no verified public sources — they're reasoning from Riot Data Dragon 16.13.1 tooltips, labeled REASONING; per-stage plan is single-source (Mobalytics) &middot; Other sources: LoL Wiki, Riot patch notes 26.9–26.11, lolalytics, u.gg, skill-capped; player data via op.gg/u.gg &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
 </div>
 
 </body>
