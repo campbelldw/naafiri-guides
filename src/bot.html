@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Naafiri Bot — Patch 26.13 Guide</title>
+<style>
+  @page { size: letter; margin: 13mm 14mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DejaVu Sans", "Segoe UI", system-ui, sans-serif; color: #1a1610; margin: 0; font-size: 10.2pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "DejaVu Serif", serif; color: #6e4a10; margin: 0 0 6px 0; }
+  h2 { font-size: 15pt; border-bottom: 2px solid #a06b18; padding-bottom: 3px; margin-top: 20px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #7d5a1e; margin-top: 12px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  .cover { position: relative; margin: -13mm -14mm 8mm -14mm; overflow: hidden; }
+  .cover img.splash { width: 100%; display: block; }
+  .cover .titleblock { position: absolute; bottom: 0; left: 0; right: 0; padding: 26px 14mm 14px; background: linear-gradient(transparent, rgba(14,10,3,0.94) 55%); color: #f3ead6; }
+  .cover h1 { color: #f3ead6; font-size: 26pt; margin: 0; }
+  .cover .sub { color: #d8b05e; font-size: 11pt; margin-top: 2px; }
+  .tag { display: inline-block; font-size: 7.2pt; font-weight: 700; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+  .t-ver { background: #dcefdd; color: #1d5e2a; border: 1px solid #a7cfa9; }
+  .t-single { background: #fdf3d7; color: #7a5a12; border: 1px solid #e3ca8a; }
+  .t-reason { background: #e8e4f4; color: #45357c; border: 1px solid #beb3e0; }
+  .box { border: 1px solid #dcd0ba; border-left: 4px solid #a06b18; background: #faf7f0; padding: 9px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+  .box.red { border-left-color: #8a1c2e; background: #faf4f4; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #6e4a10; color: #f3ead6; text-align: left; padding: 5px 8px; }
+  td { border-bottom: 1px solid #e5dcc9; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f6ef; }
+  .icon { width: 24px; height: 24px; border-radius: 4px; vertical-align: middle; margin-right: 5px; border: 1px solid #ba9; }
+  ul, ol { margin: 6px 0 6px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .muted { color: #6b6355; font-size: 9pt; }
+  .setup { border: 2px solid #a06b18; border-radius: 6px; margin: 12px 0; page-break-inside: avoid; overflow: hidden; }
+  .setup .head { background: #6e4a10; color: #f3ead6; padding: 6px 12px; font-weight: 700; font-size: 10.5pt; }
+  .setup .head .when { float: right; font-weight: 400; font-size: 8.6pt; color: #d8b05e; }
+  .setup table { margin: 0; }
+  .setup td, .setup th { font-size: 9.1pt; }
+  .setup .inner { padding: 4px 10px 8px; }
+  .footer { margin-top: 24px; padding-top: 8px; border-top: 1px solid #dcd0ba; font-size: 8.4pt; color: #6b6355; }
+  .pagebreak { page-break-before: always; }
+  .good { color: #1d5e2a; font-weight: 700; }
+  .bad { color: #8a1c2e; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img class="splash" src="img/splash.jpg" alt="Naafiri splash art">
+  <div class="titleblock">
+    <h1>Naafiri Bot</h1>
+    <div class="sub">Companion guide for <b>soup minion#NA1</b> &middot; Patch 26.13 &middot; July 2026</div>
+  </div>
+</div>
+
+<p class="muted">Labels: <span class="tag t-ver">VERIFIED</span> multi-source / re-fetched &middot; <span class="tag t-single">SINGLE SOURCE</span> &middot; <span class="tag t-reason">REASONING</span>. Kit, combos, and item encyclopedia live in the mid guide. <b>Read the sample sizes here</b> — bot is 0.6% of her games; nothing bot-specific has mid-sized data.</p>
+
+<h2>The honest verdict first</h2>
+<div class="box">
+<p><span class="tag t-ver">VERIFIED</span> Naafiri bot (carry position) is a <b>legitimate niche pick, not a troll pick — but the data is thin and split</b>: lolalytics has her at 52.8% over 1,290 Emerald+ games; skill-capped's cut says 48.0% over 999. Truth: somewhere in "roughly even, playable when conditions are right." Pick it when the enemy botlane is <b>immobile and low-poke</b>; don't first-pick it. <b>Naafiri support is a troll pick: 43.3% over 1,059 games</b> — the one role verdict in this project that isn't close.</p>
+</div>
+
+<h2>1 &middot; Why it works — and why it sometimes doesn't</h2>
+<p><span class="tag t-reason">REASONING</span> (no site publishes duo-lane data at this sample size, so this section is mechanics, labeled as such):</p>
+<ul>
+<li><b>Works:</b> 900-range Q poke outranges every ADC's autos; packmates eat the skillshots that supports throw; Gluttonous omnivamp + Q heal out-sustains most 2v2 poke; and post-6, a point-and-click 900-range R onto an ADC — in a lane where both targets are squishy — is a permanent 2-for-0 threat. The R-reset weave (&sect;1b mid) is <i>better</i> in a 2v2 than anywhere else: two kills are standing next to each other.</li>
+<li><b>Doesn't:</b> duo XP delays level 6 by ~2–3 minutes — and post-midscope, <b>level 6 is her entire engage pattern</b> (the dash is her R). Pre-6 she is a poke bully with no gap closer and no escape past E. Artillery poke she can't dodge (Ziggs, Senna, Brand support) drains her before 6 ever matters, and hyper-all-in duos (Samira, Nilah + engage support) fight her at level 2 where she's weakest.</li>
+</ul>
+
+<h2>2 &middot; Runes &amp; Build</h2>
+<div class="setup">
+  <div class="head"><img class="icon" src="img/rune_hob.png" alt="">BOT — the one setup <span class="when">same assassin package — she does not build marksman items</span></div>
+  <table>
+    <tr><th style="width:23%">Primary — Domination</th><th style="width:27%">Secondary — Precision</th><th style="width:17%">Shards</th><th>Build order</th></tr>
+    <tr><td><b>Hail of Blades</b><br>Sudden Impact<br>Grisly Mementos<br><b>Ultimate Hunter</b> <span class="muted">(bot swap — R uptime over gold)</span></td><td>Triumph<br>Cut Down</td><td>Adaptive<br>Adaptive<br>Health</td><td><img class="icon" src="img/item_1055.png" alt="">Doran's Blade → <img class="icon" src="img/item_2020.png" alt=""><b>Brutalizer</b> → <img class="icon" src="img/item_6699.png" alt=""><b>Voltaic</b> (55.5% / 722 g) → <img class="icon" src="img/item_3008.png" alt="">Glutt. Greaves (56.0%) → <img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> → <img class="icon" src="img/item_6694.png" alt=""><b>Serylda's</b> → EoN (59.1% as 5th) / Serpent's Fang vs enchanters</td></tr>
+  </table>
+  <div class="inner"><p class="muted"><span class="tag t-ver">VERIFIED</span> sequences / <span class="tag t-single">SINGLE SOURCE</span> exact WRs. Notes: op.gg's HoB cohort bot is mediocre (48.3%, 431 g) while a Sorcery-secondary Transcendence variant runs 54.2% (177 g) — and lolalytics' <i>highest-WR</i> bot page is <b>Summon Aery</b> (56.5%, 271 g), which fits the pre-6 poke-bully reality. Translation: in a lane that's poke-heavy, your mid DFT/Sorcery instincts may genuinely beat HoB here; the data is too thin to settle it, so run what matches your lane read. Your DFT page (mid Setup B) is untracked bot — nobody plays it — but its logic transfers.</p></div>
+</div>
+<p><b>Summoners</b> <span class="tag t-single">SINGLE SOURCE</span>: lolalytics' best-shown pair is <b>Flash + TP at 58.3%</b> (127 games) — pilots treat her as a transplanted solo-laner, TP-ing back to hold the poke lead. Skill-capped says Flash+Ignite. Either is defensible; Heal is not (your support can carry Heal).</p>
+
+<h2>3 &middot; Matchups — read the n's <span class="tag t-ver">VERIFIED</span></h2>
+<table>
+<tr><th style="width:26%">Matchup</th><th style="width:20%">Signal</th><th>Note</th></tr>
+<tr><td class="good">vs Caitlyn</td><td><b>58.2% over 110 games</b></td><td>The ONLY bot matchup clearing lolalytics' 100-game bar — and it's a stomp. Packmates shield the trap-headshot poke; post-6 R ignores her range advantage. If they lock Cait, Naafiri bot stops being a meme.</td></tr>
+<tr><td class="good">vs Ezreal 61.5 (n=52) &middot; Jinx 58.3 (48)</td><td>directional only</td><td>Immobile/passive carries she dives on cooldown.</td></tr>
+<tr><td class="bad">vs Ziggs 29.6 (27) &middot; Samira 32.1 (28) &middot; Senna ~29 (stale) &middot; Ashe 46.7 (45) &middot; Lucian ~46 (47)</td><td>directional only</td><td>The two death profiles: artillery poke and level-2 all-in. (Mobalytics lists Ziggs as a champ she <i>counters</i> — conflicting tiny samples; trust the pattern, not either number.)</td></tr>
+</table>
+
+<h2>4 &middot; Duo dynamics <span class="tag t-reason">REASONING</span></h2>
+<ul>
+<li><b>Best supports:</b> engage with CC that holds still (Leona, Nautilus, Rell) — their chain → your R is a guaranteed connect, and the takedown arms your recast onto the second target. The R-reset weave is the whole 2v2 win condition post-6.</li>
+<li><b>Also fine:</b> poke mages (Xerath, Lux) who make the lane a 900-range shooting gallery you're already best at.</li>
+<li><b>Awkward:</b> enchanters — you don't auto often enough to carry their buffs; and if the <i>enemy</i> runs an enchanter, buy Serpent's Fang (50% shield cut) by 3rd–4th.</li>
+<li><b>Lane rhythm:</b> pre-6, play it like your mid poke war (&sect;6 mid) with a bodyguard: Q on their support's engage cooldowns, W held for their all-in button. Post-6, every wave-crash owes the map the same &sect;6 decision — except your "roam" is usually the drake pit 20 seconds away.</li>
+</ul>
+
+<div class="box red">
+<h3>Support Naafiri — the data says no <span class="tag t-ver">VERIFIED</span></h3>
+<p>43.3% WR over 1,059 games; her <i>best</i> support rune page wins 44%. No gold = no lethality spikes = a champion whose entire kit scales on bonus AD, with no bonus AD. The one-line verdict: if you want Naafiri and got autofilled support, that's what role swaps and dodges are for.</p>
+</div>
+
+<div class="footer">
+Compiled 2026-07-05 (Phase 2) &middot; Patch 26.13 &middot; Stats: lolalytics Emerald+ bot/support cuts + tier=all item rows, op.gg ADC cut, skill-capped ADC page (all re-fetched 2026-07-05); every sub-100-game figure labeled directional &middot; Duo-lane dynamics are REASONING — no site publishes pairing data at this sample size &middot; Kit/recipes: Riot Data Dragon 16.13.1 + LoL Wiki &middot; Companion to the mid guide &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
+</div>
+</body>
+</html>

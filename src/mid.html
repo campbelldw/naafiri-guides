@@ -77,69 +77,92 @@
 </div></div>
 
 <div class="abil"><img src="img/W.png" alt=""><div class="body">
-<h3>W — The Call of the Pack <span class="muted">(26–18s CD)</span></h3>
-<p>Summons extra packmates and starts a hunt window. All-in steroid — cast <i>before</i> committing so the hounds join the full route.</p>
+<h3>W — The Call of the Pack <span class="muted">(22–18s CD)</span></h3>
+<p>On cast: <b>1s untargetability</b> (your only one — see R), then a 5s hunt: <b>+20% bonus AD</b>, faster packmates, and <b>2 extra packmates arriving 1.25s after cast</b>. You can move during the 0.75s cast, and each R cast extends the hunt 1.75s. All-in steroid <i>and</i> defensive cooldown in one button — the timing rules are in &sect;1b. <span class="tag t-ver">VERIFIED</span></p>
 </div></div>
 
 <div class="abil"><img src="img/E.png" alt=""><div class="body">
 <h3>E — Eviscerate <span class="muted">(11–7s CD, 450 dash)</span></h3>
-<p>Dash + two-hit AoE; your gap-closer and only escape. Count their answers before spending it: E-ing in while their charm/hook/exhaust is up is diving without a dash home — the mistake every Akali makes once per game. In poke lanes, hold E to sidestep the return skillshot after your Q; a held E also changes how they play, the same way an unused Fizz E does.</p>
+<p>Dash + two-hit AoE, no cast time; <b>gains bonus range through terrain — a real wall-hop</b> <span class="tag t-ver">VERIFIED</span>. Packmates vanish during the dash and reappear healed to full. Your gap-closer and only escape. Count their answers before spending it: E-ing in while their charm/hook/exhaust is up is diving without a dash home — the mistake every Akali makes once per game. In poke lanes, hold E to sidestep the return skillshot after your Q; a held E also changes how they play, the same way an unused Fizz E does.</p>
 </div></div>
 
 <div class="abil"><img src="img/R.png" alt=""><div class="body">
 <h3>R — Hounds' Pursuit <span class="muted">(110/95/80s CD, 900 range, point-and-click dash)</span></h3>
 <p><span class="tag t-ver">VERIFIED</span> Champion takedown within 7s of cast → reveal pulse + <b>one free recast within 12s</b>, and the recast grants a 3s shield (100/150/200 + 150% bonus AD). Stack with Axiom Arc's takedown ult-refund: R → kill → shielded free R → kill → half the CD already back. Play it like Katarina plays resets: the first kill isn't the end of the play, and you should know target #2 <i>before</i> you press R the first time.</p>
+<p>Two facts most Naafiris get wrong <span class="tag t-ver">VERIFIED</span>: during the dash <b>only the packmates are untargetable — you are not</b> (W is your untargetability, not R); and the 0.75s channel <b>disables your other casts</b> — but inputs pressed during the dash are queued and fire the instant you land (&sect;1b tech).</p>
 </div></div>
 
-<h2>2 &middot; Rune Pages &amp; Builds — The Three Setups</h2>
-<p>Keystone data, Emerald+ mid, 26.13 <span class="tag t-ver">VERIFIED</span>: <b>Electrocute</b> most-picked (53.65% WR, 23.7k games) &middot; <b>Hail of Blades</b> u.gg's recommended page (50.8% WR, 13.5k) &middot; <b>Deathfire Touch</b> a niche AD-variant page (one sample: 43.2% WR, 3.1k). Your DFT sits at a personal 62% over 38 games — it works, but the aggregate gap says Electrocute is likely free win rate. Suggested split below.</p>
-
-<div class="setup">
-  <div class="head"><img class="icon" src="img/rune_electrocute.png" alt="">SETUP A — Electrocute <span class="when">DEFAULT — run this ~70% of games</span></div>
-  <table>
-    <tr><th style="width:23%">Primary — Domination</th><th style="width:27%">Secondary — Precision</th><th style="width:17%">Shards</th><th>Build order</th></tr>
-    <tr><td><b>Electrocute</b><br>Sudden Impact<br>Grisly Mementos<br>Treasure Hunter</td><td>Presence of Mind<br>Coup de Grace</td><td>Adaptive<br>Adaptive<br>Health</td><td><img class="icon" src="img/item_1055.png" alt="">Doran's Blade → <img class="icon" src="img/item_2020.png" alt=""><b>Brutalizer</b> (1st back) → <img class="icon" src="img/item_6699.png" alt=""><b>Voltaic</b> → <img class="icon" src="img/item_3008.png" alt="">Glutt. Greaves <span class="muted">(→ Immortal Path)</span> → <img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> → <img class="icon" src="img/item_6694.png" alt=""><b>Serylda's</b> → situational (&sect;3)</td></tr>
-  </table>
-  <div class="inner"><p class="muted"><span class="tag t-you">YOUR DATA</span> This is your own existing Electrocute page (14 games) — no relearning. Procs off Q1 + packmate hits + one auto/E; rewards your exact poke pattern with front-loaded burst instead of DoT. <span class="tag t-reason">REASONING</span> on shards/pairing; keystone stats verified.</p></div>
+<h2>1b &middot; Combos — The Full Move List</h2>
+<p>Sources: Mobalytics S26 combo page + League wiki mechanics; each combo cross-checked against current cast times and buffer rules. <code>Q1/Q2</code> = the two Darkin Daggers casts, <code>AA</code> = auto.</p>
+<table>
+<tr><th style="width:16%">Combo</th><th style="width:27%">Input</th><th>When &amp; why the order matters</th></tr>
+<tr><td><b>Bleed trade</b> (poke)<br><span class="tag t-ver">VERIFIED</span></td><td><code>Q1 → wait 1–2 ticks → Q2</code></td><td>Your bread-and-butter poke. Q2's detonation scales up to +250% with <b>missing</b> HP, so letting the bleed tick first makes the same Q hit harder and heal more. Opposite rule on waves: detonate instantly so the cooldown starts.</td></tr>
+<tr><td><b>Extended trade</b><br><span class="tag t-ver">VERIFIED</span></td><td><code>Q1 → AA → E → Q2 → AA</code></td><td>When they step up. The AA fills Q's 0.5s recast lockout; E has no cast time so it lands mid-trade — aim it <i>at</i> them to stick or <i>away</i> to make it poke-and-out; Q2 last for the amp.</td></tr>
+<tr><td><b>Pre-6 all-in</b><br><span class="tag t-ver">VERIFIED</span></td><td><code>Q1 → W → E → AA-AA → Q2</code></td><td>Kill-threat trade without R. W while walking at them (you keep moving during its cast): the 1s untargetability eats their trade-back, +20% AD boosts the rest, and the 2 bonus packmates land right as you E in. HoB variant in &sect;2b.</td></tr>
+<tr><td><b>Post-6 all-in</b> — the core combo<br><span class="tag t-ver">VERIFIED</span></td><td><code>W → Q1 → R (queue Q2) → E → AA-AA</code></td><td>W <b>first</b>, always: its buffs live through the whole route, R extends the hunt 1.75s, and its untargetability absorbs their first answer during your R channel. Q1 before R so the bleed ticks during the dash; Q2 queued during the dash detonates on landing; E follows their sidestep.</td></tr>
+<tr><td><b>Edge-of-range all-in</b><br><span class="tag t-single">SINGLE SOURCE</span></td><td><code>Q1 → R → Q2 → E</code></td><td>Simpler variant when they're at max range: Q1 and R both reach 900. Vs Zhonya's/stopwatch: run them down with E and bait it <i>before</i> committing R.</td></tr>
+<tr><td><b>Flash burst</b><br><span class="tag t-single">SINGLE SOURCE</span></td><td><code>Q1 → W → Q2 → Flash → E → AA</code></td><td>Cheese kill on a low target hugging tower range. Q2 banks the detonation first; Flash→E is instant on arrival. Hard — practice-tool it first.</td></tr>
+<tr><td><b>Fog pick</b><br><span class="tag t-single">SINGLE SOURCE</span></td><td><code>R → queued Q1 → AA → E → Q2 → AA</code></td><td>Roam opener from a bush/fog. <b>Hold W</b> here — it's your panic button against the peel that answers the dive, not part of the opener. Note the 0.75s channel reveals you to the target: expect one reaction.</td></tr>
+<tr><td><b>Teamfight reset weave</b><br><span class="tag t-ver">VERIFIED</span></td><td><code>R carry → any takedown ≤7s → recast (3s shield) → target #2</code></td><td><b>Any</b> champion takedown arms the recast — not just your R target. Ult the backliner while your bled target dies to your team; the recast shields you <i>before</i> the second dash and can target through fog (the takedown reveals 4s). One W covers both dives. Details &sect;8.</td></tr>
+<tr><td><b>Escape</b><br><span class="tag t-ver">VERIFIED</span></td><td><code>W → E through a wall</code></td><td>W's 1s untargetability drops the targeted spell or turret shot mid-flight; E's terrain bonus range makes thin walls jumpable. You lose no distance — W casts while you run. Post-takedown, a defensive R recast (shield + dash to a <i>safer</i> enemy) is the advanced exit.</td></tr>
+</table>
+<div class="box gold">
+<h3>Tech notes</h3>
+<ul>
+<li><b>The R buffer:</b> casting is disabled during the R dash, so <i>queue</i> the next input (Q or E) mid-dash — it fires the frame you land. This is the difference between "R, land, then start comboing" and landing with the bleed already ticking. <span class="tag t-single">SINGLE SOURCE</span> (engine-verified mechanic; phrased as "queue," not a frame-perfect cancel).</li>
+<li><b>W timing:</b> cast W ~1.5s before contact, while approaching. Earlier wastes the untargetability; later and the 2 bonus packmates (1.25s spawn delay) miss the start of the fight. This is exactly the &sect;2b HoB route's pre-cast.</li>
+<li><b>Q2 rule of thumb:</b> vs champions, delay Q2 for the missing-HP amp and the heal; vs waves, detonate instantly to start the cooldown sooner.</li>
+</ul>
 </div>
+<h2 class="pagebreak">2 &middot; Rune Pages &amp; Builds — The Four Setups</h2>
+<p>Keystone data, Emerald+ mid 26.13, lolalytics n&asymp;54k, re-verified twice <span class="tag t-ver">VERIFIED</span>: <b>Hail of Blades</b> most-picked <b>and</b> highest WR (53.7%, 25.2k games) &middot; <b>Deathfire Touch</b> right behind (53.3%, 14.7k — your default is statistically sound, 0.4pp off the top) &middot; <b>Electrocute</b> lags (51.8%, 11.9k) &middot; <b>Conqueror</b> is a trap in lane (49.4%). At your elo the champion is even better: <b>Gold mid Naafiri is S-tier, rank 4 of 98 (52.67%, 78k games)</b>.</p>
 
 <div class="setup">
-  <div class="head"><img class="icon" src="img/rune_hob.png" alt="">SETUP B — Hail of Blades <span class="when">KILL-LANE READS — once the &sect;2b route is muscle memory</span></div>
+  <div class="head"><img class="icon" src="img/rune_hob.png" alt="">SETUP A — Hail of Blades <span class="when">DEFAULT TARGET — highest WR + most picked; needs the &sect;2b route</span></div>
   <table>
     <tr><th style="width:23%">Primary — Domination</th><th style="width:27%">Secondary — Sorcery</th><th style="width:17%">Shards</th><th>Build order</th></tr>
-    <tr><td><b>Hail of Blades</b><br>Sudden Impact<br>Sixth Sense<br>Treasure Hunter</td><td>Transcendence<br>Scorch</td><td>Attack Speed<br>Adaptive<br>Health</td><td>Same lethality core: Doran's → <img class="icon" src="img/item_2020.png" alt=""><b>Brutalizer</b> → <img class="icon" src="img/item_6699.png" alt=""><b>Voltaic</b> → <img class="icon" src="img/item_3008.png" alt="">Glutt. Greaves <span class="muted">(→ Immortal Path)</span> → <img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> → <img class="icon" src="img/item_6694.png" alt=""><b>Serylda's</b></td></tr>
+    <tr><td><b>Hail of Blades</b><br>Sudden Impact<br>Sixth Sense<br>Treasure Hunter</td><td>Transcendence<br>Scorch</td><td>Attack Speed<br>Adaptive<br>Health</td><td>Lethality core: Doran's → <img class="icon" src="img/item_2020.png" alt=""><b>Brutalizer</b> (1st back) → <img class="icon" src="img/item_6699.png" alt=""><b>Voltaic</b> → <img class="icon" src="img/item_3008.png" alt="">Glutt. Greaves <span class="muted">(→ Immortal Path)</span> → <img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> → <img class="icon" src="img/item_6694.png" alt=""><b>Serylda's</b> → situational (&sect;3)</td></tr>
   </table>
-  <div class="inner"><p class="muted"><span class="tag t-ver">VERIFIED</span> Exact u.gg recommended page (50.8% WR / 13,529 matches), including the rune-by-rune picks. Take into melees and immobile mages you intend to all-in.</p></div>
+  <div class="inner"><p class="muted"><span class="tag t-ver">VERIFIED</span> 53.7% WR on 25.2k games — the best-performing page in the biggest sample. It only pays when you commit to the three autos (&sect;2b, &sect;1b pre-6 all-in); if you catch yourself pure-poking, you're playing Setup B with a dead keystone.</p></div>
 </div>
 
 <div class="setup">
-  <div class="head"><img class="icon" src="img/rune_dft.png" alt="">SETUP C — Deathfire Touch <span class="when">COMFORT — heavy-poke lanes where all-ins never happen</span></div>
+  <div class="head"><img class="icon" src="img/rune_dft.png" alt="">SETUP B — Deathfire Touch lethality <span class="when">YOUR DEFAULT — poke lanes, and every game you don't feel the all-in</span></div>
   <table>
     <tr><th style="width:23%">Primary — Sorcery</th><th style="width:27%">Secondary — Precision</th><th style="width:17%">Shards</th><th>Build order</th></tr>
-    <tr><td><b>Deathfire Touch</b><br>Manaflow Band<br>Transcendence<br>Scorch</td><td>Cut Down (or Coup de Grace)<br>Legend: Haste</td><td>Adaptive<br>Adaptive<br>Health</td><td>u.gg's AD-variant pairing: Doran's → Caulfield's Warhammer → <img class="icon" src="img/item_6692.png" alt=""><b>Eclipse</b> → boots → <img class="icon" src="img/item_6699.png" alt="">Voltaic → <img class="icon" src="img/item_6696.png" alt="">Axiom Arc → <img class="icon" src="img/item_6694.png" alt="">Serylda's</td></tr>
+    <tr><td><b>Deathfire Touch</b><br>Manaflow Band<br>Transcendence<br>Scorch</td><td>Legend: Haste<br>Cut Down</td><td>Adaptive<br>Adaptive<br>HP%</td><td>Doran's → <img class="icon" src="img/item_2020.png" alt=""><b>Brutalizer</b> → <img class="icon" src="img/item_6699.png" alt=""><b>Voltaic</b> → <img class="icon" src="img/item_3008.png" alt="">Glutt. Greaves → <img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> → <img class="icon" src="img/item_6694.png" alt=""><b>Serylda's</b> <span class="muted">(Eclipse-first also fine on this page — see Setup D note)</span></td></tr>
   </table>
-  <div class="inner"><p class="muted"><span class="tag t-you">YOUR DATA</span> Your current page (38 games). Know its 26.11 nerf: the burn is now <b>magic-only</b> (was adaptive), so it no longer converts your AD as well. Packmate hits refresh a 1s burn — the DoT is real, but it pays out over seconds your all-ins don't wait for.</p></div>
+  <div class="inner"><p class="muted"><span class="tag t-ver">VERIFIED</span> This exact page is lolalytics' DFT cohort (53.3% WR, 14.4k games — every rune row confirmed live), and it's your page: your 38 games run it at 62%. The keystone is legitimate, not a comfort tax. Know its 26.11 nerf: the burn is <b>magic-only</b> now, paying out over seconds — it rewards your poke pattern, not the all-in.</p></div>
 </div>
 
 <div class="setup">
-  <div class="head"><img class="icon" src="img/rune_dft.png" alt="">SETUP D — DFT Bruiser <span class="when">VS BULKY COMPS — 2+ divers/juggernauts, or no frontline on your team</span></div>
+  <div class="head"><img class="icon" src="img/rune_electrocute.png" alt="">SETUP C — Electrocute <span class="when">ALTERNATIVE — burst feel without the HoB commitment</span></div>
+  <table>
+    <tr><th style="width:23%">Primary — Domination</th><th style="width:27%">Secondary — Precision</th><th style="width:17%">Shards</th><th>Build order</th></tr>
+    <tr><td><b>Electrocute</b><br>Sudden Impact<br>Grisly Mementos<br>Treasure Hunter</td><td>Presence of Mind<br>Coup de Grace</td><td>Adaptive<br>Adaptive<br>Health</td><td>Same lethality core as Setup A/B: Doran's → <img class="icon" src="img/item_2020.png" alt=""><b>Brutalizer</b> → <img class="icon" src="img/item_6699.png" alt=""><b>Voltaic</b> → Glutt. Greaves → <img class="icon" src="img/item_6696.png" alt=""><b>Axiom</b> → <img class="icon" src="img/item_6694.png" alt=""><b>Serylda's</b></td></tr>
+  </table>
+  <div class="inner"><p class="muted"><span class="tag t-you">YOUR DATA</span> Your existing Electrocute page (14 games). Procs off Q1 + packmates + one auto — fits your poke pattern. The current-patch data has it ~1.5–2pp behind HoB/DFT (51.8%), so it's the third option now, not the first.</p></div>
+</div>
+
+<div class="setup">
+  <div class="head"><img class="icon" src="img/rune_dft.png" alt="">SETUP D — DFT Bruiser <span class="when">VS BULKY COMPS — 2+ divers/juggernauts on you, or no frontline of your own</span></div>
   <table>
     <tr><th style="width:23%">Primary — Sorcery</th><th style="width:27%">Secondary — Precision</th><th style="width:17%">Shards</th><th>Build order</th></tr>
-    <tr><td><b>Deathfire Touch</b><br>Manaflow Band<br>Transcendence<br>Scorch</td><td>Cut Down<br>Legend: Haste</td><td>Adaptive<br>Adaptive<br>Health</td><td>Doran's → Caulfield's → <img class="icon" src="img/item_6692.png" alt=""><b>Eclipse</b> → boots → <img class="icon" src="img/item_3071.png" alt=""><b>Black Cleaver</b> → <img class="icon" src="img/item_6333.png" alt=""><b>Death's Dance</b> → Spirit Visage → Endless Hunger <i>or</i> <img class="icon" src="img/item_3156.png" alt="">Maw (vs AP)</td></tr>
+    <tr><td><b>Deathfire Touch</b><br>Manaflow Band<br>Transcendence<br>Scorch</td><td>Legend: Haste<br>Cut Down</td><td>Adaptive<br>Adaptive<br>HP%</td><td>Doran's → Caulfield's → <img class="icon" src="img/item_6692.png" alt=""><b>Eclipse</b> → <img class="icon" src="img/item_3008.png" alt="">Glutt. Greaves → <img class="icon" src="img/item_3071.png" alt=""><b>Black Cleaver</b> → <img class="icon" src="img/item_6333.png" alt=""><b>Death's Dance</b> → <img class="icon" src="img/item_2517.png" alt=""><b>Endless Hunger</b> <i>or</i> <img class="icon" src="img/item_3156.png" alt="">Maw (vs AP) → <img class="icon" src="img/item_3026.png" alt="">GA</td></tr>
   </table>
-  <div class="inner"><p class="muted"><span class="tag t-you">YOUR BUILD</span> — and it holds up better than the stat sites suggest: Eclipse, Black Cleaver, Death's Dance, Endless Hunger, and Maw all chart among lolalytics' popular/winning mid Naafiri items. Spirit Visage is the one off-meta piece — the logic is real (its 25% heal amp boosts your Q champion-heal of 45–105 +40% bAD, Death's Dance healing, and Endless Hunger omnivamp) but statistically unproven; it's also your only MR-with-HP slot, so it earns its place vs mixed damage. One honest note: patch 26.11 made the DFT burn magic-only <i>specifically</i> to break its Black Cleaver interaction — the burn no longer benefits from Cleaver shred. Cleaver still shreds for the ~92% of your kit that's physical, so the pairing stays coherent; it's just no longer the free-damage combo it was in 26.9–26.10. Expect slower kills than lethality (§5 thresholds drop roughly a spike) in exchange for surviving the collapse.</p></div>
+  <div class="inner"><p class="muted"><span class="tag t-ver">VERIFIED</span> per-slot, DFT games only: Eclipse 1st 54.1% (58% at Gold, directional), Cleaver 2nd 55.4%, Death's Dance 62.7% as 4th, Endless Hunger 68.8% as 4th (all keystones), GA the closer. This is your build with two data-driven changes. <b>(1) Endless Hunger/Maw over Spirit Visage:</b> SV's +25% heal amp is mechanically real on your Q heal/DD/omnivamp but statistically invisible (~21 games league-wide); Maw covers the same MR need with 60 AD and data behind it. <b>(2) Know what Eclipse is now:</b> its damage proc was removed — it's a shield-on-2-hits safety item, which is exactly why it belongs in <i>this</i> build and not your lethality games. Axiom Arc still slots 2nd over Cleaver when you're getting takedowns (55.0%). <span class="tag t-you">MEASURED</span> The burst tax is ~&#8531; vs the same target (&sect;5) — this build wins rotations two and three, never rotation one. Cleaver note: 26.11 made the DFT burn magic-only, so the burn no longer stacks Carve — but your packmates and Q bleed stack it near-instantly anyway (wiki-verified), covering the ~88% of your damage that's physical.</p></div>
 </div>
 
 <div class="box">
 <h3>Component cheat sheet — what to buy on each back <span class="tag t-ver">VERIFIED</span> <span class="muted">(recipes: Riot Data Dragon 16.13.1)</span></h3>
 <table>
 <tr><th>Component</th><th>Builds into</th><th>Buy it when</th></tr>
-<tr><td><img class="icon" src="img/item_2020.png" alt=""><b>The Brutalizer</b> (1337g)</td><td><b>Voltaic</b> (+2 Long Swords) and <b>Axiom Arc</b> (+Caulfield's) — the core uses <b>two</b></td><td>Default first back on Setups A/B</td></tr>
-<tr><td>Caulfield's Warhammer (1050g)</td><td>Axiom Arc, Serylda's, Hubris, Eclipse</td><td>Second back, or first back on Setups C/D</td></tr>
-<tr><td><img class="icon" src="img/item_3134.png" alt="">Serrated Dirk (1000g)</td><td>Hubris, Edge of Night, Collector — <b>NOT Voltaic</b></td><td>Only when pivoting Hubris (&sect;4) or an EoN/Collector slot</td></tr>
+<tr><td><img class="icon" src="img/item_2020.png" alt=""><b>The Brutalizer</b> (1337g)</td><td><b>Voltaic</b> (+2 Long Swords), <b>Axiom Arc</b> (+Caulfield's), Profane Hydra, Bastionbreaker — the core uses <b>two</b></td><td>Default first back on Setups A/B/C</td></tr>
+<tr><td>Caulfield's Warhammer (1050g)</td><td>Axiom Arc, Serylda's, Hubris, Eclipse, Death's Dance, Endless Hunger, Maw</td><td>Second back, or first back on Setup D</td></tr>
+<tr><td><img class="icon" src="img/item_3134.png" alt="">Serrated Dirk (1000g)</td><td>Hubris, Edge of Night, Youmuu's, Serpent's Fang, Opportunity, Umbral, Bastionbreaker — <b>NOT Voltaic</b></td><td>Only when pivoting Hubris (&sect;4) or an EoN/utility slot</td></tr>
 <tr><td>Last Whisper (1450g)</td><td>Serylda's Grudge</td><td>Third-item territory</td></tr>
 </table>
-<p class="muted"><b>Boots timing:</b> every verified sequence (op.gg, u.gg, lolalytics) slots completed boots as the <b>second full purchase</b>, right after the first legendary — so: basic Boots (300g) on an early back only if you have spare gold and the lane punishes slow feet (skillshot mids), Gluttonous Greaves completed after Voltaic (or after Hubris on the lolalytics line), <b>Immortal Path</b> upgrade whenever it unlocks — it's the boots line in 30 of your games. (onetricks.gg purchase-timeline data was rate-limited on every attempt this session — the above is from verified build sequences instead; I can retry onetricks later.) Note lolalytics' most-common mid line opens <b>Hubris → Greaves → Voltaic</b>; op.gg and u.gg open Voltaic, and Voltaic-first is what your winning games run — treat Hubris-first as the snowball variant, per &sect;4.</p>
+<p class="muted"><b>Boots timing:</b> every verified sequence, Emerald+ through Master+ (op.gg, lolalytics), slots completed boots as the <b>second full purchase</b>: first legendary → boots → second legendary. Basic Boots (300g) on an early back only if you have spare gold and the lane punishes slow feet (skillshot mids). Never sit on tier-1 boots to the mid game — "T1 boots only" games run 38.8% WR. <b>Immortal Path</b> is a free Feats-of-Strength upgrade (0g) — take it the moment it's offered. No site publishes purchase minute-stamps (onetricks.gg is bot-walled, leagueofgraphs blocks fetches), so treat "boots ~min 12–15" as approximate. Note lolalytics' most-common mid line opens <b>Hubris → Greaves → Voltaic</b>; op.gg and Master+ data open Voltaic, and Voltaic-first is what your winning games run — treat Hubris-first as the snowball variant, per &sect;4.</p>
 </div>
 
 <div class="box gold">
@@ -147,16 +170,51 @@
 <p>HoB does nothing until you commit to auto range — it plays like a Diana or Kata all-in: poke is only there to set up the one committed sequence. <b>Condition</b> minutes 1–5 with normal Q1 poke so they respect it. <b>The read:</b> they're ~60% and just burned their dash/shield on a Q or a last-hit. <b>The sequence:</b> W (pre-cast) → E in → <b>AA-AA-AA</b> (the three HoB autos — skipping these wastes the keystone) → Q1 → Q2 → R if they flash. Post-6, R opens the same sequence from 900 range and a kill hands you the shielded recast home. Ten practice-tool reps, then normals until automatic.</p>
 </div>
 
-<h2 class="pagebreak">3 &middot; Situational Items (slots 4–5)</h2>
+<h2 class="pagebreak">3 &middot; The Item Encyclopedia — what each item does for <i>her</i>, and what it opens up</h2>
+<div class="box gold">
+<h3>Why every good Naafiri item says "on takedown" <span class="tag t-ver">VERIFIED</span></h3>
+<p>One takedown event simultaneously fires: <b>R free recast + shield</b> &middot; <b>Axiom Arc</b> CD refund &middot; <b>Hubris</b> AD stack &middot; <b>Gluttonous Greaves</b> omnivamp stack &middot; <b>Death's Dance</b> cleanse/heal &middot; <b>Endless Hunger</b> omnivamp burst. Her itemization isn't a stat checklist — it's stacking payouts onto the same event her ultimate already rewards. First kill in a fight → everything comes back online → second dive. That's the whole champion.</p>
+</div>
+
+<h3>Core — in (almost) every game</h3>
 <table>
-<tr><th>Item</th><th>Buy when</th></tr>
-<tr><td><img class="icon" src="img/item_3814.png" alt="">Edge of Night (3000g)</td><td>You're dying to one ability on entry (hook, snare, charm) — the spell shield most directly fixes your teamfight deaths.</td></tr>
-<tr><td><img class="icon" src="img/item_6333.png" alt="">Death's Dance (3300g)</td><td>Dying to sustained AD (bruisers collapsing on you).</td></tr>
-<tr><td><img class="icon" src="img/item_3026.png" alt="">Guardian Angel (3200g)</td><td>You're fed and the game rests on you.</td></tr>
-<tr><td><img class="icon" src="img/item_6695.png" alt="">Serpent's Fang (2500g)</td><td>2+ shielders on their team.</td></tr>
-<tr><td><img class="icon" src="img/item_3156.png" alt="">Maw of Malmortius (3100g)</td><td>Fed AP burst threat.</td></tr>
+<tr><th style="width:22%">Item</th><th style="width:33%">What it does for her</th><th>What it opens up</th></tr>
+<tr><td><img class="icon" src="img/item_6699.png" alt=""><b>Voltaic Cyclosword</b> 3000g<br><span class="muted">53.6% WR / 87% of games</span></td><td>Ability hit triggers Energized: next auto = <b>9% of target's current HP</b> phys + 15 lethality for 4s. Charges by moving — W/R movement speed and your roams charge it for free.</td><td>Kill pressure <b>from even</b> — no conditions, every engage. R → landing auto front-loads the 9% chunk before they react. First item in every setup for a reason.</td></tr>
+<tr><td><img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> 2750g<br><span class="muted">55.9% / 61%; standard 2nd</span></td><td>Takedown within 3s of damaging → refunds <b>10% (+0.25% per lethality) of R's total CD</b> — ~20–25% at full build, stacking with R's own free recast.</td><td><b>The teamfight loop</b>: R more than once per fight, and the &sect;7 tempo (mains measured ~20–30s effective late-game R CD after a double takedown — single source, but the formula backs it). This is why it's in every build, including bruiser.</td></tr>
+<tr><td><img class="icon" src="img/item_6694.png" alt=""><b>Serylda's Grudge</b> 3000g<br><span class="muted">58.1% / 45%; standard 3rd</span></td><td>35% armor pen + your abilities <b>slow targets under 50% HP by 30%</b>.</td><td>Bruisers join your kill list (&sect;5 measured: ~90% of a bruiser at this spike), and low-HP targets can't walk away from Q2 or the dogs. Buy 3rd by default, earlier vs 2+ armor-stackers.</td></tr>
+<tr><td><img class="icon" src="img/item_3008.png" alt=""><b>Gluttonous Greaves</b> 1000g<br><span class="muted">55.7% — best boots by +4pp</span></td><td>4% omnivamp, +0.6% per takedown (max 10 stacks) — and your Q bleed + packmates all feed it.</td><td>The sustain engine: poke that heals you, all-ins you exit healthier than you entered. Ionian/Mercs/Steelcaps all cost ~4pp of win rate — buy them only for a named threat, not comfort.</td></tr>
 </table>
-<p class="muted"><span class="tag t-reason">REASONING</span> — aggregate stats for defensive items are survivorship-biased, so buy for the named problem, not win rate. Slot-4/5 WRs on the core items (Serylda's 57.6%/14.6k, Axiom 60.1%) carry the same caveat.</p>
+
+<h3>Utility lethality — pick by problem</h3>
+<table>
+<tr><th style="width:22%">Item</th><th style="width:33%">What it does for her</th><th>What it opens up</th></tr>
+<tr><td><img class="icon" src="img/item_3814.png" alt=""><b>Edge of Night</b> 3000g<br><span class="muted">57.7% / 36%; 3rd–4th</span></td><td>Spell shield + 250 HP + 15 lethality.</td><td><b>Engaging through the one ability that kills you</b> — hook, snare, charm, Malphite R. The direct fix for your teamfight deaths (&sect;8). Mains' rule: buy vs "things that fk your ult or get you picked" (Lux, Blitz, Jhin, Teemo).</td></tr>
+<tr><td><img class="icon" src="img/item_6697.png" alt=""><b>Hubris</b> 2800g<br><span class="muted">53.5% first / 58.7% second</span></td><td>+12 AD (+3 per kill) for 90s on takedown.</td><td>Snowball compounding — full rules in &sect;4. Also legitimate <b>2nd–3rd</b> once you're already ahead, not just first.</td></tr>
+<tr><td><img class="icon" src="img/item_3142.png" alt=""><b>Youmuu's Ghostblade</b> 2800g<br><span class="muted">55.8%, n=895</span></td><td>20 MS out of combat; active: 20% MS + ghosting 6s.</td><td><b>Roam tempo</b> — the &sect;6 map game as an item. The alternative to Hubris when ahead: kills come from being places first, not from bigger numbers.</td></tr>
+<tr><td><img class="icon" src="img/item_6695.png" alt=""><b>Serpent's Fang</b> 2500g<br><span class="muted">52.8%; 57.6% as 5th</span></td><td>Damaging a champion cuts shields they gain by <b>50%</b> for 3s (and existing shields on first hit).</td><td>Kills through Shen/Karma/Lulu/Sterak's. Cheapest legendary in her pool — a fast, targeted answer, 2nd–5th as needed.</td></tr>
+<tr><td><img class="icon" src="img/item_3179.png" alt=""><b>Umbral Glaive</b> 2800g<br><span class="muted">56.1%, n=132 — sleeper</span></td><td>60 AD/18 leth/15 AH; auto-sweeps and instantly kills wards near you.</td><td><b>The pick game</b>: your &sect;6 "hunt the warder" rule as an item. Small sample, real logic.</td></tr>
+<tr><td><img class="icon" src="img/item_6698.png" alt=""><b>Profane Hydra</b> 2850g<br><span class="muted">55.2%, n≈1k</span></td><td>Tiamat + <b>Brutalizer</b> — AoE cleave + execute active.</td><td>Waveclear-into-roam tempo when you're shoving five waves a game. Fell out of favor post-midscope (Voltaic does the killing better); niche now.</td></tr>
+<tr><td><img class="icon" src="img/item_2520.png" alt=""><b>Bastionbreaker</b> 3200g<br><span class="muted">56.9%, n=654</span></td><td>Brutalizer + Dirk (eats <b>both</b> forks). Abilities deal bonus <b>true damage</b>; takedowns empower your next tower hit.</td><td>The anti-tank lethality slot when Serylda's isn't enough, plus real split-push teeth. Overperforms quietly in her data.</td></tr>
+</table>
+<p class="muted"><b>Traps</b> <span class="tag t-ver">VERIFIED</span>: <b>The Collector</b> — crit is wasted on her kit (packmates don't crit); 0.75% pick for a reason. <b>Opportunity</b> — absent from 26.13 tables entirely; its lethality-while-unseen gimmick lost value when her dash moved to R. <b>Sundered Sky / Sterak's / Stridebreaker / Hullbreaker / Ravenous</b> — essentially unplayed on her (n&le;30 each league-wide); no data supports any of them.</p>
+
+<h3>Bruiser &amp; defense — Setup D's shelf</h3>
+<table>
+<tr><th style="width:22%">Item</th><th style="width:33%">What it does for her</th><th>What it opens up</th></tr>
+<tr><td><img class="icon" src="img/item_6692.png" alt=""><b>Eclipse</b> 2900g<br><span class="muted">54.1% first under DFT only</span></td><td>2 hits within 2s → shield. <b>The damage proc was removed</b> — it's a defensive item in an offensive slot now.</td><td>Trading into melee range without losing half your HP. Only correct as a DFT-page first item; on lethality pages it's -2pp vs Voltaic.</td></tr>
+<tr><td><img class="icon" src="img/item_3071.png" alt=""><b>Black Cleaver</b> 3000g<br><span class="muted">55.4% 2nd under DFT</span></td><td>6% armor shred per physical hit, 5 stacks — <b>your packmates and Q bleed ticks stack it near-instantly</b> (wiki-verified). 400 HP, +20 MS on hit.</td><td>The whole team's physical damage vs armor-stackers, plus the HP to stand in the fight you're shredding.</td></tr>
+<tr><td><img class="icon" src="img/item_6333.png" alt=""><b>Death's Dance</b> 3300g<br><span class="muted">57.1%; best 4th (59.8–62.7%)</span></td><td>Incoming damage deferred over 3s; takedown <b>cleanses the stored damage and heals</b>.</td><td>Surviving the collapse that answers your dive — and the takedown-loop makes the cleanse near-guaranteed when you dive right. Vs sustained AD.</td></tr>
+<tr><td><img class="icon" src="img/item_2517.png" alt=""><b>Endless Hunger</b> 3100g<br><span class="muted">64.4% overall; 68.8% as 4th</span></td><td>65 AD, 5% omnivamp, <b>20% tenacity</b>; takedown → 15% omnivamp for 8s.</td><td>The highest-WR bruiser-flavored item she has (selection-biased — winners buy it — but the tenacity + takedown-omnivamp fit is real). Fights that last two rotations.</td></tr>
+<tr><td><img class="icon" src="img/item_3156.png" alt=""><b>Maw of Malmortius</b> 3100g<br><span class="muted">57.2% as 4th; trap 1st (45%)</span></td><td>Magic shield below 30% HP + 10% omnivamp until combat ends. 60 AD keeps your damage.</td><td>Diving fed AP through their burst window. Hexdrinker (1300g) is the early version in bad AP lanes.</td></tr>
+<tr><td><img class="icon" src="img/item_3026.png" alt=""><b>Guardian Angel</b> 3200g<br><span class="muted">61.3%; best 5th (63.4%)</span></td><td>Revive at 50% base HP after 4s.</td><td><b>The closer</b>: when you're the win condition, GA converts "confident flank" into "free flank". Standard ~min 32.</td></tr>
+<tr><td><img class="icon" src="img/item_3065.png" alt=""><b>Spirit Visage</b> 2700g<br><span class="muted">n≈21 league-wide — theorycraft</span></td><td>400 HP/50 MR; +25% to all your heals and shields (Q heal, DD, omnivamp, R-recast shield).</td><td>Your comfort pick. The multiplier is mechanically real and nobody has disproven it — but nobody's proven it either. If you keep it, know it's a belief, not a stat.</td></tr>
+</table>
+
+<div class="box">
+<h3>Anti-heal, one rule <span class="tag t-ver">VERIFIED</span></h3>
+<p>Grievous Wounds is a flat <b>40%</b> on Summoner's Rift — no escalation. All her GW options run sub-52%, so buy for the named healer only: <b>Executioner's Calling</b> (800g) as the early stopgap → <b>Chempunk Chainsword</b> if the slot should be bruiser (450 HP; delay to 4th) or <b>Mortal Reminder</b> if it should be pen — but its 30% pen overlaps Serylda's: <b>never both</b>.</p>
+</div>
+<p class="muted">Aggregate WRs on late/defensive items are survivorship-biased — buy for the named problem, not the number. Boot alternatives: Swifties 56.2% (n=742) are real anti-kite tech vs slow-stack comps; Mercs/Steelcaps only under heavy specific threat — they trade away the omnivamp engine.</p>
 
 <h2>4 &middot; Hubris vs Voltaic</h2>
 <p><span class="tag t-reason">REASONING</span> from current tooltips (Data Dragon 16.13.1):</p>
@@ -172,17 +230,18 @@
 <p><b>Gold math:</b> a clean solo kill ≈ 600g swing (300g bounty + ~2 missed waves). Mid legendaries cost 2750–3300g, so <b>~3 uncontested solo kills ≈ one item of real advantage</b> — at 2–3 kills by first back you're past half an item, which is the Hubris window.</p>
 </div>
 
-<h2>5 &middot; Kill Thresholds by Spike — Computed</h2>
-<p><span class="tag t-reason">REASONING</span> Computed from current wiki ability values + Data Dragon item stats. Model: full rotation = R + E + Q1 (full bleed) + Q2 (average detonation) + 2 autos + ~3 hits per packmate + an Electrocute-tier keystone proc; no ignite, no target shards/MR/heals. Treat as ±10–15%.</p>
+<h2>5 &middot; Kill Thresholds by Spike — Measured</h2>
+<p><span class="tag t-you">YOUR DATA</span> Practice-tool tested 2026-07-05: full &sect;1b core combo per spike, squishy dummy 1700 HP / 70 armor, bruiser dummy 2300 HP / 120 armor. Your recorded totals are pre-mitigation; converted to actual HP damage with the wiki-verified armor formula (damage &times; 100/(100+armor); lethality = flat pen 1:1 since 14.1; percent pen applies before flat) <span class="tag t-reason">REASONING</span>. Lvl-8 row untested (model only).</p>
 <table>
 <tr><th>Spike</th><th>vs Squishy</th><th>vs Bruiser</th><th>vs Tank</th><th>Verdict</th></tr>
-<tr><td>Brutalizer + boots (lvl 8)</td><td><b>~68%</b> of their HP</td><td>—</td><td>—</td><td>Kill from ~65%; full-HP kills don't exist yet</td></tr>
-<tr><td><b>Voltaic done</b> (lvl 9–10)</td><td><b>~70%</b></td><td>~39%</td><td>—</td><td>Kill squishies from ~70% — <b>not</b> from full; bruisers are trades only</td></tr>
-<tr><td><b>+ Axiom Arc</b> (lvl 11)</td><td><b>~99%</b></td><td>~58%</td><td>—</td><td><b>The real assassin license: full-HP squishy dies to one R rotation.</b> Bruisers from ~60%</td></tr>
-<tr><td>+ Serylda's (lvl 13)</td><td><b>~118%</b></td><td>~64%</td><td>~43%</td><td>Squishies overkilled (a partly-missed Q still kills); bruisers from ~65%, or full-HP in an extended fight with a 2nd Q; tanks never — kite them with the Serylda's slow</td></tr>
+<tr><td>Brutalizer + boots (lvl 8)</td><td>~68% <span class="muted">model</span></td><td>—</td><td>—</td><td>Kill from ~65%; full-HP kills don't exist yet</td></tr>
+<tr><td><b>Voltaic done</b> (lvl 9–10)</td><td><b>~71%</b> <span class="muted">measured: 1934 raw → ~1210</span></td><td>~39% <span class="muted">model</span></td><td>—</td><td>Kill squishies from ~70% — <b>not</b> from full; bruisers are trades only</td></tr>
+<tr><td><b>+ Axiom Arc</b> (lvl 11)</td><td><b>~117%</b> <span class="muted">measured: 2835 raw → ~1995</span></td><td>~60–70% <span class="muted">model; your lvl-13 test ran ~25 pts above model, so trust the high end</span></td><td>—</td><td><b>The assassin license, confirmed with margin: a full-HP squishy dies to one R rotation.</b></td></tr>
+<tr><td>+ Serylda's (lvl 13)</td><td>Overkill — a partly-missed Q still kills</td><td><b>~91%</b> <span class="muted">measured: 3252 raw → ~2085</span></td><td>~43% <span class="muted">model</span></td><td>Bruisers die from <b>~90%</b> — far better than modeled; tanks never — kite them with the Serylda's slow</td></tr>
 </table>
-<p><b>The R tax:</b> the same rotation without R does ~20–25% less (e.g. 2-item squishy: 99% → 76%). That's the "play around your ult timer" rule as a number — with R down you are a poke champion, not an assassin.</p>
-<p class="muted">Calibrate per patch in 5 min: practice-tool dummy at 1650 HP/65 armor, then 2300/120; run the full route with your real build. Tab check in game: their armor outgrowing your lethality = off your kill list.</p>
+<p><b>The R tax — measured at 44%:</b> the identical 2-item loadout dealt 2835 with R and 1599 without. With R down you do <b>barely over half your damage</b> — not the ~75–80% the old model claimed. With R down you are a poke champion, not an assassin; this rule is now a law.</p>
+<p><b>The bruiser build's price, measured:</b> Eclipse + Black Cleaver + Death's Dance (lvl 13, DFT) dealt 2346 raw into the same bruiser dummy — roughly <b>a third less burst</b> than the lethality line's 3252 against the identical target. The bruiser build never wins the one-rotation race; it wins by surviving rotations two and three (&sect;2 Setup D).</p>
+<p class="muted">Recalibrate per patch in 15 min with the same five tests. Tab check in game: their armor outgrowing your lethality = off your kill list.</p>
 
 <h2>6 &middot; Laning &amp; Roaming — The KP Fix</h2>
 <p><span class="tag t-you">YOUR DATA</span> 43% KP, low-KP losses at 27 min: lane won, map lost. This is the section that ranks you up.</p>
@@ -320,7 +379,7 @@
 </svg>
 
 <div class="footer">
-Compiled 2026-07-04 &middot; rev 6 (per-phase flowcharts added; &sect;5 recomputed from wiki ability values + item stats; bruiser Setup D added; boots timing from verified sequences; matchup data added; skill order re-confirmed on op.gg: Q1/E2/W3, Q&gt;E&gt;W, 96% pick / 58% WR) &middot; Patch 26.13, Emerald+ aggregates (will drift next patch) &middot; Kill thresholds, Hubris math, and gold-lead heuristics had no verified public sources — they're reasoning from Riot Data Dragon 16.13.1 tooltips, labeled REASONING; per-stage plan is single-source (Mobalytics) &middot; Other sources: LoL Wiki, Riot patch notes 26.9–26.11, lolalytics, u.gg, skill-capped; player data via op.gg/u.gg &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
+Compiled 2026-07-04, rev 7 on 2026-07-05 (combos section &sect;1b; &sect;5 kill thresholds now MEASURED from your 5 practice-tool tests, armor math wiki-verified; keystone data re-verified on lolalytics 26.13 — HoB/DFT lead, Electrocute demoted; Setup D rebuilt to the research-optimal bruiser line; &sect;3 rebuilt as the full item encyclopedia) &middot; Patch 26.13, lolalytics Emerald+ aggregates (verified twice, 2026-07-05; will drift next patch) &middot; Gold-lead heuristics and per-stage plan remain REASONING/single-source as labeled &middot; Sources: LoL Wiki, Riot Data Dragon 16.13.1, patch notes 26.9–26.11, lolalytics, op.gg (incl. Master+), skill-capped, r/NaafiriMains (Mar–May 2025 archive; 2026 threads unreachable); player data via op.gg/u.gg; your practice-tool measurements 2026-07-05 &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
 </div>
 
 </body>

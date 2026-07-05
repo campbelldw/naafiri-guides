@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Naafiri Top — Patch 26.13 Guide</title>
+<style>
+  @page { size: letter; margin: 13mm 14mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DejaVu Sans", "Segoe UI", system-ui, sans-serif; color: #14181a; margin: 0; font-size: 10.2pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "DejaVu Serif", serif; color: #14501e; margin: 0 0 6px 0; }
+  h2 { font-size: 15pt; border-bottom: 2px solid #1d6e2e; padding-bottom: 3px; margin-top: 20px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #226235; margin-top: 12px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  .cover { position: relative; margin: -13mm -14mm 8mm -14mm; overflow: hidden; }
+  .cover img.splash { width: 100%; display: block; }
+  .cover .titleblock { position: absolute; bottom: 0; left: 0; right: 0; padding: 26px 14mm 14px; background: linear-gradient(transparent, rgba(4,12,6,0.94) 55%); color: #e2f3e0; }
+  .cover h1 { color: #e2f3e0; font-size: 26pt; margin: 0; }
+  .cover .sub { color: #9fd08e; font-size: 11pt; margin-top: 2px; }
+  .tag { display: inline-block; font-size: 7.2pt; font-weight: 700; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+  .t-ver { background: #dcefdd; color: #1d5e2a; border: 1px solid #a7cfa9; }
+  .t-single { background: #fdf3d7; color: #7a5a12; border: 1px solid #e3ca8a; }
+  .t-reason { background: #e8e4f4; color: #45357c; border: 1px solid #beb3e0; }
+  .box { border: 1px solid #c9d8cc; border-left: 4px solid #1d6e2e; background: #f5faf4; padding: 9px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+  .box.gold { border-left-color: #c99a3f; background: #fbf8ef; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #14501e; color: #e2f3e0; text-align: left; padding: 5px 8px; }
+  td { border-bottom: 1px solid #d6e2d8; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f9f4; }
+  .icon { width: 24px; height: 24px; border-radius: 4px; vertical-align: middle; margin-right: 5px; border: 1px solid #9b9; }
+  ul, ol { margin: 6px 0 6px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .muted { color: #5f6b62; font-size: 9pt; }
+  .setup { border: 2px solid #1d6e2e; border-radius: 6px; margin: 12px 0; page-break-inside: avoid; overflow: hidden; }
+  .setup .head { background: #14501e; color: #e2f3e0; padding: 6px 12px; font-weight: 700; font-size: 10.5pt; }
+  .setup .head .when { float: right; font-weight: 400; font-size: 8.6pt; color: #9fd08e; }
+  .setup table { margin: 0; }
+  .setup td, .setup th { font-size: 9.1pt; }
+  .setup .inner { padding: 4px 10px 8px; }
+  .footer { margin-top: 24px; padding-top: 8px; border-top: 1px solid #c9d8cc; font-size: 8.4pt; color: #5f6b62; }
+  .pagebreak { page-break-before: always; }
+  code { background: #e9f1e9; padding: 0 4px; border-radius: 3px; font-size: 9pt; }
+  .good { color: #1d5e2a; font-weight: 700; }
+  .bad { color: #8a1c2e; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img class="splash" src="img/splash.jpg" alt="Naafiri splash art">
+  <div class="titleblock">
+    <h1>Naafiri Top</h1>
+    <div class="sub">Companion guide for <b>soup minion#NA1</b> &middot; Patch 26.13 &middot; July 2026</div>
+  </div>
+</div>
+
+<p class="muted">Labels: <span class="tag t-ver">VERIFIED</span> multi-source / re-fetched &middot; <span class="tag t-single">SINGLE SOURCE</span> &middot; <span class="tag t-reason">REASONING</span>. Kit, combos, and item encyclopedia live in the mid guide — this covers what <i>changes</i> top.</p>
+
+<h2>Why play her top at all</h2>
+<div class="box">
+<p><span class="tag t-ver">VERIFIED</span> At Emerald+ she's a solid A-tier top (52.2% WR, rank ~20/110, 13.3k games). At <b>your elo she is lolalytics' #1 graded top laner — S+, 52.18%, 13.9k Gold games</b>. Only 6% of Naafiri games happen top, so nobody knows the matchup. The lane is longer, the enemies are melee juggernauts who can't punish 900-range Q poke, and bush control is packmate heaven. The catch: it's a kill lane with no safety net — <b>Teleport measurably loses on her</b> (below).</p>
+</div>
+
+<h2>1 &middot; Runes &amp; Builds</h2>
+<p><span class="tag t-ver">VERIFIED</span> Keystones top, Emerald+: <b>DFT 54.2% WR</b> (highest; 20% pick — same at Gold: 54.2%) &middot; HoB most common (49%, ~52.5–52.8%) &middot; Electrocute 52.1% &middot; <b>Conqueror is a trap: 49.4%</b> — it reads like a bruiser-lane keystone and loses like one. Your comfort page is the best page here.</p>
+
+<div class="setup">
+  <div class="head"><img class="icon" src="img/rune_dft.png" alt="">TOP A — Deathfire Touch <span class="when">DEFAULT — highest WR, and it's already your page</span></div>
+  <table>
+    <tr><th style="width:23%">Primary — Sorcery</th><th style="width:27%">Secondary — Precision</th><th style="width:17%">Shards</th><th>Build order</th></tr>
+    <tr><td><b>Deathfire Touch</b><br>Manaflow Band<br>Transcendence<br>Scorch</td><td>Cut Down<br><b>Triumph</b> <span class="muted">(top swap — not Legend: Haste)</span></td><td>Adaptive<br>Adaptive<br>Health</td><td><img class="icon" src="img/item_1055.png" alt="">Doran's Blade → <img class="icon" src="img/item_2020.png" alt=""><b>Brutalizer</b> → <img class="icon" src="img/item_6699.png" alt=""><b>Voltaic</b> → boots (Ionian or <img class="icon" src="img/item_3008.png" alt="">Glutt. Greaves — even split top) → <img class="icon" src="img/item_6696.png" alt=""><b>Axiom Arc</b> → <img class="icon" src="img/item_6694.png" alt=""><b>Serylda's</b> → EoN / DD / Maw</td></tr>
+  </table>
+  <div class="inner"><p class="muted"><span class="tag t-ver">VERIFIED</span> 54.15% WR page (n≈2,674). DFT + Scorch turns the long top lane into a bleed-out: juggernauts have no answer to 900-range Q + burn. Under DFT top, the late slots are monstrous: Serylda's 3rd 62.6%, EoN 4th 65.0%, Shojin 3rd 61.2%.</p></div>
+</div>
+
+<div class="setup">
+  <div class="head"><img class="icon" src="img/rune_hob.png" alt="">TOP B — Hail of Blades <span class="when">KILL-LANE READS — dive-able melees, and you want level 1–3 blood</span></div>
+  <table>
+    <tr><th style="width:23%">Primary — Domination</th><th style="width:27%">Secondary — Sorcery</th><th style="width:17%">Shards</th><th>Build order</th></tr>
+    <tr><td><b>Hail of Blades</b><br>Sudden Impact<br><b>Grisly Mementos</b> <span class="muted">(top swap for Sixth Sense)</span><br>Treasure Hunter</td><td>Manaflow Band<br>Transcendence</td><td>Adaptive<br>Adaptive<br>HP-scaling</td><td>Same lethality core: Doran's → <img class="icon" src="img/item_2020.png" alt="">Brutalizer → <img class="icon" src="img/item_6699.png" alt="">Voltaic → boots → <img class="icon" src="img/item_6696.png" alt="">Axiom → <img class="icon" src="img/item_6694.png" alt="">Serylda's</td></tr>
+  </table>
+  <div class="inner"><p class="muted"><span class="tag t-ver">VERIFIED</span> Most-common top page, 52.52% (n≈6,520). The mid guide's &sect;2b HoB route works unchanged — top melees are easier HoB targets than mids.</p></div>
+</div>
+
+<div class="box gold">
+<h3>Bruiser top? The honest data</h3>
+<p><span class="tag t-ver">VERIFIED</span> Eclipse-first is picked in 21% of top games and <b>wins only 49.7%</b> — the lethality core beats it top just like mid. The real bruiser-adjacent line top is late-slot: Death's Dance 56.8%, Maw 58.1%, Shojin 56.4%, Endless Hunger 61.0%, Bastionbreaker 63.1% (n=236). So: <b>lethality items 1–3, bruiser items 4–5</b>. The Eclipse → Cleaver → Shojin full-bruiser line exists (~1/7th of the play) but has no statistical edge. And the split-push fantasy is dead: Hullbreaker top has <b>n=3</b>. Your Setup D (mid guide) transfers as written for the vs-bulky-comp games; expect the same measured burst tax.</p>
+</div>
+
+<h2>2 &middot; What changes about the game plan</h2>
+<table>
+<tr><th style="width:22%">Lever</th><th>Mid habit</th><th>Top adaptation</th></tr>
+<tr><td><b>Summoners</b></td><td>Flash + Ignite</td><td><b>Still Flash + Ignite</b> <span class="tag t-ver">VERIFIED</span> — 52.8% WR at 87% pick. Flash+TP wins 49.3%: <b>TP costs ~3.5pp</b>. She converts kills, not map rotations. If you take TP you've picked the wrong champion for it.</td></tr>
+<tr><td><b>Skill at level 1</b></td><td>Q first, always (63%)</td><td>Q first is still standard (40%), but <b>W first is a real top tech (26% of games)</b>: the 1s untargetability blanks a Darius pull, a Renekton stun trade, or a level-1 cheese. Take it when their level 1 is scarier than yours.</td></tr>
+<tr><td><b>Poke pattern</b></td><td>Poke → shove → roam</td><td>Poke → <b>freeze near your tower</b> → they overextend into a 900-range R lane. Roams are 2× as expensive top (longer lane) — convert leads into plates, dives with your jungler, and Herald instead.</td></tr>
+<tr><td><b>W usage</b></td><td>Pre-cast on engage (&sect;1b mid)</td><td>Often better <b>held defensively</b>: it's the "dodge the Darius Q / Garen silence / Illaoi E button" <span class="tag t-single">SINGLE SOURCE</span> — juggernaut lanes hinge on one dodged ability. In hard matchups W is your Sivir spell-shield, not your steroid.</td></tr>
+<tr><td><b>Bushes</b></td><td>—</td><td>Top brush is packmate radar: a packmate parked in the river bush is a free ward. Q through the bush at fog-shapes — packmates will chase what you can't see.</td></tr>
+</table>
+
+<h2 class="pagebreak">3 &middot; Matchups <span class="tag t-ver">VERIFIED</span> <span class="muted">(Emerald+, n≥80 per row; header counters re-confirmed on two sites)</span></h2>
+<table>
+<tr><th style="width:18%">Tier</th><th>Matchup (Naafiri WR)</th><th>The plan</th></tr>
+<tr><td class="good">Feast</td><td><b>Vayne 62.6</b> &middot; <b>Tahm Kench 62.1</b> &middot; <b>Varus 61.9</b> &middot; Gwen 59.2 &middot; Mundo 58.9 &middot; Gnar 58.2 &middot; <b>Teemo 57.7</b> (your most common lane, n=763) &middot; Rumble 57.3 &middot; Akali 56.7 &middot; Volibear 56.1 &middot; Aatrox 55.8</td><td>Ranged bullies lose to her here: packmates eat their poke, one R erases them. Vs Teemo — dogs don't get blinded; run him down post-6.</td></tr>
+<tr><td>Playable</td><td>K'Sante 54.5 &middot; Darius 54.3 &middot; Jax 54.3 &middot; Pantheon 54.3 &middot; Gangplank 54.2 &middot; Illaoi 54.1 &middot; Yorick 53.7 &middot; Mordekaiser 53.6 &middot; Nasus 52.7 &middot; Sion 52.4</td><td>The juggernaut package: poke from 900, never trade inside their effect radius, W the signature ability (Darius Q, Morde E, Illaoi E), kill on their cooldowns.</td></tr>
+<tr><td class="bad">Respect</td><td>Yone 48.9 &middot; Malphite 48.4 &middot; Camille 48.3 &middot; Sett 48.1 &middot; Riven 47.9 &middot; Tryndamere 47.9 &middot; Yasuo 47.6 (windwall eats Q) &middot; Renekton 46.2 &middot; Jayce 46.0 &middot; Fiora 45.5 &middot; <b>Garen 45.3</b></td><td>Same rule as mid's Riven/Talon lanes: E strictly defensive, concede levels 1–3, poke only after their engage whiffs. Garen: respect the silence — Q2 <i>immediately</i>, don't hold it <span class="tag t-single">SINGLE SOURCE</span>.</td></tr>
+<tr><td class="bad">Dodge/ban</td><td><b>Warwick 39.0</b> &middot; <b>Irelia 38.9 — her single worst matchup in the game</b></td><td>Irelia Q's your dogs for free passive stacks and resets — "she one-shots your packmates and heals off them" <span class="tag t-single">SINGLE SOURCE</span>. This is the ban slot top. Warwick outsustains everything you do pre-3-items.</td></tr>
+</table>
+<p class="muted">Gold-tier header differs slightly (counters Camille/Vayne/Kennen; countered by Warwick) — the Irelia/Warwick/Garen red zone holds at both tiers. Her damage is ~88% physical, so their armor stacking works — which is why Serylda's/Cleaver timing decides the 25-min+ game.</p>
+
+<h2>4 &middot; Top-specific win condition</h2>
+<div class="box gold">
+<p><span class="tag t-reason">REASONING</span> from the verified pieces: top Naafiri's game is <b>lane kill → plates → Herald window → group mid as the extra assassin nobody drafted against</b>. You are not a side-lane 1-3-1 piece (no TP, no Hullbreaker data, falls off vs stacked armor) — after two items, treat top like mid's &sect;7 loop: crash the side wave, then be at every mid-map fight with R up. The mid guide's flowcharts apply from minute 14 on; only the laning chart changes (no roam branch — its replacement is "freeze or dive").</p>
+</div>
+
+<div class="footer">
+Compiled 2026-07-05 (Phase 2) &middot; Patch 26.13 &middot; Stats: lolalytics Emerald+ &amp; Gold cuts (re-verified 2026-07-05), op.gg Emerald+/Master+, skill-capped; matchup rows n≥80; community notes r/NaafiriMains Mar–May 2025 archive (labeled single-source) &middot; Kit/recipes: Riot Data Dragon 16.13.1 + LoL Wiki &middot; Companion to the mid guide (kit, combos, item encyclopedia, measured kill thresholds) &middot; Images © Riot Games (Data Dragon CDN), non-commercial fan content.
+</div>
+</body>
+</html>
