@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jarvan IV Jungle — Patch 26.13 Guide</title>
+<style>
+  @page { size: letter; margin: 13mm 14mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DejaVu Sans", "Segoe UI", system-ui, sans-serif; color: #1a1814; margin: 0; font-size: 10.2pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "DejaVu Serif", serif; color: #1c2d52; margin: 0 0 6px 0; }
+  h2 { font-size: 15pt; border-bottom: 2px solid #c99a3f; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #2c4372; margin-top: 14px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  .cover { position: relative; margin: -13mm -14mm 8mm -14mm; overflow: hidden; }
+  .cover img.splash { width: 100%; display: block; }
+  .cover .titleblock { position: absolute; bottom: 0; left: 0; right: 0; padding: 26px 14mm 14px; background: linear-gradient(transparent, rgba(8,10,18,0.94) 55%); color: #f0e6cf; }
+  .cover h1 { color: #f0e6cf; font-size: 26pt; margin: 0; }
+  .cover .sub { color: #d8b96a; font-size: 11pt; margin-top: 2px; }
+  .tag { display: inline-block; font-size: 7.2pt; font-weight: 700; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+  .t-ver { background: #dcefdd; color: #1d5e2a; border: 1px solid #a7cfa9; }
+  .t-single { background: #fdf3d7; color: #7a5a12; border: 1px solid #e3ca8a; }
+  .t-reason { background: #e8e4f4; color: #45357c; border: 1px solid #beb3e0; }
+  .box { border: 1px solid #d4cfc0; border-left: 4px solid #1c2d52; background: #f7f5ef; padding: 9px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+  .box.gold { border-left-color: #c99a3f; background: #fbf8ef; }
+  .box.red { border-left-color: #a03a2e; background: #faf1ef; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #1c2d52; color: #f0e6cf; text-align: left; padding: 5px 8px; }
+  td { border-bottom: 1px solid #ddd8ca; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f7f5ef; }
+  .icon { width: 26px; height: 26px; border-radius: 4px; vertical-align: middle; margin-right: 6px; border: 1px solid #ab9; }
+  ul, ol { margin: 6px 0 6px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .muted { color: #5f5c50; font-size: 9pt; }
+  .kbd { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; background: #eee9db; border: 1px solid #d0c9b4; border-radius: 3px; padding: 0 4px; white-space: nowrap; }
+  .footer { margin-top: 26px; padding-top: 8px; border-top: 1px solid #d4cfc0; font-size: 8.4pt; color: #5f5c50; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img class="splash" src="img/j4_splash.jpg" alt="Jarvan IV splash art">
+  <div class="titleblock">
+    <h1>Jarvan IV Jungle</h1>
+    <div class="sub">Built for <b>Jasio#NA1</b> &middot; Patch 26.13 &middot; July 2026 &middot; feat. <i>When Your Jungle Isn't Yours</i></div>
+  </div>
+</div>
+
+<p class="muted">How to read the labels: <span class="tag t-ver">VERIFIED</span> multi-source, adversarially fact-checked &middot; <span class="tag t-single">SINGLE SOURCE</span> one reputable source &middot; <span class="tag t-reason">REASONING</span> game-knowledge, verify in your own games. Stats are lolalytics patch 26.13, Emerald+ unless marked. Requested by Campbell (soup minion#NA1); a special chapter covers your question — <i>what do I do when I'm constantly invaded?</i> — in §6.</p>
+
+<h2>1 &middot; The Snapshot</h2>
+<p><span class="tag t-ver">VERIFIED</span> Jarvan IV is <b>S- tier, the #7 jungler of 77</b> at Emerald+ (52.1% WR, n=153,547) and <b>#6 of 80 at Gold</b> (50.4%, n=94,060) on 26.13. He hasn't been patched since 25.19 — everything here is stable, not flavor-of-the-month.</p>
+<div class="box gold">
+<p><span class="tag t-ver">VERIFIED</span> <b>You, specifically</b> (op.gg, 2026-07-06): Platinum 3 solo queue, 59% WR — climbing. Your Jarvan is 4 games old, all <b>top lane</b>, and it's working (3W&ndash;1L, 5.7 KDA, 71% kill participation) — this guide moves that success to jungle. Your current jungle volume pick is Nunu (13W&ndash;18L, 42%), and your Nunu losses cluster against early duelists who invade: <b>Viego 0&ndash;3, Kayn 0&ndash;2, Lee Sin 0&ndash;2</b>. That's not a coincidence — it's the exact problem §6 exists to solve, and J4 handles all three of those matchups at even-or-better (§7). One more number from your recent games: <b>zero control wards</b> in your last four. Hold that thought until §6c.</p>
+</div>
+<p><span class="tag t-reason">REASONING</span> What he is: the best <b>level-2&ndash;3 engage jungler</b> in the game — E-Q knockup is a gank that works from behind a wall, before most junglers have a gank at all. What he is <b>not</b>: a 1v1 duelist (dedicated duelists beat him in isolated fights — see §6 and §7) or a late-game carry (he falls off; his job after 25 minutes is engage + peel, not damage). Your whole game plan flows from this: <b>use early tempo to bank objectives, then cash out before scaling junglers outgrow you.</b></p>
+
+<h2>2 &middot; The Kit — Numbers That Matter</h2>
+<table>
+<tr><th style="width:34%">Ability</th><th>What it actually does</th></tr>
+<tr><td><img class="icon" src="img/j4_P.png" alt=""><b>P &middot; Martial Cadence</b></td><td><span class="tag t-ver">VERIFIED</span> First basic attack on each target: <b>8% of their CURRENT health</b> as bonus physical damage (min 20). Capped at 400 <b>vs monsters only — uncapped vs champions</b>. Per-target cooldown 6/5/4/3s by level. Jungle engine: first hit on every buff is huge. In fights: <b>auto early while they're full HP</b>, and spread autos across fresh targets.</td></tr>
+<tr><td><img class="icon" src="img/j4_Q.png" alt=""><b>Q &middot; Dragon Strike</b></td><td><span class="tag t-ver">VERIFIED</span> 90&ndash;250 (+145% bonus AD) physical in a line, <b>shreds 10&ndash;26% of armor for 3s</b>, CD 10&rarr;6s, 0.4s cast. If the lance touches your E flag, you <b>dash to it, knocking up everything on the path for 0.75s</b> — and the dash executes even if you're rooted or grounded when it connects.</td></tr>
+<tr><td><img class="icon" src="img/j4_W.png" alt=""><b>W &middot; Golden Aegis</b></td><td><span class="tag t-ver">VERIFIED</span> Shield 60&ndash;140 (+70% bonus AD) <b>+1.3% of your max HP per enemy champion hit</b> (4s), and slows all of them 15&ndash;35% for 2s. Flat 9s CD. Rule: cast it <b>after</b> you land in their team, not before — every champion in the 625 radius makes it bigger.</td></tr>
+<tr><td><img class="icon" src="img/j4_E.png" alt=""><b>E &middot; Demacian Standard</b></td><td><span class="tag t-ver">VERIFIED</span> Passive: <b>+20&ndash;30% attack speed, permanently</b> (this is why it's your level-1 skill for clearing). Active: flag deals 80&ndash;240 magic, stands 8s, gives the same AS aura to nearby allies (radius 1000). Range 860, <b>no cast time</b> — which is what makes the instant E-Q possible.</td></tr>
+<tr><td><img class="icon" src="img/j4_R.png" alt=""><b>R &middot; Cataclysm</b></td><td><span class="tag t-ver">VERIFIED</span> 200/325/450 (+180% bonus AD) physical, 0.35s displacement-immune leap, then a <b>3.5s ring of real terrain</b>. Enemies near the edge get shoved out; everyone else gets pulled in. Recast (available after 0.75s) collapses the wall. It IS crossable by dashes and Flash — R traps immobile champions, not mobile ones. CD 120/105/90.</td></tr>
+</table>
+
+<h2>3 &middot; Combos</h2>
+<table>
+<tr><th style="width:30%">Combo</th><th style="width:38%">Buttons</th><th>When &amp; why</th></tr>
+<tr><td><b>Instant E-Q</b> (the gank)</td><td><span class="kbd">E+Q same instant</span></td><td>E has no cast time, so buffering both fires a near-instant 0.75s knockup at ~770 range. This is your bread and butter — from fog, over walls, before they can react.</td></tr>
+<tr><td><b>Full gank string</b></td><td><span class="kbd">E&rarr;Q &rarr; AA &rarr; W &rarr; (R)</span></td><td>Knockup &rarr; auto (passive chunk while they're full HP) &rarr; W slow so they can't walk away when the knockup ends. R only if they'll escape or to wall off help.</td></tr>
+<tr><td><b>EQ-Flash</b></td><td><span class="kbd">E&rarr;Q, Flash mid-dash</span></td><td><span class="tag t-ver">VERIFIED</span> Flash <b>during</b> the E-Q dash: the dash stops but the knockup still applies at your new position. Direction correction — they sidestep, you Flash the knockup back onto them.</td></tr>
+<tr><td><b>Jail-break</b></td><td><span class="kbd">R &rarr; E outside wall &rarr; Q</span></td><td>Trap them in R, then E-Q <b>over your own wall</b> and leave. The cage stays up 3.5s without you in it. Use when their team collapses or you're low.</td></tr>
+<tr><td><b>Escape E-Q</b></td><td><span class="kbd">E over terrain &rarr; Q</span></td><td>Your only escape — a wall-hop on a ~10&ndash;12s cooldown. If you burned E-Q engaging and the fight turns, you are not leaving. Decide before you jump.</td></tr>
+<tr><td><b>R discipline</b></td><td><span class="kbd">R center-mass; recast when done</span></td><td>Land R so the target is <b>inside</b>, not on the rim (rim = shoved out). Recast the moment the kill is secured — a standing cage traps your own immobile teammates too.</td></tr>
+</table>
+<div class="box gold">
+<p><span class="tag t-ver">VERIFIED</span> <b>Tech notes:</b> the E-Q pull executes even while immobilized (rooted mid-dash still pulls). Enemies dodge R with any dash/blink — hold it until their dash is down, or use it as a <b>wall</b> (cut a choke, block a path) rather than a cage vs mobile champs. W's slow is your gank stick pre-6: E-Q &rarr; AA &rarr; W keeps them in auto range for your laner.</p>
+</div>
+
+<h2>4 &middot; Runes &amp; Build</h2>
+<table>
+<tr><th>Piece</th><th>Choice</th><th>Notes</th></tr>
+<tr><td>Keystone</td><td><img class="icon" src="img/rune_conqueror.png" alt=""><b>Conqueror</b> (Precision)</td><td><span class="tag t-ver">VERIFIED</span> 94.3% pick, 52.1% WR (n=144,761). Nothing else is close — your fights are extended skirmishes and Conqueror stacks fully in them.</td></tr>
+<tr><td>Minors</td><td>Triumph &middot; Legend: Alacrity &middot; Coup de Grace</td><td><span class="tag t-ver">VERIFIED</span> The standard page. Directional upgrades: Legend: Haste 53.4% (n=7,139), Cut Down 52.7% vs 2+ tanks (n=15,234).</td></tr>
+<tr><td>Secondary</td><td><b>Inspiration:</b> Cosmic Insight + Magical Footwear</td><td><span class="tag t-ver">VERIFIED</span> 77% of pages, 52.4%. Shards: Attack Speed / Adaptive / Health.</td></tr>
+<tr><td>Summoners &amp; start</td><td>Flash + Smite &middot; <img class="icon" src="img/item_1102.png" alt="">Scorchclaw pup + potion</td><td><span class="tag t-ver">VERIFIED</span> Flash+Smite is 99.9% of games. Scorchclaw (red pet) 63% pick; its slow-and-burn helps ganks stick.</td></tr>
+<tr><td>First item</td><td><img class="icon" src="img/item_6610.png" alt=""><b>Sundered Sky</b> (default) or <img class="icon" src="img/item_6698.png" alt=""><b>Profane Hydra</b> (stat pick)</td><td><span class="tag t-ver">VERIFIED</span> Sundered: 51.6% of games, most forgiving — the crit-heal keeps you alive through skirmishes. Profane Hydra wins on stats (53.8% vs 51.6% at Emerald+, +2.0pp over Sundered at Gold, n=18k+) — faster clears, execute resets. Honest read: Hydra is the better item if your early game is clean; Sundered forgives mistakes. Eclipse (16.9% pick) is the distant third.</td></tr>
+<tr><td>Boots</td><td><img class="icon" src="img/item_3111.png" alt=""><b>Mercs</b> / <img class="icon" src="img/item_3047.png" alt="">Steelcaps</td><td><span class="tag t-ver">VERIFIED</span> Steelcaps are picked more (48%) but <b>Mercs win more</b> (54.0% vs 51.9%; same gap at Gold). Pick by their damage profile, but when in doubt vs mixed comps, Mercs — you engage into CC every fight.</td></tr>
+<tr><td>Second item</td><td><img class="icon" src="img/item_3071.png" alt=""><b>Black Cleaver</b> (default) or <img class="icon" src="img/item_6696.png" alt="">Axiom Arc</td><td><span class="tag t-ver">VERIFIED</span> Cleaver 38.2% pick, 53.1% — your E-Q + R hit multiple people and stack it fast, and its shred + Q's shred strips frontlines. Axiom Arc is the sleeper: 55.4% WR (n=22,284) — takedowns refund R, and more Cataclysms = more picks. Take Axiom when ahead and snowballing kills.</td></tr>
+<tr><td>3rd&ndash;5th</td><td><img class="icon" src="img/item_6333.png" alt="">Death's Dance &middot; <img class="icon" src="img/item_3026.png" alt="">GA &middot; <img class="icon" src="img/item_3110.png" alt="">Frozen Heart &middot; <img class="icon" src="img/item_3065.png" alt="">Spirit Visage &middot; <img class="icon" src="img/item_3053.png" alt="">Sterak's &middot; <img class="icon" src="img/item_3156.png" alt="">Maw</td><td><span class="tag t-ver">VERIFIED</span> After two damage items you pivot tanky — you're the engage button and you die first if you don't. DD 58.5% at slot 3; GA 64.3% (inflated by survivorship, but the pattern is real: winners buy defense 3rd). Maw/Rookern vs AP, Frozen Heart vs crit/AS, Visage with healing comps.</td></tr>
+<tr><td>Situational</td><td><img class="icon" src="img/item_6694.png" alt="">Serylda's &middot; <img class="icon" src="img/item_6695.png" alt="">Serpent's Fang &middot; <img class="icon" src="img/item_3814.png" alt="">Edge of Night &middot; <img class="icon" src="img/item_2504.png" alt="">Kaenic Rookern</td><td><span class="tag t-ver">VERIFIED</span> Serylda's 60.4% by-game WR when armor stacks; Serpent's vs shield comps; EoN to survive the first spell when you engage; Rookern vs heavy AP.</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> Skill order: <b>E at 1</b> (attack speed for the clear) &rarr; Q at 2 &rarr; W at 3 (83.5%). Max <b>Q &gt; E &gt; W</b>, R at 6/11/16 — 95% consensus, 53.0% WR.</p>
+
+<h2>5 &middot; The Clear — Season 2026 Timers</h2>
+<div class="box red">
+<p><span class="tag t-ver">VERIFIED</span> <b>Patch 26.01 sped up the whole early jungle and most guides never updated:</b> buffs now spawn at <b>0:55</b> (was 1:30), Gromp/Krugs at <b>1:07</b> (was 1:42), first scuttle at <b>2:55</b> (was 3:30). If a guide says "scuttle at 3:30," it's stale. Everything happens ~35s earlier now — including the enemy's invade window.</p>
+</div>
+<p><span class="tag t-single">SINGLE SOURCE</span> Standard route (jungler.gg 26.12, matches the lolalytics skill data): <b>Red brambleback (E first for attack speed) &rarr; Krugs &rarr; Raptors</b> — that's level 3 around 2:05&ndash;2:15, your first E-Q gank or scuttle window — <b>&rarr; Wolves &rarr; Blue &rarr; Gromp</b>, full clear ~3:15&ndash;3:35 at level 4, then scuttle/gank. Start Raptors&rarr;Red&rarr;Krugs when you want the faster level-3 gank on bot side. <span class="tag t-reason">REASONING</span> E-Q the multi-camps (raptors, wolves, krugs) — the knockup path hits everything; drop E for its AS aura before big single targets. W on cooldown at buffs/Gromp to shave damage taken. Aim to end the first clear above 60% HP; time yourself once in practice tool.</p>
+<table>
+<tr><th>Camp</th><th>First spawn</th><th>Respawn</th><th>Gold</th><th>XP</th></tr>
+<tr><td>Blue Sentinel / Red Brambleback</td><td>0:55</td><td>5:00</td><td>90</td><td>95&ndash;142</td></tr>
+<tr><td>Wolves / Raptors</td><td>0:55</td><td>2:15</td><td>85 / 75</td><td>80&ndash;120 / 70&ndash;105</td></tr>
+<tr><td>Gromp / Krugs</td><td>1:07</td><td>2:15</td><td>80 / 81</td><td>120&ndash;180 / ~90&ndash;134</td></tr>
+<tr><td>Rift Scuttler</td><td>2:55</td><td>2:30</td><td>55&ndash;121</td><td>100&ndash;150</td></tr>
+</table>
+<p class="muted"><span class="tag t-ver">VERIFIED</span> against wiki camp pages 2026-07-06. Respawn timers become visible to <i>both</i> teams 60s out for buffs, 10s out for small camps — that's a tracking tool (§6). Camps level with the game's average, so late camps aren't XP-dead.</p>
+
+<h2>6 &middot; When Your Jungle Isn't Yours</h2>
+<div class="box gold">
+<h3>Your current habit, graded</h3>
+<p><span class="tag t-reason">REASONING</span> "If I can't find camps I look for ganks" is <b>half right, and the half that's right is genuinely right</b> — Jarvan is a gank champion, and doing <i>something</i> beats standing in an empty jungle. The problem is the ungated version. A gank into a bad lane state gives you 0 gold and 0 XP <b>while the invader who took your camps farms freely</b> — you don't just fail to gain, you fall further behind on both ends. That's the compounding loss that turns one stolen camp into a lost jungle. The fix isn't "stop ganking" — it's a 10-second checklist before you commit, and a better default when the checklist fails.</p>
+</div>
+
+<h3>6a &middot; The gank checklist — go only on 2 or more</h3>
+<p><span class="tag t-ver">VERIFIED</span> (Dodge.gg 2026 jungle guide) Count these before walking to a lane: <b>(1)</b> enemy pushed past the river line &middot; <b>(2)</b> their Flash/escape is down &middot; <b>(3)</b> your laner has CC to chain your knockup &middot; <b>(4)</b> the wave is pushing toward your tower &middot; <b>(5)</b> you have a level or item edge &middot; <b>(6)</b> lane likely unwarded. <b>Fewer than two: don't go.</b> "A jungler who waits for the right gank outperforms a jungler who ganks constantly with low success." One more that's yours specifically: <span class="tag t-reason">REASONING</span> never gank a losing lane to "help" — you're feeding a shutdown into the player already beating your teammate.</p>
+
+<h3>6b &middot; The four answers to an invade — in order</h3>
+<table>
+<tr><th style="width:22%">Play</th><th style="width:30%">When</th><th>How</th></tr>
+<tr><td><b>1. Mirror-farm</b><br><span class="muted">(the default)</span></td><td>You find a camp gone, or spot him entering your side</td><td><span class="tag t-ver">VERIFIED</span> Don't chase — cross the map and <b>take his matching camps</b>. He took your Red side? His Red side is standing empty. Steal the <b>big monster only</b> and leave the smalls: the camp can't start its respawn timer, so his side stays dead longer. Get in, take it, get out — "each second in the enemy jungle is more dangerous than the last."</td></tr>
+<tr><td><b>2. Counter-gank</b><br><span class="muted">(the J4 special)</span></td><td>You <i>know</i> where he is (he's in YOUR jungle)</td><td><span class="tag t-reason">REASONING</span> An invader's position is information. If he's eating your bot-side camps, he is not defending his top laner — and you have the best level-3 engage in the game. This is the disciplined version of your instinct: gank <b>because you know where he isn't</b>, not because your camps are gone. Checklist still applies.</td></tr>
+<tr><td><b>3. Fight him</b><br><span class="muted">(gated)</span></td><td>A laner can arrive before his does, OR you win the matchup</td><td><span class="tag t-ver">VERIFIED</span> A 2v1 in your own jungle is a won fight — ping immediately, fight when they commit. But solo? J4 is a skirmisher with backup, <b>not a duelist</b>: Trundle, Poppy, Rek'Sai, Elise, Kindred, Bel'Veth all beat you isolated (§7). No help + no matchup edge = walk away. "Take camps, not fights."</td></tr>
+<tr><td><b>4. Concede &amp; powerfarm</b><br><span class="muted">(the reset)</span></td><td>Behind, low HP, or no good option</td><td><span class="tag t-ver">VERIFIED</span> Swap to your opposite side and farm everything, toward the next objective spawn. The game pays you to do this: once you're &gt;1.1 levels below average, <b>every large monster gives +50 bonus XP per level you're behind</b>. Catch-up XP refunds farming — it refunds nothing for wandering. Above all: <b>don't die.</b> Dying to the invader hands him your whole jungle on repeat.</td></tr>
+</table>
+
+<h3>6c &middot; Track him so it stops happening</h3>
+<ul>
+<li><span class="tag t-ver">VERIFIED</span> <b>Loading screen:</b> level-1 invades come from hard-CC comps (Blitzcrank, Braum, Trundle, Olaf). See one? Expect your bot-side buff to be contested — start top-side, or ward your entrance at ~1:00 and stand in the river bush with your team.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Start-side detection:</b> if their bot lane shows up late to lane, they leashed — their jungler started bot-side. On time = top-side start. Now you know which of your camps he can reach and when.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>The TAB rule:</b> each camp is 4 CS. Check his CS on the scoreboard: 8 = two camps, 12 = three camps and level 3 — <b>he can gank now</b>; 24 = full clear. Do this every time you back.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Ward at 3:00</b> — river or pixel brush, when first clears end and junglers start moving. Your own stolen camps help too: respawn timers show to both teams 60s out (buffs), so a visible timer on your Red tells you when he might come back for it. <span class="tag t-reason">REASONING</span> This is the §1 callback: your last four games had <b>zero control wards</b>. A jungler who buys no pinks is invisible-blind in his own jungle — one control ward per back, planted at your most-invaded entrance, is the single cheapest fix to "I keep getting invaded." It's 75g for the information every rule in this chapter runs on.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Track intention, not just location.</b> A Kayn wants your camps; an Elise wants your laners at level 3. Knowing what he wants predicts where he'll be — and where you should be.</li>
+</ul>
+
+<div class="box">
+<h3>The math, so it sticks</h3>
+<p><span class="tag t-ver">VERIFIED</span> One camp &asymp; 75&ndash;90 gold + a chunk of a level (table in §5); small camps respawn every 2:15, so a farming jungler banks ~3&ndash;4 camps' value in the time two failed roams take. A kill is worth 300g (400 first blood) plus XP — roughly 2&ndash;4 camps — <b>but only if it lands</b>, and an off-resources gank at Silver&ndash;Gold usually doesn't. Meanwhile his uncontested farm keeps flowing. <span class="tag t-reason">REASONING</span> The loop that beats invades long-term is boring: <b>Clear &rarr; ONE play &rarr; reset.</b> Farm what's up, make one checklist-approved play, recall, repeat. Windows where the "play" is strongest: level 3 (~2:15), after full clear (~3:30&ndash;4:00), your first-item spike, and level 6.</p>
+</div>
+
+<h2>7 &middot; Matchups</h2>
+<p><span class="tag t-ver">VERIFIED</span> Numbers below are Emerald+ (the cut closest to your Plat 3, big samples). One nuance first: <b>duel-winners and game-winners are different lists.</b> Trundle beats you 1v1 in every early duel — yet J4 wins 55.9% of games vs Trundle (n=388), because good Jarvans just don't fight him and out-tempo the map. Losing the duel &ne; losing the game, as long as you refuse the duel.</p>
+<table>
+<tr><th style="width:30%">vs You (Emerald+, 26.13)</th><th>WR (n)</th><th>Plan</th></tr>
+<tr><td><b>Feast on:</b> Locke &middot; Volibear &middot; Rammus &middot; Trundle &middot; Zed &middot; Lillia &middot; Zac</td><td>60.4 (3,471) &middot; 57.4 (671) &middot; 56.0 (1,046) &middot; 55.9 (388) &middot; 55.7 (1,595) &middot; 55.3 (1,807) &middot; 55.0 (1,770)</td><td>Play your normal tempo game — your engage outpaces them, or they need time you won't give. (Vs Trundle: win by refusing, see above.)</td></tr>
+<tr><td><b>Your old tormentors:</b> Viego &middot; Kayn &middot; Lee Sin &middot; Graves</td><td>50.8 (7,260) &middot; 51.8 (5,290) &middot; 52.5 (11,868) &middot; 50.4 (9,048)</td><td><span class="tag t-ver">VERIFIED</span> The junglers who went a combined 0&ndash;7 against your Nunu are all <b>even or J4-favored</b> on Jarvan. You don't have to outfarm them anymore — you out-engage them. Skirmish 2v2 at scuttle with lane priority; your E-Q is the fight-starter Nunu never had.</td></tr>
+<tr><td><b>Respect:</b> Cho'Gath &middot; Aatrox &middot; Ivern &middot; Talon &middot; Nasus &middot; Elise &middot; Briar &middot; Rek'Sai</td><td>46.9 (318) &middot; 48.6 (1,135) &middot; 49.0 (929) &middot; 49.2 (3,671) &middot; 49.4 (2,517) &middot; 49.5 (1,576) &middot; 49.8 (3,388) &middot; 49.9 (1,267)</td><td><span class="tag t-reason">REASONING</span> Two flavors: early bullies who beat you in skirmishes (Aatrox, Elise, Briar, Rek'Sai — don't duel, mirror-farm per §6) and scale-monsters (Cho, Nasus — kills aren't enough; convert every gank into grubs/dragon and press to end before 30, or your S-tier early game evaporates). At Gold-and-below the scaler problem gets even worse — games run longer and leads get wasted — so as a Plat player, closing speed is your edge.</td></tr>
+<tr><td><b>Invade-duelists</b> (they take YOUR camps): Trundle &middot; Poppy &middot; Rek'Sai &middot; Elise &middot; Kindred</td><td>duel-losers, game-winnable</td><td><span class="tag t-single">SINGLE SOURCE</span> Poppy W cancels your E-Q dash mid-flight; Trundle pillar traps you inside your own R; Rek'Sai/Elise out-duel you pre-6; Kindred wins if you over-commit. Vs all five: §6 rules — mirror-farm, don't duel, and ward your entrances because <b>they're coming.</b></td></tr>
+</table>
+
+<div class="footer">
+Compiled 2026-07-06 by Claude for Jasio (Jasio#NA1), commissioned by Campbell (soup minion#NA1) &middot; Patch 26.13 &middot; Sources: lolalytics 26.13 (Emerald+ n=153,547; Gold n=94,060), LoL Wiki (kit + camp pages, verified 2026-07-06 against Data Dragon 16.13.1), Dodge.gg, Boosteria, jungler.gg, SkillGap.pro, Dignitas, official 26.12/26.13 patch notes &middot; Images © Riot Games via Data Dragon CDN, used under Riot's Legal Jibber Jabber for non-commercial fan content.
+</div>
+
+</body>
+</html>

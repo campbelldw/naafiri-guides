@@ -1,6 +1,6 @@
-# Naafiri Guides — Patch 26.13
+# Naafiri Guides (+ friends) — Patch 26.13
 
-Personalized League of Legends guides for **soup minion#NA1**. Phase 1 (2026-07-04): two adversarially-verified deep-research runs (100 + 104 agents) plus live match-history analysis. Phase 2 (2026-07-05): a third verified research run (13 agents — optimal bruiser, full itemization, top/bot lanes) plus in-game practice-tool damage measurements.
+Personalized League of Legends guides for **soup minion#NA1**. Phase 1 (2026-07-04): two adversarially-verified deep-research runs (100 + 104 agents) plus live match-history analysis. Phase 2 (2026-07-05): a third verified research run (13 agents — optimal bruiser, full itemization, top/bot lanes) plus in-game practice-tool damage measurements. Guest guides (2026-07-06+): commissioned for friends, same verification standard.
 
 | Guide | Role | Pages |
 |---|---|---|
@@ -8,6 +8,12 @@ Personalized League of Legends guides for **soup minion#NA1**. Phase 1 (2026-07-
 | [naafiri-top-guide.pdf](naafiri-top-guide.pdf) | **Top** (companion) — S+ at Gold; DFT/HoB pages, kill-lane summoners (no TP), full matchup table, W-first tech | 4 |
 | [naafiri-bot-guide.pdf](naafiri-bot-guide.pdf) | **Bot ADC** (companion) — honest niche-pick verdict, duo dynamics, Caitlyn counter; support = don't | 3 |
 | [naafiri-jungle-guide.pdf](naafiri-jungle-guide.pdf) | **Jungle** (companion) — Conqueror build, clear mechanics, snowball levers, balance history | 3 |
+
+## Guest guides
+
+| Guide | For | Pages |
+|---|---|---|
+| [jarvan-jungle-guide.pdf](jarvan-jungle-guide.pdf) | **Jarvan IV Jungle** for **Jasio#NA1** — kit numbers, combos (insta-EQ, EQ-Flash, jail-break), Conqueror build, Season-2026 clear timers, full anti-invade chapter (*When Your Jungle Isn't Yours*), Emerald+ matchups | 7 |
 
 Every claim is labeled **VERIFIED** (adversarial fact-check), **SINGLE SOURCE**, **REASONING** (derived from Riot Data Dragon 16.13.1 numbers), or **YOUR DATA / MEASURED** (match history + practice-tool tests).
 
