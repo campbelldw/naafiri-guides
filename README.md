@@ -13,7 +13,7 @@ Personalized League of Legends guides for **soup minion#NA1**. Phase 1 (2026-07-
 
 | Guide | For | Pages |
 |---|---|---|
-| [jarvan-jungle-guide.pdf](jarvan-jungle-guide.pdf) | **Jarvan IV Jungle** for **Jasio#NA1** — kit numbers, combos (insta-EQ, EQ-Flash, jail-break), Conqueror build, Season-2026 clear timers, full anti-invade chapter (*When Your Jungle Isn't Yours*), Emerald+ matchups | 7 |
+| [jarvan-jungle-guide.pdf](jarvan-jungle-guide.pdf) | **Jarvan IV Jungle** for **Jasio#NA1** — kit numbers, combos (insta-EQ, EQ-Flash, jail-break), Conqueror build, Season-2026 clear timers, two-path build chapter w/ item encyclopedia, full anti-invade chapter (*When Your Jungle Isn't Yours*), Emerald+ matchups | 10 |
 
 Every claim is labeled **VERIFIED** (adversarial fact-check), **SINGLE SOURCE**, **REASONING** (derived from Riot Data Dragon 16.13.1 numbers), or **YOUR DATA / MEASURED** (match history + practice-tool tests).
 
