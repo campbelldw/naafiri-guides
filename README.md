@@ -4,8 +4,8 @@ Personalized League of Legends guides for **soup minion#NA1**. Phase 1 (2026-07-
 
 | Guide | Role | Pages |
 |---|---|---|
-| [naafiri-mid-guide.pdf](naafiri-mid-guide.pdf) | **Mid** (main) — personalized: combos & tech, four rune/build setups incl. research-optimal bruiser, full item encyclopedia, **measured** kill thresholds, KP fix, phase flowcharts | 13 |
-| [naafiri-top-guide.pdf](naafiri-top-guide.pdf) | **Top** (companion) — S+ at Gold; DFT/HoB pages, kill-lane summoners (no TP), full matchup table, W-first tech | 4 |
+| [naafiri-mid-guide.pdf](naafiri-mid-guide.pdf) | **Mid** (main) — personalized: combos & tech, four rune/build setups incl. research-optimal bruiser, full item encyclopedia, **measured** kill thresholds, KP fix, phase flowcharts, comp-audit framework (§3b) | 16 |
+| [naafiri-top-guide.pdf](naafiri-top-guide.pdf) | **Top** (companion) — S+ at Gold; DFT/HoB pages, kill-lane summoners (no TP), full matchup table, W-first tech, comp adjustments | 5 |
 | [naafiri-bot-guide.pdf](naafiri-bot-guide.pdf) | **Bot ADC** (companion) — honest niche-pick verdict, duo dynamics, Caitlyn counter; support = don't | 3 |
 | [naafiri-jungle-guide.pdf](naafiri-jungle-guide.pdf) | **Jungle** (companion) — Conqueror build, clear mechanics, snowball levers, balance history | 3 |
 
@@ -13,7 +13,7 @@ Personalized League of Legends guides for **soup minion#NA1**. Phase 1 (2026-07-
 
 | Guide | For | Pages |
 |---|---|---|
-| [jarvan-jungle-guide.pdf](jarvan-jungle-guide.pdf) | **Jarvan IV Jungle** for **Jasio#NA1** — kit numbers, combos (insta-EQ, EQ-Flash, jail-break), Conqueror build, Season-2026 clear timers, two-path build chapter w/ item encyclopedia, full anti-invade chapter (*When Your Jungle Isn't Yours*), Emerald+ matchups | 10 |
+| [jarvan-jungle-guide.pdf](jarvan-jungle-guide.pdf) | **Jarvan IV Jungle** for **Jasio#NA1** — kit numbers, combos (insta-EQ, EQ-Flash, jail-break), Conqueror build, Season-2026 clear timers, two-path build chapter w/ item encyclopedia, full anti-invade chapter (*When Your Jungle Isn't Yours*), comp-audit path picker (§4d), Emerald+ matchups | 11 |
 
 Every claim is labeled **VERIFIED** (adversarial fact-check), **SINGLE SOURCE**, **REASONING** (derived from Riot Data Dragon 16.13.1 numbers), or **YOUR DATA / MEASURED** (match history + practice-tool tests).
 
