@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand Roles Companion — Patch 26.13</title>
+<style>
+  @page { size: letter; margin: 13mm 14mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DejaVu Sans", "Segoe UI", system-ui, sans-serif; color: #1a1410; margin: 0; font-size: 10.2pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "DejaVu Serif", serif; color: #5c1408; margin: 0 0 6px 0; }
+  h2 { font-size: 15pt; border-bottom: 2px solid #e0762a; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #8a2f10; margin-top: 14px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  .banner { display: flex; align-items: center; gap: 14px; background: linear-gradient(100deg, #1a0803, #4a1206 70%, #7a2a10); color: #f5e8d8; margin: -13mm -14mm 10mm -14mm; padding: 14px 14mm; }
+  .banner img { width: 74px; height: 74px; border-radius: 8px; border: 2px solid #e0762a; }
+  .banner h1 { color: #f5e8d8; font-size: 21pt; margin: 0; }
+  .banner .sub { color: #eda05c; font-size: 10.5pt; }
+  .tag { display: inline-block; font-size: 7.2pt; font-weight: 700; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+  .t-ver { background: #dcefdd; color: #1d5e2a; border: 1px solid #a7cfa9; }
+  .t-single { background: #fdf3d7; color: #7a5a12; border: 1px solid #e3ca8a; }
+  .t-reason { background: #e8e4f4; color: #45357c; border: 1px solid #beb3e0; }
+  .t-you { background: #fbe3d4; color: #8a2f10; border: 1px solid #eab48c; }
+  .box { border: 1px solid #d8cfc2; border-left: 4px solid #5c1408; background: #f9f5ee; padding: 9px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+  .box.ember { border-left-color: #e0762a; background: #fcf5ec; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #5c1408; color: #f5e8d8; text-align: left; padding: 5px 8px; }
+  td { border-bottom: 1px solid #e0d8ca; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f5ee; }
+  .icon { width: 26px; height: 26px; border-radius: 4px; vertical-align: middle; margin-right: 6px; border: 1px solid #b9a; }
+  ul, ol { margin: 6px 0 6px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .muted { color: #635c50; font-size: 9pt; }
+  .kbd { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; background: #efe8da; border: 1px solid #d4c9b0; border-radius: 3px; padding: 0 4px; white-space: nowrap; }
+  .footer { margin-top: 26px; padding-top: 8px; border-top: 1px solid #d8cfc2; font-size: 8.4pt; color: #635c50; }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <img src="img/brand_square.png" alt="Brand">
+  <div>
+    <h1>Brand — The Other Three Roles</h1>
+    <div class="sub">Companion to the jungle guide &middot; for <b>send help#2366</b> &middot; Patch 26.13 &middot; July 2026</div>
+  </div>
+</div>
+
+<p class="muted">Labels: <span class="tag t-ver">VERIFIED</span> fact-checked multi-source &middot; <span class="tag t-single">SINGLE SOURCE</span> lolalytics only &middot; <span class="tag t-reason">REASONING</span> derived &middot; <span class="tag t-you">YOUR DATA</span> your op.gg match history. Stats: lolalytics 26.13, Emerald+ unless marked. Kit numbers, combos, R rules, and item deep-dives live in the jungle guide — this one covers what <i>changes</i> per role.</p>
+
+<h2>1 &middot; The Report Card</h2>
+<p><span class="tag t-you">YOUR DATA</span> You've already played Brand in all five positions this season (6&ndash;2 overall). Here's what the data says each role is actually worth:</p>
+<table>
+<tr><th>Role</th><th>Win rate (E+ / Gold)</th><th>Share of Brand games</th><th>Verdict</th></tr>
+<tr><td><b>Support</b></td><td>51.9% / 51.5%</td><td>46&ndash;57%</td><td><span class="tag t-ver">VERIFIED</span> <b>His home role.</b> A-tier at Gold, six-figure sample. Where the ban rate comes from.</td></tr>
+<tr><td><b>Bot (APC)</b></td><td><b>53.8%</b> / 53.6%</td><td>19&ndash;31%</td><td><span class="tag t-ver">VERIFIED</span> <b>His highest win rate anywhere.</b> A legit pocket pick that farms real ADCs.</td></tr>
+<tr><td><b>Mid</b></td><td>51.4% / 50.9%</td><td>13&ndash;15%</td><td><span class="tag t-ver">VERIFIED</span> Niche but not troll — above lane average, punished by specific counters.</td></tr>
+<tr><td>Jungle</td><td>48.6% / 48.7%</td><td>3&ndash;5%</td><td><span class="tag t-ver">VERIFIED</span> The fun off-role. See the main guide.</td></tr>
+<tr><td>Top</td><td class="muted" colspan="3"><span class="tag t-reason">REASONING</span> 5% of games, no reliable data at your elo — you went 1&ndash;2 there; treat it as filled-into, not a plan.</td></tr>
+</table>
+
+<h2>2 &middot; What never changes</h2>
+<ul>
+<li><span class="tag t-ver">VERIFIED</span> <b>Runes:</b> Deathfire Touch + Manaflow + Transcendence + Scorch, Precision secondary — the top page in <i>every</i> role, and the page you already run. Only the Precision row flexes: <b>Cut Down</b> (support/bot) vs <b>Coup de Grace</b> (mid's most common — dead-opposite rune, 8% vs targets <i>below</i> 40%; both fine, pick per enemy comp like the jungle guide's §6d).</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>The item spine:</b> a torch (Liandry's or Blackfire), Sorcerer's Shoes, Rylai's, then Zhonya's/Shadowflame/Morello situationals. Same mechanics fine print as jungle §6: item burns don't proc Rylai's, your Blaze does; Shadowflame makes burns crit below 40%; one Blight item max.</li>
+<li><span class="tag t-reason">REASONING</span> <b>The teamfight:</b> identical in every role — 900-range W, E to spread, R the burning clump, never first through the door. Support Brand and jungle Brand die to the same mistake: standing 300 units too far forward.</li>
+</ul>
+
+<h2>3 &middot; Support — the home role</h2>
+<p><span class="tag t-you">YOUR DATA</span> Your two Brand support games are quietly your best Brand games: a 10/8/20 MVP (op_score rank 1 in the lobby) with 25 wards and 2 pinks, and a 4/7/2 win with 21 wards and 4 pinks. You ward like a support and fight like Brand — that's the whole job description.</p>
+<table>
+<tr><th style="width:24%">Piece</th><th>Standard</th><th>Notes</th></tr>
+<tr><td>Start</td><td><img class="icon" src="img/item_3865.png" alt="">World Atlas + 2 pots</td><td><span class="tag t-ver">VERIFIED</span> Quest gold from poking (your W/E hit champions = quest progress) &rarr; upgrades itself; at the final step pick <b>Zaz'Zak's Realmspike</b> (89.6% of Brands): your ability damage detonates a %-max-HP void explosion on a 10s cooldown — <b>Blaze ticks proc it automatically</b>.</td></tr>
+<tr><td>Core</td><td><img class="icon" src="img/item_3871.png" alt="">Zaz'Zak's &rarr; <img class="icon" src="img/item_3116.png" alt="">Rylai's &rarr; <img class="icon" src="img/item_3020.png" alt="">Sorcs</td><td><span class="tag t-ver">VERIFIED</span> 55.4% WR core (n≈17.5k). Rylai's second is the support signature — perma-slow peel for your ADC without needing gold for damage items. Liandry's 3rd (54.7%).</td></tr>
+<tr><td>Summoners</td><td>Flash + Ignite</td><td><span class="tag t-ver">VERIFIED</span> 71.5% pick — kill-lane default. Interesting: <b>Exhaust+Flash posts the highest WR of the three</b> (52.6%) — take it vs dive/assassin bot lanes and use it on the diver.</td></tr>
+<tr><td>Skills</td><td><span class="kbd">W &rarr; Q &rarr; E</span>, max W&gt;Q&gt;E</td><td><span class="tag t-ver">VERIFIED</span> Same as jungle. Poke pattern: W on the wave-edge where they'll step, E when they're close enough, Q only when they're burning (the stun threat is what makes them stand back).</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> <b>Matchups:</b> you feast on engage tanks and mid-range mages — Mel (62.3%), Swain (60.8%), Alistar (54.2%). What actually beats you is <b>enchanters who out-sustain your poke</b>: Milio is the robust worst (48.3%, n=2,141), then Janna. Into those, stop trying to poke them out and play for level-6 all-ins with Ignite + detonation instead — their heals can't answer a 3-stack + Zaz'Zak's proc burst. <span class="tag t-reason">REASONING</span> Your Grievous rule from the jungle guide applies double here: vs Soraka/Milio/Yuumi, an early Oblivion Orb (800g) on a support income is the highest-value 800g on your team.</p>
+
+<h2>4 &middot; Bot APC — the pocket pick with the best numbers</h2>
+<p><span class="tag t-ver">VERIFIED</span> Brand replacing the ADC wins <b>53.8%</b> at Emerald+ — his best number anywhere — because most ADCs simply lose lane to a mage: he outranges their damage window with W (900) and out-trades anything that steps up, and Cut Down is nearly always live vs full-HP marksmen. You went 1&ndash;1 in your two APC games; the champion's data says there's more there.</p>
+<table>
+<tr><th style="width:24%">Piece</th><th>Standard</th><th>Notes</th></tr>
+<tr><td>Start &amp; core</td><td>Doran's Ring &rarr; <img class="icon" src="img/item_2503.png" alt="">Blackfire &rarr; <img class="icon" src="img/item_3020.png" alt="">Sorcs &rarr; <img class="icon" src="img/item_3116.png" alt="">Rylai's</td><td><span class="tag t-ver">VERIFIED</span> Bot is where your Blackfire habit is <i>correct</i>: 77% first-item pick, 54.0% WR, and the top line (BFT&rarr;Sorcs&rarr;Rylai's) wins 55.4% on n≈12.8k. With a farm income you hit item spikes an ADC pays 30 more CS for. 4th: Shadowflame (57.8%).</td></tr>
+<tr><td>Summoners</td><td>Flash + TP <span class="muted">or</span> <b>Flash + Barrier</b></td><td><span class="tag t-ver">VERIFIED</span> TP is most picked (47%), but <b>Barrier is the standout: 55.4% WR</b> on ~13k games — it flat-out cancels the "assassin jumps the immobile mage" script. At your elo, take Barrier.</td></tr>
+<tr><td>Skills</td><td><span class="kbd">W &rarr; Q &rarr; E</span>, max W&gt;Q&gt;E</td><td><span class="tag t-ver">VERIFIED</span> Same string as support/jungle (the mid E-max flip below doesn't apply — your support helps you shove).</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> <b>Matchups:</b> you beat conventional ADCs (at Gold: Varus 60.3%, Kalista 59.6%, Lucian 57.6%) and Nilah/Ezreal/Smolder at Emerald+. What beats you is <b>the mage-bot mirror</b> — Seraphine is the robust worst (46.7%), with Lux behind her: they match your range and their utility outscales your damage. <span class="tag t-reason">REASONING</span> Duo note for flex nights: this is the role where your premades help most — a hook/engage support (the Blitzcrank you already play, or a tanky Naafiri support game) converts your E&rarr;Q stun into lane kills from level 2.</p>
+
+<h2>5 &middot; Mid — playable, with two predators</h2>
+<p><span class="tag t-ver">VERIFIED</span> Mid Brand is 51.4% at Emerald+ on a small pick rate — real, above lane average, and one of your 5 mid games this season was a Brand mid win. Two things change from every other role:</p>
+<ul>
+<li><span class="tag t-ver">VERIFIED</span> <b>Skill max flips to W &gt; E &gt; Q</b> (73.8% of mid games): E's bounce off a burning minion is your waveclear and your safe poke — E a caster minion near their laner and the spread fire reaches them without you stepping up. Order stays <span class="kbd">W &rarr; E &rarr; Q</span> at 1/2/3.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Both torch lines work; the winning one is Liandry's:</b> BFT&rarr;Sorcs&rarr;Rylai's is most common (52.5%, n=3,047) but <b>Liandry's&rarr;Sorcs&rarr;Rylai's wins 56.9%</b> (n=1,785) — consistent with the Silver-tier torch lesson in the jungle guide. Summoners: Flash+TP is standard, but <b>Flash+Ignite wins more</b> (52.3% vs 51.1%) and fits a kill-lane style.</li>
+</ul>
+<p><span class="tag t-ver">VERIFIED</span> <b>Matchups:</b> comfortable vs juggernaut-mids and skirmishers — Ryze (60.3%), Mel, Yone (55.2%). Two archetypes genuinely beat you: <b>dive assassins</b> (Fizz 42.9% is the worst, and his E dodges your whole combo) and <b>longer artillery</b> (at Gold: Xerath 40.6%, and — brace yourself — <b>Naafiri mid 42.3%</b>, so don't queue into your duo's champ). Into either: max-range W farming, Zhonya's second, and let your jungler know your lane can't be won alone.</p>
+
+<h2>6 &middot; Which role tonight?</h2>
+<table>
+<tr><th style="width:34%">Situation</th><th>Play</th></tr>
+<tr><td>Flex night, Jasio on Nunu jungle</td><td><span class="tag t-reason">REASONING</span> <b>Support</b> (his home role; you've been MVP there) or <b>bot APC</b> with an engage support. Jungle's taken anyway.</td></tr>
+<tr><td>Flex night, no Jasio</td><td><span class="tag t-reason">REASONING</span> <b>Jungle</b> if you want the project (main guide), support if you want the win.</td></tr>
+<tr><td>Solo queue, climbing</td><td><span class="tag t-ver">VERIFIED</span> <b>Bot APC or support</b> — his two best win rates, and both scale off what you already do well (fighting, warding). </td></tr>
+<tr><td>Enemy locks Milio/Seraphine bot</td><td><span class="tag t-reason">REASONING</span> That's the counter to support/APC Brand respectively — swap targets: play the <i>other</i> bot-side role, or mid.</td></tr>
+</table>
+
+<h2>7 &middot; Fine print</h2>
+<ul class="muted">
+<li>All win rates: lolalytics, patch 26.13, snapshot of 2026-07-06 (single stat site; matchup decimals drift within a patch). Cells under n=300 were excluded or called out.</li>
+<li>Top lane omitted deliberately: 5% pick, no robust data — nothing worth teaching.</li>
+<li>Patch 26.14 lands ~July 8&ndash;9; the 26.13 Brand nerf (detonation floor, E mana) already hurt lane roles less than jungle, but numbers here should be re-pulled after it drops.</li>
+</ul>
+
+<div class="footer">
+Brand Roles Companion — built July 6, 2026 for send help#2366 at Campbell's request &middot; Patch 26.13 / Data Dragon 16.13.1 &middot; Sources: lolalytics 26.13 (support/middle/bottom payloads, Emerald+ and Gold cuts), League Wiki, Riot Data Dragon 16.13.1, op.gg match history (position-field verified). Companion to <i>Brand Jungle</i> — kit numbers, combos, item mechanics and the invade playbook live there. Images © Riot Games via Data Dragon.
+</div>
+
+</body>
+</html>

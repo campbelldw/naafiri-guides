@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand Jungle — Patch 26.13 Guide</title>
+<style>
+  @page { size: letter; margin: 13mm 14mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DejaVu Sans", "Segoe UI", system-ui, sans-serif; color: #1a1410; margin: 0; font-size: 10.2pt; line-height: 1.5; }
+  h1, h2, h3 { font-family: Georgia, "DejaVu Serif", serif; color: #5c1408; margin: 0 0 6px 0; }
+  h2 { font-size: 15pt; border-bottom: 2px solid #e0762a; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #8a2f10; margin-top: 14px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  .cover { position: relative; margin: -13mm -14mm 8mm -14mm; overflow: hidden; }
+  .cover img.splash { width: 100%; display: block; }
+  .cover .titleblock { position: absolute; bottom: 0; left: 0; right: 0; padding: 26px 14mm 14px; background: linear-gradient(transparent, rgba(16,6,2,0.94) 55%); color: #f5e8d8; }
+  .cover h1 { color: #f5e8d8; font-size: 26pt; margin: 0; }
+  .cover .sub { color: #eda05c; font-size: 11pt; margin-top: 2px; }
+  .tag { display: inline-block; font-size: 7.2pt; font-weight: 700; letter-spacing: 0.4px; padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+  .t-ver { background: #dcefdd; color: #1d5e2a; border: 1px solid #a7cfa9; }
+  .t-single { background: #fdf3d7; color: #7a5a12; border: 1px solid #e3ca8a; }
+  .t-reason { background: #e8e4f4; color: #45357c; border: 1px solid #beb3e0; }
+  .t-you { background: #fbe3d4; color: #8a2f10; border: 1px solid #eab48c; }
+  .box { border: 1px solid #d8cfc2; border-left: 4px solid #5c1408; background: #f9f5ee; padding: 9px 12px; margin: 10px 0; border-radius: 0 4px 4px 0; page-break-inside: avoid; }
+  .box.ember { border-left-color: #e0762a; background: #fcf5ec; }
+  .box.red { border-left-color: #a03a2e; background: #faf1ef; }
+  .box h3 { margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #5c1408; color: #f5e8d8; text-align: left; padding: 5px 8px; }
+  td { border-bottom: 1px solid #e0d8ca; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f5ee; }
+  .icon { width: 26px; height: 26px; border-radius: 4px; vertical-align: middle; margin-right: 6px; border: 1px solid #b9a; }
+  ul, ol { margin: 6px 0 6px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .muted { color: #635c50; font-size: 9pt; }
+  .kbd { font-family: "DejaVu Sans Mono", monospace; font-size: 8.8pt; background: #efe8da; border: 1px solid #d4c9b0; border-radius: 3px; padding: 0 4px; white-space: nowrap; }
+  .footer { margin-top: 26px; padding-top: 8px; border-top: 1px solid #d8cfc2; font-size: 8.4pt; color: #635c50; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <img class="splash" src="img/brand_splash.jpg" alt="Brand splash art">
+  <div class="titleblock">
+    <h1>Brand Jungle</h1>
+    <div class="sub">Built for <b>send help#2366</b> &middot; Patch 26.13 &middot; July 2026 &middot; the Burning Vengeance, from the river up</div>
+  </div>
+</div>
+
+<p class="muted">How to read the labels: <span class="tag t-ver">VERIFIED</span> multi-source, adversarially fact-checked &middot; <span class="tag t-single">SINGLE SOURCE</span> one reputable source &middot; <span class="tag t-reason">REASONING</span> derived from verified numbers &middot; <span class="tag t-you">YOUR DATA</span> your own match history (op.gg, position fields, July 2026). Stats are lolalytics patch 26.13, Emerald+ unless marked. Requested by Campbell (soup minion#NA1). This is the long one on purpose — it assumes nothing about jungle and explains everything once. The companion PDF covers Brand's other roles.</p>
+
+<h2>1 &middot; The Honest Snapshot</h2>
+<p><span class="tag t-ver">VERIFIED</span> Straight truth first, because a guide that hides it would be lying to you: <b>Brand jungle is an off-meta pick</b> on 26.13. Only ~1 in 20 Brand games at Emerald+ (and ~1 in 30 at Silver) are jungle — most Brands are supports — and his jungle win rate sits below 49% at every tier, bottom-10 of ~80 junglers. Riot also nerfed his early game <i>this exact patch</i> (§3). None of that makes him unplayable — it means he's a "because it's fun and I'm good at Brand" pick, not a free-ladder-points pick.</p>
+<table>
+<tr><th>Cut (26.13)</th><th>Win rate</th><th>Pick rate</th><th>Games (n)</th><th>Rank among junglers</th></tr>
+<tr><td>Emerald+</td><td>48.62%</td><td>0.31%</td><td>7,696</td><td>75 of 77</td></tr>
+<tr><td>Gold</td><td>48.65%</td><td>0.36%</td><td>8,242</td><td>77 of 80</td></tr>
+<tr><td>Silver</td><td>47.59%</td><td>0.30%</td><td>5,352</td><td>74 of 81</td></tr>
+<tr><td>All ranks</td><td>47.95%</td><td>0.32%</td><td>31,954</td><td>77 of 80</td></tr>
+</table>
+<div class="box ember">
+<p><span class="tag t-you">YOUR DATA</span> <b>You, specifically</b> (op.gg match payloads, July 6): Bronze 3 in both queues, and <b>Brand is already your best champion — 8 games, 6&ndash;2 this season</b>, and you've played him in <i>all five positions</i>, including a Brand-jungle <b>win today</b> (3/7/21 in a 41-minute flex game). Two things jump out of that jungle game. First, the good: 21 assists means you already play Brand's real teamfight job. Second, the fixable: <b>164 jungle CS in 41.6 minutes is 3.9 camps-CS per minute — very slow clears</b>, and clears are most of a jungler's income. §7 is built around fixing exactly that. One more habit to steal from your own support games: you bought 6 control wards there and <b>zero in every other role</b>. §2e.</p>
+<p><span class="tag t-you">YOUR DATA</span> Your squad context: soup minion (Naafiri) was in <b>all 15</b> of your recent flex games and Jasio (Nunu, one-tricked) jungled in 10 of them — so Brand jungle is your slot for <b>solo queue and the nights Jasio isn't on</b>. Fair warning for those flex lobbies: premade MMR pulls them to Silver&ndash;Plat 4, well above your solo bracket.</p>
+<p><span class="tag t-ver">VERIFIED</span> One more honest note: your best <i>statistical</i> Brand roles are support (his home role, 51.9% at Emerald+, A-tier at Gold) and bot APC (his highest WR anywhere, ~53.8%). Those live in the companion PDF — this one is jungle because that's what you asked for.</p>
+</div>
+<p><span class="tag t-reason">REASONING</span> What Brand jungle actually is: an <b>AoE burn machine</b> whose passive does percent-max-HP damage — camps and dragons don't get smaller to him as the game goes on, and his multi-camp AoE (W + spreading E) eats grouped camps and the Void Grub trio. What he is <b>not</b>: mobile. He has no dash, no escape, and every good early duelist in the game knows it (§10 and §11 deal with that). Game plan in one line: <b>clear fast, gank with the stun, own every grouped objective, and teamfight like the support Brand you already are — from 900 range, not the front line.</b></p>
+
+<h2>2 &middot; Jungle 101 — the rules nobody explains</h2>
+<p class="muted">You've jungled a handful of games (Graves &times;2, Brand today). This section is the stuff the game never tells you, verified against the wiki's current pages — several popular guide sites still show pre-2026 numbers.</p>
+
+<h3>2a &middot; Smite</h3>
+<p><span class="tag t-ver">VERIFIED</span> Smite deals <b>600 true damage</b> to a monster. You get your first charge at <b>0:48</b>, it recharges every 90s, holds max 2 charges, and has a 15s cooldown between casts. Feeding your jungle pet <b>treats</b> (earned by killing large monsters) upgrades it: at <b>15 treats &rarr; Unleashed Smite (1,000)</b>, at <b>35 treats &rarr; Primal Smite (1,400</b>, hits nearby monsters too, consumes the pet item and frees the slot, and unlocks your pet's bonus passive<b>)</b>. Both upgraded tiers also let you Smite <i>champions and their pets</i> for 40 true damage + a 20% slow for 2s. Two rules that decide games: <b>never start Dragon/Baron/Grubs without a Smite charge up</b>, and at any contested objective, save Smite for the execute — the enemy jungler's Smite vs yours is a duel over the last ~1,200 HP.</p>
+
+<h3>2b &middot; Your pet</h3>
+<p><span class="tag t-ver">VERIFIED</span> Junglers start with a 450g pet that makes camps damage you less and die faster — buying one (plus a Health Potion) IS the jungle start; it also gates treat progress. Brand's pick: <b>Scorchclaw Pup</b> (71% of Brand jungle games). <span class="tag t-single">SINGLE SOURCE</span> Fully stacked (large monster kills fill it), your next hit on a champion burns them for 5% max-HP true damage and slows 30% — a free gank-stick that stacks with everything in §8. <span class="tag t-ver">VERIFIED</span> Curiosity for later: Mosstomper (the shield pet) posts 53.3% WR at Emerald+ on n=289 — a real "immobile mage needs padding" signal, but the sample is thin; Scorchclaw is the default.</p>
+
+<h3>2c &middot; Camp timers — 2026 numbers (many sites still show the old ones)</h3>
+<table>
+<tr><th>Camp</th><th>First spawn</th><th>Respawn (from its death)</th></tr>
+<tr><td>Red / Blue buff</td><td><b>0:55</b></td><td>5:00</td></tr>
+<tr><td>Wolves, Raptors</td><td><b>0:55</b></td><td>2:15</td></tr>
+<tr><td>Gromp, Krugs</td><td><b>1:07</b></td><td>2:15</td></tr>
+<tr><td>Scuttle crab (river)</td><td><b>2:55</b></td><td>2:30</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> Patch 26.01 moved all of these up (~35s earlier than every pre-2026 guide). The respawn clock runs from the moment the camp <i>dies</i> — so the rhythm of jungling is: clear a side, spend ~30&ndash;60s ganking/warding/backing, and be back as camps repop. Standing in your jungle waiting for a camp is wasted time; walking past an up camp without killing it is wasted gold.</p>
+
+<h3>2d &middot; The objective clock</h3>
+<table>
+<tr><th>Objective</th><th>Timing</th><th>Why you care</th></tr>
+<tr><td><b>Void Grubs</b> (trio, top river)</td><td>8:00 &rarr; despawn 14:45 &middot; <b>one spawn per game</b></td><td>Each grub eaten = your whole team's attacks burn structures. Three camps standing in a cluster — <b>Brand's best objective in the game</b> (§9).</td></tr>
+<tr><td><b>Dragon</b> (bot river)</td><td>5:00, respawns 5:00 after</td><td>Permanent team stat buffs; 4th drake = Soul. The bot-side mirror of grubs.</td></tr>
+<tr><td><b>Rift Herald</b> (top river)</td><td>15:00 &rarr; despawns 19:45</td><td>Take it, drop the Eye, ram a tower. Once per game.</td></tr>
+<tr><td><b>Baron</b></td><td>20:00</td><td>The game-ender. Never start it without Smite up; assume the enemy jungler is 3 seconds away.</td></tr>
+</table>
+
+<h3>2e &middot; Four habits that are the actual rank-up</h3>
+<ul>
+<li><span class="tag t-you">YOUR DATA</span> <b>Buy control wards.</b> You bought 6 across two support games and zero anywhere else. As a jungler, one pink at 75g in the river bush or an objective pit pays for itself the first time it catches a contest coming. Rule: <b>one control ward on every back after the first.</b></li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Track the enemy jungler with TAB.</b> Every camp is worth 4 CS. If the enemy jungler shows at scuttle with 12 CS, they did a 3-camp path; ~24 CS means a full clear. Their CS tells you where they started, so it tells you where they'll gank next.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Falling behind isn't fatal.</b> Jungle catch-up XP scales up when you're behind — a deficit shrinks fast if you just keep farming. What actually loses games is dying trying to fix it instantly (§10).</li>
+<li><span class="tag t-reason">REASONING</span> <b>Back on purpose.</b> Recall when you can afford a real item step (§6b), when you're too low to fight over the next objective, or ~45s before Dragon/Grubs spawns so you arrive full HP with Smite. Never back at 30% HP "to keep farming" into an invade-happy jungler.</li>
+</ul>
+
+<h2>3 &middot; The Kit — a jungler's reading</h2>
+<table>
+<tr><th style="width:34%">Ability</th><th>What it actually does</th></tr>
+<tr><td><img class="icon" src="img/brand_P.png" alt=""><b>P &middot; Blaze</b></td><td><span class="tag t-ver">VERIFIED</span> Every ability hit sets the target Ablaze: <b>2% of their max HP</b> burned over 4s per stack, max 3 stacks (ticks every 0.25s). At 3 stacks on a champion or large monster, it <b>detonates after 2s: 6&ndash;12% (by level) +2% per 100 AP of max HP</b> to everything in a 475 radius. Kills with abilities (or of any burning target) refund 20&ndash;40 mana — your sustain. This passive is why Brand never falls off vs dragons and tanks: percent-HP doesn't care how big they are.</td></tr>
+<tr><td><img class="icon" src="img/brand_Q.png" alt=""><b>Q &middot; Sear</b></td><td><span class="tag t-ver">VERIFIED</span> Skillshot, range 1100 (edge 1040): 70&ndash;190 (+65% AP). The headline: if the target is <b>already burning, Q stuns for 1.75s</b>. Not burning = no stun. Every gank you ever land is "apply fire first, then Q." CD 8&rarr;6s, 70 mana.</td></tr>
+<tr><td><img class="icon" src="img/brand_W.png" alt=""><b>W &middot; Pillar of Flame</b></td><td><span class="tag t-ver">VERIFIED</span> 900-range AoE circle (260 radius): 75&ndash;255 (+70% AP), and <b>+25% vs targets already Ablaze</b>. It lands 0.627s after cast (0.891s including cast time) — lead moving targets, or stun them first. Your max-first skill and your whole camp clear.</td></tr>
+<tr><td><img class="icon" src="img/brand_E.png" alt=""><b>E &middot; Conflagration</b></td><td><span class="tag t-ver">VERIFIED</span> Point-and-click (never misses), range 675: 55&ndash;155 (+60% AP), and it <b>spreads</b> to everything within 300 units — <b>600 units if the target is already Ablaze</b>. Spread targets are locked at cast; the fire homes in even if they run. This is the "set the whole camp on fire" button. 26.13 raised its mana to 90 flat — respect it early (§7). CD 13&rarr;9s.</td></tr>
+<tr><td><img class="icon" src="img/brand_R.png" alt=""><b>R &middot; Pyroclasm</b></td><td><span class="tag t-ver">VERIFIED</span> A fireball that hits for 100/175/250 (+30% AP) and then <b>bounces up to 4 times</b> between nearby enemies (and Brand himself), 600 search radius, preferring <b>burning champions &rarr; other champions &rarr; anything else</b>. Against one isolated enemy it hits them up to 3 times (300/525/750 +90% AP total). Burning targets hit by it are also slowed 30/45/60%. CD 100/90/80, range 750. Full usage rules in §4 — this button has real discipline attached.</td></tr>
+</table>
+
+<div class="box">
+<h3>Blaze vs monsters — your clear engine, and what 26.13 did to it</h3>
+<p><span class="tag t-ver">VERIFIED</span> Vs monsters, Blaze ticks do <b>270% damage</b>, capped per tick at 12.5/25/37.5 (1/2/3 stacks) vs regular camps and 20/40/60 vs epics — that's up to <b>150 damage per second vs camps and 240/s vs Dragon and Baron</b>, before any of your actual spells. The 3-stack detonation is capped at 270&ndash;525 (by level) vs monsters.</p>
+<p><span class="tag t-ver">VERIFIED</span> The 26.13 nerf: the detonation floor dropped from 8% to <b>6%</b> max HP. The monster cap doesn't protect your clear from this — at 6%, the cap only kicks in above 4,500 max HP, and camps spawn far below that (<b>Gromp 2,050, Blue buff 2,300</b>; Blue only reaches its 6,210 max late game). So early detonations are uncapped percent damage, and this patch made them smaller. Translation: your first clear got slightly slower <i>this patch</i>, so route hygiene (§7) matters more, not less. Same patch also gave back mana regen (9&rarr;11) and made E cost 90 flat.</p>
+</div>
+
+<h2>4 &middot; Combos — four buttons, strict order</h2>
+<table>
+<tr><th style="width:26%">Combo</th><th style="width:30%">Buttons</th><th>When &amp; why</th></tr>
+<tr><td><b>Camp clear loop</b></td><td><span class="kbd">E &rarr; W &rarr; Q &rarr; W on CD</span></td><td>E tags the whole camp (spread), so your W hits everything for <b>+25%</b>, and Q on the big monster stuns... nothing (monsters don't get stunned) but stacks toward the <b>detonation</b>, which is the real clear speedup. Details per camp in §7.</td></tr>
+<tr><td><b>The gank string</b></td><td><span class="kbd">E &rarr; Q(stun) &rarr; W &rarr; autos</span></td><td>E is point-and-click — guaranteed fire — so the follow-up Q is a <b>1.75s stun</b> on a much easier target. W lands inside the stun window. This is 90% of your ganks.</td></tr>
+<tr><td><b>Long-range opener</b></td><td><span class="kbd">W &rarr; Q &rarr; E</span></td><td>From fog, 900 range, before they know you're there. Harder (W must hit a moving target) but starts the fight from further than most junglers can answer. If W misses, just leave.</td></tr>
+<tr><td><b>Full burst (post-6)</b></td><td><span class="kbd">E &rarr; Q &rarr; W &rarr; R</span></td><td>Three stacks + detonation + R raining down, with R's bounces preferring the burning target. Kills most squishies from level 11 on.</td></tr>
+<tr><td><b>Teamfight</b></td><td><span class="kbd">Q pick &rarr; E spread &rarr; W clump &rarr; R</span></td><td>Spread fire wide, then R the clump: bounces prefer burning champions, so pre-spreading turns R into a 5-hit detonation chain.</td></tr>
+</table>
+<div class="box ember">
+<p><span class="tag t-ver">VERIFIED</span> <b>R discipline — read twice:</b> (1) It's a <b>2+ enemies button</b> in fights; near minions or camps the bounces bleed into them (anything is a valid bounce target after champions — including Brand himself). (2) If the <b>first</b> target spell-shields (Sivir, Morgana Black Shield, Banshee's), the <i>entire spell fizzles — zero bounces</i>. A shield on a later bounce only eats that one hit and the chain continues. So never open R into a visible spell shield; strip it with E first. (3) Bounce count is wiki-verified at 4 (the in-game shop text says 5 — old text; a 10-second in-client check would settle it for good, see §12).</p>
+</div>
+
+<h2>5 &middot; Runes &amp; Summoners</h2>
+<div class="box ember">
+<p><span class="tag t-you">YOUR DATA</span> Good news: <b>you already run the correct page.</b> All 8 of your Brand games this season used Deathfire Touch with Precision secondary — that's the statistically best setup at every tier, and most Bronze players are NOT on the right page. Below is the exact best version of what you're already doing.</p>
+</div>
+<table>
+<tr><th>Piece</th><th>Choice</th><th>Notes</th></tr>
+<tr><td>Keystone</td><td><img class="icon" src="img/rune_dft.png" alt=""><b>Deathfire Touch</b> (Sorcery)</td><td><span class="tag t-ver">VERIFIED</span> 73% pick, and it beats Dark Harvest by 1.1&ndash;3.3pp at every tier. Your spell damage sticks a burn (magic damage, scaling with AP) — on a champion whose whole kit is already burns. Re-added to the game in 26.09.</td></tr>
+<tr><td>Sorcery row</td><td>Manaflow Band &middot; Transcendence &middot; Scorch</td><td><span class="tag t-ver">VERIFIED</span> The standard page at all tiers (48.8&ndash;49.8% on n≈5.5k per tier). Directional upgrades if you want to experiment: Gathering Storm 50.6% and Waterwalking 50.2% (a jungler lives in the river) both out-win Scorch's 47.6%.</td></tr>
+<tr><td>Secondary</td><td><b>Precision:</b> Cut Down + Presence of Mind</td><td><span class="tag t-ver">VERIFIED</span> Cut Down = "8% more damage to champions above 60% max health" — your burns start every fight vs full-HP targets, so it's basically always on at the moment you engage.</td></tr>
+<tr><td>Shards</td><td>Adaptive / <b>Ability Haste</b> / Health</td><td><span class="tag t-ver">VERIFIED</span> One real upgrade over the most-picked page: the <b>Haste flex shard wins by ~2.5pp</b> over double-Adaptive (50.1% vs 47.6%, n=2,222). More casts = more Blaze stacks.</td></tr>
+<tr><td>Summoners &amp; start</td><td>Flash + Smite &middot; <img class="icon" src="img/item_1101.png" alt="">Scorchclaw + Health Potion</td><td><span class="tag t-ver">VERIFIED</span> Flash+Smite is 95.8% of games. No Flash = no escape on a champion with no dash; non-negotiable.</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> <b>Deathfire Touch fine print</b> (it matters for Brand): the burn lasts <b>4s only from single-target spell damage — for Brand, just Q</b>. Area damage (your W, E and R) applies a <b>2s</b> burn, and damage-over-time ticks (Blaze itself) refresh only a <b>1s</b> burn. It's still his best keystone — it just means Q into a fleeing target is your longest-bleeding poke, and DFT is really a "many refreshes" rune on Brand, not a "one big burn" rune.</p>
+
+<h2>6 &middot; Build</h2>
+<h3>6a &middot; The core three</h3>
+<table>
+<tr><th style="width:26%">Order</th><th>Item</th><th>Why</th></tr>
+<tr><td><b>1st</b></td><td><img class="icon" src="img/item_6653.png" alt=""><b>Liandry's Torment</b> 3000g</td><td><span class="tag t-ver">VERIFIED</span> 60 AP, 300 HP; your ability damage adds a burn of <b>1% of max HP per 0.5s for 3s</b>, plus up to +6% damage amp the longer you fight. Percent-HP burn on the percent-HP burn champion. Most picked first at every tier <b>and the safest: at Silver, Liandry's-first wins 49.8% vs Blackfire-first 45.2%</b>.</td></tr>
+<tr><td><b>2nd</b></td><td><img class="icon" src="img/item_3020.png" alt=""><b>Sorcerer's Shoes</b> 1100g</td><td><span class="tag t-ver">VERIFIED</span> 76% pick; magic pen is his best cheap damage. Note for 2026: the free tier-3 upgrade (Spellslinger's Shoes) is a <b>midlane role-quest reward — junglers don't get it</b>; your role progression is the pet-treats track (§2a). Plan around plain Sorcs.</td></tr>
+<tr><td><b>3rd</b></td><td><img class="icon" src="img/item_3116.png" alt=""><b>Rylai's Crystal Scepter</b> 2600g</td><td><span class="tag t-ver">VERIFIED</span> 65 AP, 400 HP, and ability damage slows 30% for 1s — <b>every Blaze tick re-applies it</b>, so anything you set on fire is slowed for the whole burn +1s. On a dash-less ganker this is the item that makes ganks stick. Liandry's&rarr;Rylai's is the winning pair at every tier (Silver 52.0%, Gold 51.8%, E+ 50.5%).</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> The full core (Liandry's &rarr; Sorcs &rarr; Rylai's) is the most-played line at 51.6% WR (n=1,493) — above Brand jungle's 48.6% average. Fine print on the slow: Rylai's is triggered by <i>ability</i> damage — Blaze counts, but <b>Liandry's and Blackfire's own item burns don't</b> (they're tagged as non-spell damage), so the perma-slow comes from keeping YOUR fire refreshed, not from items ticking.</p>
+<div class="box">
+<p><span class="tag t-you">YOUR DATA</span> <b>About your Blackfire Torch habit</b> — you built it in 7 of 8 Brand games. It's not wrong: Blackfire is a real Brand item (each burning champion or large monster = +4% AP for you, lovely in jungle), it's fully legal alongside Liandry's, and at Emerald+ the Blackfire&rarr;Liandry's line actually posts the best numbers. But <b>at Silver/Bronze it measurably underperforms</b> (45.2% first-item vs Liandry's 49.8%) — most likely because it's a tempo item that rewards perfect early aggression, while Liandry's+Rylai's forgives mistakes. Recommendation: <b>Liandry's first every game for now</b>; if you want your torch back, slot Blackfire third instead of Rylai's only when you're already fed and the enemy has no divers.</p>
+</div>
+
+<h3>6b &middot; First back — what to buy with what you have</h3>
+<p><span class="tag t-reason">REASONING</span> (component prices DDragon-verified) You'll rarely back with exactly 3000g. The ladder toward Liandry's:</p>
+<ul>
+<li><b>~900g:</b> <img class="icon" src="img/item_2508.png" alt=""><b>Fated Ashes</b> — 30 AP and its own mini-burn that does <b>+45 bonus damage vs monsters</b>. The single best early jungle buy on him.</li>
+<li><b>~1300g:</b> add <img class="icon" src="img/item_3147.png" alt=""><b>Haunting Guise</b> (30 AP, 200 HP, ramping damage amp) — Fated Ashes + Haunting Guise + 800g = Liandry's.</li>
+<li><b>350g spare:</b> <b>Dark Seal</b> if you're snowballing and confident; a <b>Control Ward</b> always (§2e).</li>
+<li><b>Boots 300g</b> early if their jungler is a skirmisher you need to sidestep.</li>
+</ul>
+
+<h3>6c &middot; Items 4&ndash;6 — the situational half</h3>
+<table>
+<tr><th style="width:28%">Item</th><th>The job</th></tr>
+<tr><td><img class="icon" src="img/item_3157.png" alt=""><b>Zhonya's Hourglass</b> 3250g</td><td><span class="tag t-ver">VERIFIED</span> The best 3rd/4th item in the data by a mile (54.3% at slot 3, 61.7% at slot 4). You're an immobile mage who wants to stand in mid-fight range: the 2.5s stasis IS your missing escape. Buy it 3rd every time they have assassins or dive (Zed, Kha'Zix, Vi, Nocturne...). Your burns keep ticking while you're golden.</td></tr>
+<tr><td><img class="icon" src="img/item_4645.png" alt=""><b>Shadowflame</b> 3200g</td><td><span class="tag t-ver">VERIFIED</span> 110 AP, 15 magic pen, and your magic damage <b>crits for 120% vs enemies below 40% HP — including every Blaze and Liandry's tick</b>. The finisher item: burns start executing people. Great 3rd/4th vs squishy comps.</td></tr>
+<tr><td><img class="icon" src="img/item_8010.png" alt=""><b>Bloodletter's Curse</b> 2900g</td><td><span class="tag t-ver">VERIFIED (group)</span> Stacking magic-resist shred as you damage them — your DoTs stack it hands-free, and it shreds for your whole AP team. Vs tanky-MR comps. <b>Shop rule: Limited to 1 Blight item — it shares a group with Void Staff (and Cryptbloom); you can never own two of those.</b></td></tr>
+<tr><td><img class="icon" src="img/item_3135.png" alt=""><b>Void Staff</b> 3000g</td><td><span class="tag t-ver">VERIFIED</span> 40% magic pen; the raw math answer once two enemies stack MR. Same Blight group as above — pick <i>one</i> shred item.</td></tr>
+<tr><td><img class="icon" src="img/item_3165.png" alt=""><b>Morellonomicon</b> 2850g</td><td><span class="tag t-ver">VERIFIED</span> Anti-heal: your magic damage applies 40% Grievous Wounds (that's the max — the old 60% tier doesn't exist). Buy vs Soraka/Mundo/lifesteal stackers; <b>one Grievous buyer per team is enough</b>, and your DoTs keep it applied constantly, so that buyer should be you.</td></tr>
+<tr><td><img class="icon" src="img/item_3089.png" alt=""><b>Rabadon's Deathcap</b> 3500g</td><td><span class="tag t-ver">VERIFIED</span> +30% total AP; the "I'm fed, end the game" 5th item.</td></tr>
+<tr><td><b>Malignance — don't</b></td><td><span class="tag t-ver">VERIFIED</span> Looks Brand-flavored (ult haste + R burn zone) but posts <b>~39% WR as a first item</b> at Gold/Silver. A trap on jungle Brand; his R is already low-CD.</td></tr>
+</table>
+
+<h3>6d &middot; Reading the enemy comp (the 30-second lobby audit)</h3>
+<table>
+<tr><th style="width:38%">If the enemy team has...</th><th>You prioritize</th></tr>
+<tr><td>2+ tanks / 3k-HP frontline</td><td><span class="tag t-reason">REASONING</span> Nothing changes — this is Brand's favorite lobby. Blaze + Liandry's are percent-HP; add <b>Void Staff or Bloodletter's</b> (never both) 4th. Keep Cut Down.</td></tr>
+<tr><td>Assassins / hard dive (Zed, Kha'Zix, Vi, Noc)</td><td><span class="tag t-reason">REASONING</span> <b>Zhonya's third</b>, before Rylai's if it's bad. Consider Mercs/Steelcaps over Sorcs if they also have heavy CC. Play behind your frontline at W range.</td></tr>
+<tr><td>All-squishy poke comp</td><td><span class="tag t-reason">REASONING</span> <b>Shadowflame</b> climbs to 3rd; consider swapping Cut Down &rarr; Coup de Grace (the below-40% twin) since nobody stays above 60% long.</td></tr>
+<tr><td>Big healing (Soraka, Aatrox, Vlad)</td><td><span class="tag t-reason">REASONING</span> <b>Morello 4th</b> — you're the team's best Grievous applicator.</td></tr>
+<tr><td>A spell-shield user (Sivir, Morgana, Banshee's buyer)</td><td><span class="tag t-reason">REASONING</span> Doesn't change the build — changes the <b>R rule</b>: E strips the shield first, or R a different primary target (§4).</td></tr>
+</table>
+
+<h2>7 &middot; Skills &amp; the First Clear — fixing the 3.9</h2>
+<p><span class="tag t-ver">VERIFIED</span> Skill max: <b>W &gt; Q &gt; E</b>, R at 6/11/16 (68% pick, and the winning order at every tier). Level 1: take <b>W</b> — it's what low-elo Brands overwhelmingly do (69&ndash;74% at Gold/Silver) and it fits the AoE-clear logic below. Level 2 take Q, level 3 take E. <span class="tag t-reason">REASONING</span> (Emerald+ actually splits W/Q at level 1 close to 50/50 — if you ever start buff-side and want max single-target damage on Red, Q-first works; W-first is the simpler default and this guide assumes it.)</p>
+<div class="box">
+<h3>The route (red side start; mirror it from blue)</h3>
+<ol>
+<li><b>Red buff (0:55)</b> — W as it spawns, Q, W again, Smite it low. Kite it: Brand outranges every camp, so <b>cast from max range and step back between casts</b> — damage you don't take is HP you gank with.</li>
+<li><b>Krugs (1:07)</b> — W the pair, Q the big one. Level 2: Q.</li>
+<li><b>Raptors</b> — the AoE showcase: <b>E the big raptor</b> (spread tags the whole camp) &rarr; <b>W the clump for +25% on all of them</b> &rarr; Q the big one. Level 3 here.</li>
+<li><b>Wolves</b> — same E&rarr;W&rarr;Q loop.</li>
+<li><b>Blue buff</b> — single target: W, Q, E, W. Your mana comes back on kills (passive refund) + Blue itself.</li>
+<li><b>Gromp</b> — W, Q, E; Smite if it's slow. Level 4: second point in W.</li>
+<li><b>Scuttle (2:55)</b> — arrive ~2:50. If the enemy jungler contests, remember §10; you are not a level-3 duelist.</li>
+</ol>
+<p><span class="tag t-reason">REASONING</span> Why E&rarr;W on multi-camps but W-first on buffs: E's spread needs a target and doubles (300&rarr;600) off a burning one, and W hits +25% on anything already burning — so on groups, tag with E, then W the burning pile. On single targets there's nothing to spread to; just open W. Either way, cycle everything on cooldown — <b>3 Blaze stacks on the big monster = a detonation</b>, which is a huge chunk of the camp's HP bar.</p>
+<p><span class="tag t-single">SINGLE SOURCE</span> Pace targets (estimates adjusted to 2026 spawn times — treat as goals, not gospel): 3 camps + level 3 by ~2:10&ndash;2:30; full 6-camp clear + scuttle by ~3:30&ndash;3:45. <span class="tag t-you">YOUR DATA</span> Your Brand game today averaged 3.9 jungle CS/min over the whole game — a full-clear rhythm is closer to 5.5+. The gap is almost always: waiting out full animations instead of kiting, walking between camps without a reason, and skipping repops. Two weeks of "clear on a timer" fixes it.</p>
+</div>
+
+<h2>8 &middot; Ganking — the stun is the gank</h2>
+<p><span class="tag t-reason">REASONING</span> Brand ganks are binary: land the stun and someone usually dies; miss everything and you've spent 8 seconds and 250 mana waving at them. So gank where the stun is <i>guaranteed</i>: walk into <b>675 range and open with point-and-click E</b>, then Q the burning target — 1.75s is longer than most Flash reaction times at your elo. Only use the W-first long-range opener when they're CC'd by your laner or channeling/recalling.</p>
+<ul>
+<li><span class="tag t-ver">VERIFIED</span> <b>Pre-6 you can gank from level 3</b>, but the community consensus is blunt: if Q doesn't land, the gank fails. Pick lanes where your laner has CC to layer with (their hook/root &rarr; your free E-Q).</li>
+<li><span class="tag t-reason">REASONING</span> <b>Best lanes for you:</b> anyone with setup CC (your flex squad: Naafiri Q poke isn't setup, but a Blitz hook or Nunu snowball absolutely is). Worst: lanes hugging tower with no CC — you have no dive tool.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Post-6:</b> E &rarr; Q &rarr; W &rarr; R. R's slow only applies to burning targets, and with Rylai's online everything you touch is slowed anyway — post-Rylai's ganks (§6a) are your power spike as much as any level.</li>
+<li><span class="tag t-single">SINGLE SOURCE</span> Scorchclaw at full stacks adds a 5% max-HP true burn + 30% slow to your first hit — time ganks for when it's lit.</li>
+<li><span class="tag t-reason">REASONING</span> <b>Counter-gank &gt; gank</b> when their jungler shows on the map bot and your bot is pushing: arrive second, E-Q the diver, collect. Brand's AoE wins 3v3s that his 1v1 never could.</li>
+</ul>
+
+<h2>9 &middot; Objectives — where Brand is secretly good</h2>
+<ul>
+<li><span class="tag t-ver">VERIFIED</span> <b>Void Grubs (8:00) are your best objective in the game.</b> Three clustered camps, and your E spreads + W blankets all of them while Blaze burns each for percent-HP (epic-monster tick cap is the higher 20/40/60 tier). Path top-side at 7:40 with Smite up, most games.</li>
+<li><span class="tag t-ver">VERIFIED</span> <b>Dragons:</b> the 240 DPS burn ceiling at 3 stacks means you solo drakes faster than most mages. Keep 3 stacks rolling (any spell refreshes) and hold Smite for the last 1,200 HP.</li>
+<li><span class="tag t-reason">REASONING</span> <b>Contested pits:</b> you are the best "fight in a doorway" champion at the objective — W + E spread into the choke as they file in, R once 3+ are burning. Fights at Dragon are where those 21 assists came from; keep doing that, from the back.</li>
+<li><span class="tag t-ver">VERIFIED</span> Baron at 20:00: never start without Smite; drop your control ward in the pit bush first (§2e).</li>
+</ul>
+
+<h2>10 &middot; When You Get Invaded</h2>
+<p><span class="tag t-reason">REASONING</span> Brand is exactly who early duelists look for: immobile, squishy, no escape. The counter-intuitive rule: <b>invades steal gold, but deaths donate games.</b> Your answers, in order:</p>
+<ol>
+<li><b>See it coming (free):</b> your leash-side laners ward river at 0:40 game one; you pink the pixel brush on your first back. If their jungler is a Kha'Zix/Viego/Lee type (§11), assume the invade until proven otherwise.</li>
+<li><b>Don't take the duel.</b> Level 2&ndash;4, hand over the camp if they arrive first or in person. A camp is 4 CS; your Flash+death is their double buff and a plate.</li>
+<li><b>Mirror-farm instead.</b> They're in your Red-side? You're in their Red-side. Camps are identical gold; the map is symmetric. Take theirs, cross back, and let jungle catch-up XP (§2e) erase the rest.</li>
+<li><b>Convert their overreach.</b> An invading jungler shows on the map far from their lanes — that's your window to E-Q gank the opposite side or start Grubs/Dragon solo. Trade up, not even.</li>
+<li><b>With the squad:</b> in flex nights, tell soup minion the invade is live — a mid roaming to a jungle 2v1 with your guaranteed E-Q stun is a kill more often than not.</li>
+</ol>
+
+<h2>11 &middot; Matchups — jungle vs jungle</h2>
+<p class="muted">All-ranks, 26.13, minimum 300 games per cell; win rate is Brand's. "Matchup" for junglers means the whole early game — invades, scuttle fights, objective 1v1s — not a lane.</p>
+<table>
+<tr><th style="width:50%">They beat you (worst 10)</th><th>You beat them (best 10)</th></tr>
+<tr><td>
+<b>Naafiri 39.9%</b> &middot; Kha'Zix 43.5% &middot; Vi 45.3% &middot; Nocturne 45.5% &middot; Master Yi 45.8% &middot; Lillia 46.0% &middot; Shyvana 46.2% &middot; Shaco 46.2% &middot; Ekko 46.2% &middot; Briar &amp; Sylas tied 46.3%
+</td><td>
+Locke 55.8%* &middot; Hecarim 54.1% &middot; Malphite 53.3% &middot; Amumu 52.0% &middot; Sejuani 51.7% &middot; Warwick 51.1% &middot; Lee Sin 51.1% &middot; Jax 50.9% &middot; Rammus 50.8% &middot; Zac 50.7%
+</td></tr>
+</table>
+<p><span class="tag t-ver">VERIFIED</span> The pattern is one sentence: <b>Brand beats tanks and loses to AD assassins and dive.</b> Every bad matchup is someone who jumps on him; every good one is a big slow target that burns. *Locke released <i>this patch</i> (26.13) — that 55.8% is people not knowing the champ yet; don't trust it as a real counter. <span class="tag t-you">YOUR DATA</span> And yes — Brand's single worst matchup in the entire game is <b>Naafiri</b>, the champion your duo plays. In your flex games she's always on YOUR side, so the worst matchup you literally cannot face there. In solo queue: if Naafiri jungle appears in the enemy lobby, that's your cue to play the §10 playbook from minute zero, or to have hovered a different pick.</p>
+<p><span class="tag t-reason">REASONING</span> Vs the bad list: full-clear away from them, pink your entrances, let them have scuttle, and scale to the 5v5 AoE fights they can't match. Vs the good list: you can actually contest scuttle and grubs — your percent-HP burn out-duels tanks even-level.</p>
+
+<h2>12 &middot; What we couldn't verify (and how to close it)</h2>
+<ul class="muted">
+<li><b>R bounce count</b>: wiki says up to 4 bounces, the in-game tooltip text in the data files says 5. Wiki is usually right and this guide uses 4; Campbell can settle it with one glance at the in-client tooltip.</li>
+<li><b>Whether Q's stun consumes Blaze stacks</b> (i.e., does E&rarr;Q still reach detonation as fast): not stated anywhere authoritative. A 30-second practice-tool test settles it.</li>
+<li><b>Clear-time pace targets in §7</b> are arithmetic from the 2026 spawn changes, not measured. Same practice-tool session would produce real numbers with your hands on the keyboard.</li>
+<li>The 4s per-target re-detonation cooldown on Blaze, and the exact ~14&ndash;15 min Smite-quest pace, are single-source details — treated as minor here.</li>
+<li>All win rates are lolalytics (one site), patch 26.13, pulled 2026-07-06; patch 26.14 lands ~July 8&ndash;9 and clears/detonation numbers above should be re-checked then.</li>
+</ul>
+
+<div class="footer">
+Brand Jungle — built July 6, 2026 for send help#2366 at Campbell's request &middot; Patch 26.13 / Data Dragon 16.13.1 &middot; Sources: League Wiki (Brand, Smite, Void Grub, Rift Herald, jungle monster pages — mechanics authority), Riot Data Dragon (items, runes), lolalytics 26.13 (Emerald+/Gold/Silver/all-ranks cuts), op.gg (your match history, position-field verified), jungler.gg / Mobalytics / dodge.gg / tapin.gg (coaching heuristics, corrected against wiki where stale). Every stat re-verified by an independent fact-check pass; labels mark the confidence of each claim. Images © Riot Games via Data Dragon.
+</div>
+
+</body>
+</html>
